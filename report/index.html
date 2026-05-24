@@ -8,6 +8,7 @@
     :root { color-scheme: light dark; }
     body { font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; margin: 24px; }
     h1 { font-size: 24px; margin: 0 0 8px; }
+    h1 a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.12em; }
     h2 { font-size: 18px; margin: 30px 0 8px; border-top: 2px solid #9997; padding-top: 14px; }
     h3 { font-size: 15px; margin: 22px 0 6px; }
     table { border-collapse: collapse; width: 100%; font-size: 12px; margin-bottom: 18px; }
@@ -24,21 +25,310 @@
     .fail { color: #b00020; font-weight: 700; }
     .muted { color: #777; }
     .artifacts a { display: inline-block; margin-right: 6px; }
-    .caveat { max-width: 1180px; }
+    .chart-intro { max-width: 1180px; }
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 8px 0 14px; color: #555; }
+    .chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .swatch, .fail-swatch, .winner-swatch, .loser-swatch { display: inline-block; width: 18px; height: 10px; border-radius: 999px; }
+    .swatch.zkf { background: linear-gradient(90deg, #1976b8, #62b6ff); }
+    .swatch.flopoco { background: linear-gradient(90deg, #c26a00, #ffc85a); }
+    .fail-swatch { border: 2px solid #b00020; box-sizing: border-box; background: transparent; }
+    .winner-swatch { background: #d8f3df; }
+    .loser-swatch { background: #ffe1dc; }
+    .comparison-grid { display: grid; gap: 18px; margin-bottom: 24px; }
+    .chart-row { display: grid; grid-template-columns: minmax(180px, 0.45fr) repeat(2, minmax(360px, 1fr)); gap: 14px; align-items: stretch; }
+    .chart-target { border: 1px solid #9995; border-radius: 8px; padding: 12px; background: color-mix(in srgb, #f4f6f8 62%, Canvas); }
+    .chart-target h3 { margin-top: 0; font-size: 14px; }
+    .chart-target p { margin: 6px 0; color: #666; }
+    .target-win-summary { display: grid; gap: 5px; margin-top: 12px; padding-top: 9px; border-top: 1px solid #9994; font-size: 11px; }
+    .target-win-summary div { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    .target-win-summary span { flex-basis: 100%; color: #666; font-weight: 750; text-transform: uppercase; letter-spacing: 0.04em; }
+    .target-win-summary strong { display: inline-flex; border-radius: 999px; padding: 1px 7px; background: color-mix(in srgb, #94a3b8 14%, Canvas); font-weight: 750; }
+    .compare-card { border: 1px solid #9995; border-radius: 8px; padding: 12px; background: color-mix(in srgb, #ffffff 88%, Canvas); box-shadow: 0 1px 4px #0001; }
+    .chart-card-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; border-bottom: 1px solid #9994; padding-bottom: 8px; margin-bottom: 10px; }
+    .chart-card-head h3 { margin: 0; }
+    .chart-card-head span { color: #666; font-size: 12px; white-space: nowrap; }
+    .op-chart { padding: 10px 0 4px; border-top: 2px solid #9993; }
+    .op-chart:first-of-type { border-top: 0; padding-top: 0; }
+    .op-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; height: 22px; border-radius: 999px; background: color-mix(in srgb, #334155 12%, Canvas); color: #334155; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; }
+    .metric-title { margin: 8px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #666; font-weight: 800; }
+    .bar-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 2px 8px; align-items: center; margin: 7px 0; }
+    .bar-name { align-self: stretch; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start; min-height: 16px; padding: 0 6px; border-radius: 5px; font-size: 12px; font-weight: 700; }
+    .bar-name.winner { background: color-mix(in srgb, #cfeeda 78%, Canvas); color: #064719; }
+    .bar-name.loser { background: color-mix(in srgb, #ffd6d1 76%, Canvas); color: #78180e; }
+    .bar-name.tie { background: color-mix(in srgb, #94a3b8 14%, Canvas); }
+    .bar-track { height: 16px; border-radius: 999px; background: color-mix(in srgb, #94a3b8 18%, Canvas); overflow: hidden; box-shadow: inset 0 0 0 1px #0001; }
+    .bar-fill { height: 100%; border-radius: inherit; }
+    .bar-fill.zkf { background: linear-gradient(90deg, #1976b8, #62b6ff); }
+    .bar-fill.flopoco { background: linear-gradient(90deg, #c26a00, #ffc85a); }
+    .bar-fill.timing-fail { box-shadow: inset 0 0 0 2px #b00020; }
+    .bar-fill.zkf.timing-fail { background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #1976b8, #62b6ff); }
+    .bar-fill.flopoco.timing-fail { background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #c26a00, #ffc85a); }
+    .bar-value { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 6px; color: #555; font-size: 12px; }
+    .bar-value strong { color: CanvasText; }
+    .chart-status { display: inline-flex; align-items: center; border-radius: 999px; padding: 1px 7px; font-size: 11px; background: color-mix(in srgb, #94a3b8 16%, Canvas); }
+    .chart-status.pass { color: #087b28; }
+    .chart-status.fail { color: #b00020; }
+    .resource-detail { color: #666; }
     code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    @media (max-width: 1100px) {
+      .chart-row { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 58px minmax(0, 1fr); }
+    }
     @media (prefers-color-scheme: dark) {
       tbody tr.lib-zkf { background: color-mix(in srgb, #12344d 50%, Canvas); }
       tbody tr.lib-flopoco { background: color-mix(in srgb, #4c3510 50%, Canvas); }
       td.heat-best { background: #143d22 !important; color: #d7f6df; }
       td.heat-mid { background: #4a3c12 !important; color: #fff0ad; }
       td.heat-worst { background: #4b1f1a !important; color: #ffd4cd; }
+      .chart-legend, .chart-target p, .chart-card-head span, .metric-title, .bar-value, .resource-detail, .target-win-summary span { color: #bbb; }
+      .chart-target { background: color-mix(in srgb, #18202b 58%, Canvas); }
+      .compare-card { background: color-mix(in srgb, #111827 58%, Canvas); }
+      .op-chip { color: #d6e0ec; background: color-mix(in srgb, #cbd5e1 18%, Canvas); }
+      .bar-name.winner { background: color-mix(in srgb, #1e6b35 46%, Canvas); color: #d7f6df; }
+      .bar-name.loser { background: color-mix(in srgb, #842a22 42%, Canvas); color: #ffd4cd; }
     }
   </style>
 </head>
 <body>
-  <h1>ZKF vs FloPoCo FPGA Benchmark</h1>
-  <p class="muted">Generated 2026-05-24T00:07:36+03:00. Mode: <code>full</code>. Target frequencies: <code>Lattice ECP5 / Yosys + nextpnr: 100 MHz; Lattice ECP5 / Diamond: 100 MHz; AMD/Xilinx Spartan-7 / Vivado: 150 MHz</code>.</p>
-  <p class="caveat"><strong>Caveat.</strong> ZKF semantics differ from IEEE/FloPoCo around NaN, subnormals, signed zero, and exception encoding. This benchmark compares synthesized implementation cost and latency under matched exponent/significand widths. FloPoCo <code>wF</code> excludes the hidden bit, so ZKF <code>WMAN=18/36</code> is compared with FloPoCo <code>wF=17/35</code>. FloPoCo 5.1 <code>FPAdd</code>, <code>FPMult</code>, and <code>FPDiv</code> do not expose a documented command-line option to disable NaN handling; the native FloPoCo format already does not support IEEE subnormals. Each target/toolchain tunes ZKF staging and FloPoCo generation parameters independently; the report shows the selected best candidate per library/operator/format using this policy: lowest latency among rows that pass the target frequency, then lowest resource use, then highest Fmax. If no candidate passes, the highest-Fmax failing candidate is shown and marked <code>FAIL</code>.</p>
+  <h1><a href="https://github.com/Zubax/kulibin">ZKF</a> vs <a href="https://gitlab.com/flopoco/flopoco">FloPoCo</a> FPGA Benchmark</h1>
+  <p class="muted">Generated 2026-05-24T13:08:25+03:00. Mode: <code>report</code>. Target frequencies: <code>Lattice ECP5 / Yosys + nextpnr: 100 MHz; Lattice ECP5 / Diamond: 100 MHz; AMD/Xilinx Spartan-7 / Vivado: 150 MHz</code>.</p>
+  <p>ZKF semantics differ from IEEE/FloPoCo around NaN, subnormals, signed zero, and exception encoding. FloPoCo <code>wF</code> excludes the hidden bit, so ZKF <code>WMAN=18/36</code> is compared with FloPoCo <code>wF=17/35</code>. FloPoCo 5.1 <code>FPAdd</code>, <code>FPMult</code>, and <code>FPDiv</code> do not expose a documented command-line option to disable NaN handling; the native FloPoCo format already does not support IEEE subnormals. Each target/toolchain tunes ZKF staging and FloPoCo generation parameters independently; the report shows the selected best candidate per library/operator/format using this policy: lowest latency among rows that pass the target frequency, then lowest resource use, then highest Fmax. If no candidate passes, the highest-Fmax failing candidate is shown and marked <code>FAIL</code>.</p>
+  <p>FloPoCo appears to have difficulty closing timing for wide hard-multiplier implementations in some flows. Using <code>useHardMult=0</code> can avoid that hard-multiplier path, but at the cost of greatly increased latency and fabric area, making it impractical. This report therefore keeps <code>useHardMult=1</code> for multiplication everywhere and marks any remaining timing failures explicitly.</p>
+
+  <h2>Comparison Charts</h2>
+  <p class="muted chart-intro">Each target row contains one chart per floating-point format. Latency bars are cycles; area bars are LUT + FF + carry, with DSP and other hard blocks shown in the detail text.</p>
+  <div class="chart-legend">
+    <span><i class="swatch zkf"></i>ZKF</span>
+    <span><i class="swatch flopoco"></i>FloPoCo</span>
+    <span><i class="winner-swatch"></i>Metric winner</span>
+    <span><i class="loser-swatch"></i>Metric loser</span>
+    <span><i class="fail-swatch"></i>Timing failure</span>
+  </div>
+  <div class="comparison-grid">
+    
+  <section class="chart-row">
+    <div class="chart-target">
+      <h3>Lattice ECP5 / Yosys + nextpnr</h3>
+      <p>LFE5U-12F CABGA381 speed 6</p>
+      <p><code>yosys-nextpnr-ecp5</code></p>
+      <div class="target-win-summary"><div><span>Latency wins</span><strong>ZKF 4</strong><strong>FloPoCo 0</strong></div><div><span>Fabric wins</span><strong>ZKF 3</strong><strong>FloPoCo 3</strong></div></div>
+    </div>
+    
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=18 / FloPoCo wE=8, wF=17</h3>
+        <span>100 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 31.2%"></div></div><div class="bar-value"><strong>5 cycles</strong><span class="chart-status pass">PASS 113.49 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 31.2%"></div></div><div class="bar-value"><strong>5 cycles</strong><span class="chart-status pass">PASS 100.67 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 44.0%"></div></div><div class="bar-value"><strong>1,239 fabric</strong><span class="resource-detail">LUT 821 / FF 368 / carry 50 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 28.8%"></div></div><div class="bar-value"><strong>811 fabric</strong><span class="resource-detail">LUT 447 / FF 304 / carry 60 / DSP 0</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 6.2%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 104.94 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 6.2%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 111.37 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 10.3%"></div></div><div class="bar-value"><strong>289 fabric</strong><span class="resource-detail">LUT 146 / FF 114 / carry 29 / DSP 1</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 8.1%"></div></div><div class="bar-value"><strong>227 fabric</strong><span class="resource-detail">LUT 84 / FF 119 / carry 24 / DSP 1</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 75.0%"></div></div><div class="bar-value"><strong>12 cycles</strong><span class="chart-status pass">PASS 133.60 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>16 cycles</strong><span class="chart-status pass">PASS 111.69 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 95.3%"></div></div><div class="bar-value"><strong>2,685 fabric</strong><span class="resource-detail">LUT 1,368 / FF 949 / carry 368 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>2,818 fabric</strong><span class="resource-detail">LUT 1,208 / FF 1,386 / carry 224 / DSP 0</span></div></div>
+      </div>
+
+    </section>
+
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=36 / FloPoCo wE=8, wF=35</h3>
+        <span>100 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 6.9%"></div></div><div class="bar-value"><strong>5 cycles</strong><span class="chart-status pass">PASS 101.31 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 11.1%"></div></div><div class="bar-value"><strong>8 cycles</strong><span class="chart-status pass">PASS 112.18 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 11.4%"></div></div><div class="bar-value"><strong>1,880 fabric</strong><span class="resource-detail">LUT 1,246 / FF 557 / carry 77 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 11.1%"></div></div><div class="bar-value"><strong>1,829 fabric</strong><span class="resource-detail">LUT 1,035 / FF 707 / carry 87 / DSP 0</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 2.8%"></div></div><div class="bar-value"><strong>2 cycles</strong><span class="chart-status pass">PASS 116.96 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco timing-fail" style="width: 18.1%"></div></div><div class="bar-value"><strong>13 cycles</strong><span class="chart-status fail">FAIL 72.67 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 4.5%"></div></div><div class="bar-value"><strong>734 fabric</strong><span class="resource-detail">LUT 352 / FF 308 / carry 74 / DSP 4</span></div></div><div class="bar-row area"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco timing-fail" style="width: 16.0%"></div></div><div class="bar-value"><strong>2,628 fabric</strong><span class="resource-detail">LUT 1,414 / FF 1,107 / carry 107 / DSP 6</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 29.2%"></div></div><div class="bar-value"><strong>21 cycles</strong><span class="chart-status pass">PASS 120.13 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>72 cycles</strong><span class="chart-status pass">PASS 137.61 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 53.3%"></div></div><div class="bar-value"><strong>8,777 fabric</strong><span class="resource-detail">LUT 4,625 / FF 2,956 / carry 1,196 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>16,455 fabric</strong><span class="resource-detail">LUT 4,356 / FF 11,344 / carry 755 / DSP 0</span></div></div>
+      </div>
+
+    </section>
+
+  </section>
+
+  <section class="chart-row">
+    <div class="chart-target">
+      <h3>Lattice ECP5 / Diamond</h3>
+      <p>LFE5U-12F CABGA381 speed 6</p>
+      <p><code>diamond-lse-map-par-trce</code></p>
+      <div class="target-win-summary"><div><span>Latency wins</span><strong>ZKF 3</strong><strong>FloPoCo 0</strong></div><div><span>Fabric wins</span><strong>ZKF 0</strong><strong>FloPoCo 6</strong></div></div>
+    </div>
+    
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=18 / FloPoCo wE=8, wF=17</h3>
+        <span>100 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 26.7%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 110.44 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 26.7%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 102.40 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 36.3%"></div></div><div class="bar-value"><strong>947 fabric</strong><span class="resource-detail">LUT 585 / FF 294 / carry 68 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 27.7%"></div></div><div class="bar-value"><strong>722 fabric</strong><span class="resource-detail">LUT 399 / FF 272 / carry 51 / DSP 0 / BRAM 1</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 6.7%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 102.45 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 6.7%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 115.41 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 10.0%"></div></div><div class="bar-value"><strong>261 fabric</strong><span class="resource-detail">LUT 137 / FF 94 / carry 30 / DSP 1</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 8.8%"></div></div><div class="bar-value"><strong>229 fabric</strong><span class="resource-detail">LUT 89 / FF 115 / carry 25 / DSP 1</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 80.0%"></div></div><div class="bar-value"><strong>12 cycles</strong><span class="chart-status pass">PASS 131.06 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>15 cycles</strong><span class="chart-status pass">PASS 115.06 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 100.0%"></div></div><div class="bar-value"><strong>2,608 fabric</strong><span class="resource-detail">LUT 1,265 / FF 961 / carry 382 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 89.6%"></div></div><div class="bar-value"><strong>2,338 fabric</strong><span class="resource-detail">LUT 1,122 / FF 975 / carry 241 / DSP 0 / BRAM 1</span></div></div>
+      </div>
+
+    </section>
+
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=36 / FloPoCo wE=8, wF=35</h3>
+        <span>100 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 12.1%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 108.97 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 15.2%"></div></div><div class="bar-value"><strong>5 cycles</strong><span class="chart-status pass">PASS 101.80 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 19.2%"></div></div><div class="bar-value"><strong>1,597 fabric</strong><span class="resource-detail">LUT 1,010 / FF 477 / carry 110 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 15.7%"></div></div><div class="bar-value"><strong>1,311 fabric</strong><span class="resource-detail">LUT 754 / FF 478 / carry 79 / DSP 0 / BRAM 1</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 3.0%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 102.51 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco timing-fail" style="width: 3.0%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status fail">FAIL 78.03 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 4.4%"></div></div><div class="bar-value"><strong>370 fabric</strong><span class="resource-detail">LUT 177 / FF 148 / carry 45 / DSP 4</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco timing-fail" style="width: 4.2%"></div></div><div class="bar-value"><strong>351 fabric</strong><span class="resource-detail">LUT 130 / FF 187 / carry 34 / DSP 4</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 63.6%"></div></div><div class="bar-value"><strong>21 cycles</strong><span class="chart-status pass">PASS 108.50 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>33 cycles</strong><span class="chart-status pass">PASS 102.58 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 100.0%"></div></div><div class="bar-value"><strong>8,338 fabric</strong><span class="resource-detail">LUT 4,142 / FF 2,977 / carry 1,219 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 93.4%"></div></div><div class="bar-value"><strong>7,787 fabric</strong><span class="resource-detail">LUT 3,434 / FF 3,637 / carry 716 / DSP 0 / BRAM 6</span></div></div>
+      </div>
+
+    </section>
+
+  </section>
+
+  <section class="chart-row">
+    <div class="chart-target">
+      <h3>AMD/Xilinx Spartan-7 / Vivado</h3>
+      <p>xc7s50csga324-1</p>
+      <p><code>vivado</code></p>
+      <div class="target-win-summary"><div><span>Latency wins</span><strong>ZKF 4</strong><strong>FloPoCo 0</strong></div><div><span>Fabric wins</span><strong>ZKF 2</strong><strong>FloPoCo 4</strong></div></div>
+    </div>
+    
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=18 / FloPoCo wE=8, wF=17</h3>
+        <span>150 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 26.7%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 171.51 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 26.7%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 150.34 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 34.4%"></div></div><div class="bar-value"><strong>681 fabric</strong><span class="resource-detail">LUT 382 / FF 274 / carry 25 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 29.0%"></div></div><div class="bar-value"><strong>575 fabric</strong><span class="resource-detail">LUT 304 / FF 249 / carry 22 / DSP 0</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name tie">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 6.7%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 173.62 MHz</span></div></div><div class="bar-row latency"><div class="bar-name tie">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 6.7%"></div></div><div class="bar-value"><strong>1 cycles</strong><span class="chart-status pass">PASS 150.29 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 10.3%"></div></div><div class="bar-value"><strong>204 fabric</strong><span class="resource-detail">LUT 100 / FF 94 / carry 10 / DSP 1</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 8.6%"></div></div><div class="bar-value"><strong>171 fabric</strong><span class="resource-detail">LUT 46 / FF 115 / carry 10 / DSP 1</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 80.0%"></div></div><div class="bar-value"><strong>12 cycles</strong><span class="chart-status pass">PASS 184.45 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>15 cycles</strong><span class="chart-status pass">PASS 161.69 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 100.0%"></div></div><div class="bar-value"><strong>1,980 fabric</strong><span class="resource-detail">LUT 1,069 / FF 738 / carry 173 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 84.1%"></div></div><div class="bar-value"><strong>1,665 fabric</strong><span class="resource-detail">LUT 671 / FF 885 / carry 109 / DSP 0</span></div></div>
+      </div>
+
+    </section>
+
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>ZKF WEXP=8, WMAN=36 / FloPoCo wE=8, wF=35</h3>
+        <span>150 MHz target</span>
+      </div>
+      
+      <div class="op-chart">
+        <div class="op-chip">ADD</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 12.1%"></div></div><div class="bar-value"><strong>4 cycles</strong><span class="chart-status pass">PASS 162.08 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 15.2%"></div></div><div class="bar-value"><strong>5 cycles</strong><span class="chart-status pass">PASS 150.93 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 17.2%"></div></div><div class="bar-value"><strong>1,152 fabric</strong><span class="resource-detail">LUT 660 / FF 455 / carry 37 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 23.0%"></div></div><div class="bar-value"><strong>1,541 fabric</strong><span class="resource-detail">LUT 756 / FF 733 / carry 52 / DSP 0</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">MUL</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 6.1%"></div></div><div class="bar-value"><strong>2 cycles</strong><span class="chart-status pass">PASS 163.03 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 9.1%"></div></div><div class="bar-value"><strong>3 cycles</strong><span class="chart-status pass">PASS 152.05 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 7.4%"></div></div><div class="bar-value"><strong>495 fabric</strong><span class="resource-detail">LUT 233 / FF 234 / carry 28 / DSP 4</span></div></div><div class="bar-row area"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 15.3%"></div></div><div class="bar-value"><strong>1,024 fabric</strong><span class="resource-detail">LUT 563 / FF 431 / carry 30 / DSP 6</span></div></div>
+      </div>
+
+      <div class="op-chart">
+        <div class="op-chip">DIV</div>
+        <div class="metric-title">Latency</div>
+        <div class="bar-row latency"><div class="bar-name winner">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 63.6%"></div></div><div class="bar-value"><strong>21 cycles</strong><span class="chart-status pass">PASS 162.14 MHz</span></div></div><div class="bar-row latency"><div class="bar-name loser">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 100.0%"></div></div><div class="bar-value"><strong>33 cycles</strong><span class="chart-status pass">PASS 157.56 MHz</span></div></div>
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        <div class="bar-row area"><div class="bar-name loser">ZKF</div><div class="bar-track"><div class="bar-fill zkf" style="width: 100.0%"></div></div><div class="bar-value"><strong>6,686 fabric</strong><span class="resource-detail">LUT 3,702 / FF 2,376 / carry 608 / DSP 0</span></div></div><div class="bar-row area"><div class="bar-name winner">FloPoCo</div><div class="bar-track"><div class="bar-fill flopoco" style="width: 75.7%"></div></div><div class="bar-value"><strong>5,064 fabric</strong><span class="resource-detail">LUT 1,687 / FF 3,152 / carry 225 / DSP 0 / BRAM 6</span></div></div>
+      </div>
+
+    </section>
+
+  </section>
+
+  </div>
 <h2>Lattice ECP5 / Yosys + nextpnr</h2>
 <p class="muted">Device: <code>LFE5U-12F CABGA381 speed 6</code>. Toolchain: <code>yosys-nextpnr-ecp5</code>.</p>
 <p class="muted">Timing target: <code>100 MHz</code>.</p>

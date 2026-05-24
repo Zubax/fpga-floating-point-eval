@@ -15,7 +15,7 @@ import sys
 import textwrap
 from collections import Counter, defaultdict
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -1928,6 +1928,255 @@ def report_variant(row: dict[str, Any]) -> str:
     return "; ".join(parts)
 
 
+def comparison_row_index(rows: list[dict[str, Any]]) -> dict[tuple[str, int, int, str, str], dict[str, Any]]:
+    indexed = {}
+    for row in rows:
+        if row.get("status") != "ok":
+            continue
+        indexed[
+            (
+                str(row.get("target_id", "")),
+                int(row.get("wexp", 0)),
+                int(row.get("wman", 0)),
+                str(row.get("operator", "")),
+                str(row.get("library", "")),
+            )
+        ] = row
+    return indexed
+
+
+def count_value(row: dict[str, Any], key: str) -> int:
+    value = _number(row.get(key))
+    return int(value) if value is not None else 0
+
+
+def fabric_area(row: dict[str, Any]) -> int:
+    return count_value(row, "lut") + count_value(row, "ff") + count_value(row, "carry")
+
+
+def bar_width(value: float, maximum: float) -> str:
+    if maximum <= 0 or value <= 0:
+        return "0%"
+    return f"{min(100.0, max(2.0, 100.0 * value / maximum)):.1f}%"
+
+
+def fmt_count(value: int | float | None) -> str:
+    if value is None:
+        return ""
+    return f"{int(value):,}"
+
+
+def chart_status(row: dict[str, Any]) -> str:
+    status = str(row.get("timing_status") or "")
+    cls = "pass" if status == "PASS" else "fail" if status == "FAIL" else ""
+    return f'<span class="chart-status {cls}">{html.escape(status)} {fmt_num(row.get("fmax_mhz"), 2)} MHz</span>'
+
+
+def comparison_bar(
+    row: dict[str, Any],
+    *,
+    metric: str,
+    value: float,
+    maximum: float,
+    primary: str,
+    detail: str,
+    comparison_class: str = "",
+) -> str:
+    library = str(row.get("library", ""))
+    label = "ZKF" if library == "zkf" else "FloPoCo" if library == "flopoco" else library
+    status = str(row.get("timing_status") or "")
+    fill_classes = " ".join(
+        x
+        for x in [
+            "bar-fill",
+            "zkf" if library == "zkf" else "flopoco" if library == "flopoco" else "",
+            "timing-fail" if status == "FAIL" else "",
+        ]
+        if x
+    )
+    bar_name_classes = " ".join(x for x in ["bar-name", comparison_class] if x)
+    return (
+        f'<div class="bar-row {html.escape(metric)}">'
+        f'<div class="{html.escape(bar_name_classes)}">{html.escape(label)}</div>'
+        f'<div class="bar-track"><div class="{fill_classes}" style="width: {bar_width(value, maximum)}"></div></div>'
+        f'<div class="bar-value"><strong>{html.escape(primary)}</strong>{detail}</div>'
+        f"</div>"
+    )
+
+
+def comparison_class(value: float, peer_values: list[float]) -> str:
+    if not peer_values or max(peer_values) == min(peer_values):
+        return "tie"
+    if value == min(peer_values):
+        return "winner"
+    if value == max(peer_values):
+        return "loser"
+    return ""
+
+
+def count_target_wins(
+    target_id: str,
+    rows_by_key: dict[tuple[str, int, int, str, str], dict[str, Any]],
+    value_fn: Callable[[dict[str, Any]], float | int | None],
+) -> dict[str, int]:
+    wins = {"zkf": 0, "flopoco": 0}
+    for wexp, wman in FORMATS:
+        for op in OP_ORDER:
+            paired = {
+                lib: rows_by_key.get((target_id, wexp, wman, op, lib))
+                for lib in ("zkf", "flopoco")
+            }
+            if not paired["zkf"] or not paired["flopoco"]:
+                continue
+            values = {lib: value_fn(row) for lib, row in paired.items() if row is not None}
+            if values["zkf"] is None or values["flopoco"] is None or values["zkf"] == values["flopoco"]:
+                continue
+            wins[min(values, key=lambda lib: values[lib])] += 1
+    return wins
+
+
+def target_win_summary(target_id: str, rows_by_key: dict[tuple[str, int, int, str, str], dict[str, Any]]) -> str:
+    latency_wins = count_target_wins(target_id, rows_by_key, lambda row: _number(row.get("latency_cycles")))
+    fabric_wins = count_target_wins(target_id, rows_by_key, fabric_area)
+    return (
+        '<div class="target-win-summary">'
+        '<div><span>Latency wins</span>'
+        f'<strong>ZKF {latency_wins["zkf"]}</strong>'
+        f'<strong>FloPoCo {latency_wins["flopoco"]}</strong></div>'
+        '<div><span>Fabric wins</span>'
+        f'<strong>ZKF {fabric_wins["zkf"]}</strong>'
+        f'<strong>FloPoCo {fabric_wins["flopoco"]}</strong></div>'
+        "</div>"
+    )
+
+
+def comparison_card(
+    target_id: str,
+    wexp: int,
+    wman: int,
+    rows_by_key: dict[tuple[str, int, int, str, str], dict[str, Any]],
+) -> str:
+    card_rows = [
+        rows_by_key[key]
+        for op in OP_ORDER
+        for lib in ("zkf", "flopoco")
+        if (key := (target_id, wexp, wman, op, lib)) in rows_by_key
+    ]
+    if not card_rows:
+        return (
+            '<section class="compare-card">'
+            f"<h3>{html.escape(format_heading(wexp, wman))}</h3>"
+            '<p class="muted">No selected rows available.</p>'
+            "</section>"
+        )
+
+    max_latency = max(_number(row.get("latency_cycles")) or 0 for row in card_rows)
+    max_area = max(fabric_area(row) for row in card_rows)
+    operator_blocks: list[str] = []
+    for op in OP_ORDER:
+        op_rows = [
+            rows_by_key[key]
+            for lib in ("zkf", "flopoco")
+            if (key := (target_id, wexp, wman, op, lib)) in rows_by_key
+        ]
+        if not op_rows:
+            continue
+        latency_bars = []
+        area_bars = []
+        latency_values = [_number(row.get("latency_cycles")) or 0 for row in op_rows]
+        area_values = [fabric_area(row) for row in op_rows]
+        for row in op_rows:
+            latency = _number(row.get("latency_cycles")) or 0
+            latency_bars.append(
+                comparison_bar(
+                    row,
+                    metric="latency",
+                    value=latency,
+                    maximum=max_latency,
+                    primary=f"{fmt_num(row.get('latency_cycles'), 0)} cycles",
+                    detail=chart_status(row),
+                    comparison_class=comparison_class(latency, latency_values),
+                )
+            )
+            area = fabric_area(row)
+            resource_detail = (
+                f'<span class="resource-detail">LUT {fmt_count(count_value(row, "lut"))} '
+                f'/ FF {fmt_count(count_value(row, "ff"))} '
+                f'/ carry {fmt_count(count_value(row, "carry"))} '
+                f'/ DSP {fmt_count(count_value(row, "dsp"))}'
+            )
+            if count_value(row, "bram"):
+                resource_detail += f' / BRAM {fmt_count(count_value(row, "bram"))}'
+            resource_detail += "</span>"
+            area_bars.append(
+                comparison_bar(
+                    row,
+                    metric="area",
+                    value=area,
+                    maximum=max_area,
+                    primary=f"{fmt_count(area)} fabric",
+                    detail=resource_detail,
+                    comparison_class=comparison_class(area, area_values),
+                )
+            )
+        operator_blocks.append(
+            f"""
+      <div class="op-chart">
+        <div class="op-chip">{html.escape(op.upper())}</div>
+        <div class="metric-title">Latency</div>
+        {''.join(latency_bars)}
+        <div class="metric-title">Fabric area: LUT + FF + carry</div>
+        {''.join(area_bars)}
+      </div>
+"""
+        )
+
+    return f"""
+    <section class="compare-card">
+      <div class="chart-card-head">
+        <h3>{html.escape(format_heading(wexp, wman))}</h3>
+        <span>{target_frequency_mhz(target_id):g} MHz target</span>
+      </div>
+      {''.join(operator_blocks)}
+    </section>
+"""
+
+
+def comparison_charts(rows: list[dict[str, Any]]) -> str:
+    rows_by_key = comparison_row_index(rows)
+    target_blocks: list[str] = []
+    for target_id in TARGET_ORDER:
+        target = TARGET_FLOWS[target_id]
+        cards = [comparison_card(target_id, wexp, wman, rows_by_key) for wexp, wman in FORMATS]
+        target_blocks.append(
+            f"""
+  <section class="chart-row">
+    <div class="chart-target">
+      <h3>{html.escape(target.title)}</h3>
+      <p>{html.escape(target.device)}</p>
+      <p><code>{html.escape(target.toolchain)}</code></p>
+      {target_win_summary(target_id, rows_by_key)}
+    </div>
+    {''.join(cards)}
+  </section>
+"""
+        )
+    return f"""
+  <h2>Comparison Charts</h2>
+  <p class="muted chart-intro">Each target row contains one chart per floating-point format. Latency bars are cycles; area bars are LUT + FF + carry, with DSP and other hard blocks shown in the detail text.</p>
+  <div class="chart-legend">
+    <span><i class="swatch zkf"></i>ZKF</span>
+    <span><i class="swatch flopoco"></i>FloPoCo</span>
+    <span><i class="winner-swatch"></i>Metric winner</span>
+    <span><i class="loser-swatch"></i>Metric loser</span>
+    <span><i class="fail-swatch"></i>Timing failure</span>
+  </div>
+  <div class="comparison-grid">
+    {''.join(target_blocks)}
+  </div>
+"""
+
+
 def target_sections(rows: list[dict[str, Any]], heat: dict[tuple[str, str, str], str]) -> str:
     sections: list[str] = []
     rows_by_target: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -2058,6 +2307,7 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     :root {{ color-scheme: light dark; }}
     body {{ font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; margin: 24px; }}
     h1 {{ font-size: 24px; margin: 0 0 8px; }}
+    h1 a {{ color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.12em; }}
     h2 {{ font-size: 18px; margin: 30px 0 8px; border-top: 2px solid #9997; padding-top: 14px; }}
     h3 {{ font-size: 15px; margin: 22px 0 6px; }}
     table {{ border-collapse: collapse; width: 100%; font-size: 12px; margin-bottom: 18px; }}
@@ -2074,27 +2324,81 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     .fail {{ color: #b00020; font-weight: 700; }}
     .muted {{ color: #777; }}
     .artifacts a {{ display: inline-block; margin-right: 6px; }}
-    .caveat {{ max-width: 1180px; }}
+    .chart-intro {{ max-width: 1180px; }}
+    .chart-legend {{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 8px 0 14px; color: #555; }}
+    .chart-legend span {{ display: inline-flex; align-items: center; gap: 6px; }}
+    .swatch, .fail-swatch, .winner-swatch, .loser-swatch {{ display: inline-block; width: 18px; height: 10px; border-radius: 999px; }}
+    .swatch.zkf {{ background: linear-gradient(90deg, #1976b8, #62b6ff); }}
+    .swatch.flopoco {{ background: linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .fail-swatch {{ border: 2px solid #b00020; box-sizing: border-box; background: transparent; }}
+    .winner-swatch {{ background: #d8f3df; }}
+    .loser-swatch {{ background: #ffe1dc; }}
+    .comparison-grid {{ display: grid; gap: 18px; margin-bottom: 24px; }}
+    .chart-row {{ display: grid; grid-template-columns: minmax(180px, 0.45fr) repeat(2, minmax(360px, 1fr)); gap: 14px; align-items: stretch; }}
+    .chart-target {{ border: 1px solid #9995; border-radius: 8px; padding: 12px; background: color-mix(in srgb, #f4f6f8 62%, Canvas); }}
+    .chart-target h3 {{ margin-top: 0; font-size: 14px; }}
+    .chart-target p {{ margin: 6px 0; color: #666; }}
+    .target-win-summary {{ display: grid; gap: 5px; margin-top: 12px; padding-top: 9px; border-top: 1px solid #9994; font-size: 11px; }}
+    .target-win-summary div {{ display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }}
+    .target-win-summary span {{ flex-basis: 100%; color: #666; font-weight: 750; text-transform: uppercase; letter-spacing: 0.04em; }}
+    .target-win-summary strong {{ display: inline-flex; border-radius: 999px; padding: 1px 7px; background: color-mix(in srgb, #94a3b8 14%, Canvas); font-weight: 750; }}
+    .compare-card {{ border: 1px solid #9995; border-radius: 8px; padding: 12px; background: color-mix(in srgb, #ffffff 88%, Canvas); box-shadow: 0 1px 4px #0001; }}
+    .chart-card-head {{ display: flex; justify-content: space-between; gap: 8px; align-items: baseline; border-bottom: 1px solid #9994; padding-bottom: 8px; margin-bottom: 10px; }}
+    .chart-card-head h3 {{ margin: 0; }}
+    .chart-card-head span {{ color: #666; font-size: 12px; white-space: nowrap; }}
+    .op-chart {{ padding: 10px 0 4px; border-top: 2px solid #9993; }}
+    .op-chart:first-of-type {{ border-top: 0; padding-top: 0; }}
+    .op-chip {{ display: inline-flex; align-items: center; justify-content: center; min-width: 42px; height: 22px; border-radius: 999px; background: color-mix(in srgb, #334155 12%, Canvas); color: #334155; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; }}
+    .metric-title {{ margin: 8px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #666; font-weight: 800; }}
+    .bar-row {{ display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 2px 8px; align-items: center; margin: 7px 0; }}
+    .bar-name {{ align-self: stretch; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start; min-height: 16px; padding: 0 6px; border-radius: 5px; font-size: 12px; font-weight: 700; }}
+    .bar-name.winner {{ background: color-mix(in srgb, #cfeeda 78%, Canvas); color: #064719; }}
+    .bar-name.loser {{ background: color-mix(in srgb, #ffd6d1 76%, Canvas); color: #78180e; }}
+    .bar-name.tie {{ background: color-mix(in srgb, #94a3b8 14%, Canvas); }}
+    .bar-track {{ height: 16px; border-radius: 999px; background: color-mix(in srgb, #94a3b8 18%, Canvas); overflow: hidden; box-shadow: inset 0 0 0 1px #0001; }}
+    .bar-fill {{ height: 100%; border-radius: inherit; }}
+    .bar-fill.zkf {{ background: linear-gradient(90deg, #1976b8, #62b6ff); }}
+    .bar-fill.flopoco {{ background: linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .bar-fill.timing-fail {{ box-shadow: inset 0 0 0 2px #b00020; }}
+    .bar-fill.zkf.timing-fail {{ background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #1976b8, #62b6ff); }}
+    .bar-fill.flopoco.timing-fail {{ background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .bar-value {{ grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 6px; color: #555; font-size: 12px; }}
+    .bar-value strong {{ color: CanvasText; }}
+    .chart-status {{ display: inline-flex; align-items: center; border-radius: 999px; padding: 1px 7px; font-size: 11px; background: color-mix(in srgb, #94a3b8 16%, Canvas); }}
+    .chart-status.pass {{ color: #087b28; }}
+    .chart-status.fail {{ color: #b00020; }}
+    .resource-detail {{ color: #666; }}
     code {{ font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }}
+    @media (max-width: 1100px) {{
+      .chart-row {{ grid-template-columns: 1fr; }}
+      .bar-row {{ grid-template-columns: 58px minmax(0, 1fr); }}
+    }}
     @media (prefers-color-scheme: dark) {{
       tbody tr.lib-zkf {{ background: color-mix(in srgb, #12344d 50%, Canvas); }}
       tbody tr.lib-flopoco {{ background: color-mix(in srgb, #4c3510 50%, Canvas); }}
       td.heat-best {{ background: #143d22 !important; color: #d7f6df; }}
       td.heat-mid {{ background: #4a3c12 !important; color: #fff0ad; }}
       td.heat-worst {{ background: #4b1f1a !important; color: #ffd4cd; }}
+      .chart-legend, .chart-target p, .chart-card-head span, .metric-title, .bar-value, .resource-detail, .target-win-summary span {{ color: #bbb; }}
+      .chart-target {{ background: color-mix(in srgb, #18202b 58%, Canvas); }}
+      .compare-card {{ background: color-mix(in srgb, #111827 58%, Canvas); }}
+      .op-chip {{ color: #d6e0ec; background: color-mix(in srgb, #cbd5e1 18%, Canvas); }}
+      .bar-name.winner {{ background: color-mix(in srgb, #1e6b35 46%, Canvas); color: #d7f6df; }}
+      .bar-name.loser {{ background: color-mix(in srgb, #842a22 42%, Canvas); color: #ffd4cd; }}
     }}
   </style>
 </head>
 <body>
-  <h1>ZKF vs FloPoCo FPGA Benchmark</h1>
+  <h1><a href="https://github.com/Zubax/kulibin">ZKF</a> vs <a href="https://gitlab.com/flopoco/flopoco">FloPoCo</a> FPGA Benchmark</h1>
   <p class="muted">Generated {html.escape(generated)}. Mode: <code>{html.escape(mode)}</code>. Target frequencies: <code>{html.escape(target_frequency_summary())}</code>.</p>
-  <p class="caveat"><strong>Caveat.</strong> ZKF semantics differ from IEEE/FloPoCo around NaN, subnormals, signed zero, and exception encoding. This benchmark compares synthesized implementation cost and latency under matched exponent/significand widths. FloPoCo <code>wF</code> excludes the hidden bit, so ZKF <code>WMAN=18/36</code> is compared with FloPoCo <code>wF=17/35</code>. FloPoCo 5.1 <code>FPAdd</code>, <code>FPMult</code>, and <code>FPDiv</code> do not expose a documented command-line option to disable NaN handling; the native FloPoCo format already does not support IEEE subnormals. Each target/toolchain tunes ZKF staging and FloPoCo generation parameters independently; the report shows the selected best candidate per library/operator/format using this policy: lowest latency among rows that pass the target frequency, then lowest resource use, then highest Fmax. If no candidate passes, the highest-Fmax failing candidate is shown and marked <code>FAIL</code>.</p>
+  <p>ZKF semantics differ from IEEE/FloPoCo around NaN, subnormals, signed zero, and exception encoding. FloPoCo <code>wF</code> excludes the hidden bit, so ZKF <code>WMAN=18/36</code> is compared with FloPoCo <code>wF=17/35</code>. FloPoCo 5.1 <code>FPAdd</code>, <code>FPMult</code>, and <code>FPDiv</code> do not expose a documented command-line option to disable NaN handling; the native FloPoCo format already does not support IEEE subnormals. Each target/toolchain tunes ZKF staging and FloPoCo generation parameters independently; the report shows the selected best candidate per library/operator/format using this policy: lowest latency among rows that pass the target frequency, then lowest resource use, then highest Fmax. If no candidate passes, the highest-Fmax failing candidate is shown and marked <code>FAIL</code>.</p>
+  <p>FloPoCo appears to have difficulty closing timing for wide hard-multiplier implementations in some flows. Using <code>useHardMult=0</code> can avoid that hard-multiplier path, but at the cost of greatly increased latency and fabric area, making it impractical. This report therefore keeps <code>useHardMult=1</code> for multiplication everywhere and marks any remaining timing failures explicitly.</p>
 """
     footer = """
 </body>
 </html>
 """
-    (REPORT_DIR / "index.html").write_text(head + validation + target_sections(rows, heat) + footer, encoding="utf-8")
+    (REPORT_DIR / "index.html").write_text(head + validation + comparison_charts(rows) + target_sections(rows, heat) + footer, encoding="utf-8")
     if issues:
         warn(f"Report generated with {len(issues)} validation issue(s): {REPORT_DIR / 'index.html'}")
     else:
