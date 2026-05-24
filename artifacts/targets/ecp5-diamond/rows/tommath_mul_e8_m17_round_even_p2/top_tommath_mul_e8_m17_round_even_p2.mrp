@@ -1,0 +1,468 @@
+
+Lattice Mapping Report File for Design Module
+     'top_tommath_mul_e8_m17_round_even_p2'
+
+
+Design Information
+------------------
+
+Command line:   /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p
+     LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/
+     artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_to
+     mmath_mul_e8_m17_round_even_p2.ngd -o /mnt/storage/test/zkf-vs-flopoco/arti
+     facts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommat
+     h_mul_e8_m17_round_even_p2_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/art
+     ifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tomma
+     th_mul_e8_m17_round_even_p2.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifa
+     cts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommath_
+     mul_e8_m17_round_even_p2.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifact
+     s/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/constraints.lp
+     f 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/24/26  13:50:18
+
+Design Summary
+--------------
+
+   Number of registers:    143 out of 12687 (1%)
+      PFU registers:          143 out of 12096 (1%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       151 out of  6048 (2%)
+      SLICEs as Logic/ROM:    151 out of  6048 (2%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         21 out of  6048 (0%)
+   Number of LUT4s:        166 out of 12096 (1%)
+      Number used as logic LUTs:        124
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       42
+      Number used as shift registers:     0
+   Number of PIO sites used: 82 out of 197 (42%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+                                    Page 1
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+Design Summary (cont)
+---------------------
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          1
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  2 out of 56 (3 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 79 loads, 79 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of local set/reset loads for net rst_c merged into GSR:  2
+   Number of LSRs:  3
+     Net n2_n0_is_nan: 9 loads, 9 LSLICEs
+     Net rst_c: 2 loads, 2 LSLICEs
+     Net n399: 4 loads, 4 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net u_dut/when_FpxxMul_l81: 25 loads
+     Net _zz_io_result_payload_exp_9: 19 loads
+     Net _zz_n2_exp_mul_adj_1_0: 19 loads
+     Net u_dut/n1073: 18 loads
+     Net u_dut/n2_n0_is_inf: 18 loads
+     Net u_dut/n2_n0_is_zero: 18 loads
+     Net n2_n0_is_nan: 10 loads
+     Net u_dut/n1557: 8 loads
+     Net _zz_n1_exp_mul_0: 7 loads
+     Net _zz_n1_exp_mul_2: 6 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'rst_c' to infer global GSR net.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| out_valid_o         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[25]             | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 2
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| y_o[24]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[23]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[22]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[21]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[20]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[19]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[18]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[17]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[16]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[15]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[14]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[13]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[10]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| in_valid_i          | INPUT     | LVCMOS25  |            |
+
+                                    Page 3
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| a_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[24]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 4
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| b_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/CI undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+Removed logic (cont)
+--------------------
+Signal _add_1_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal add_332_11/S1 undriven or does not drive anything - clipped.
+Signal add_332_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_161_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_161_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal add_332_1/S0 undriven or does not drive anything - clipped.
+Signal add_332_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_161_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_161_add_4_2/CI undriven or does not drive anything - clipped.
+Block i17 was optimized away.
+
+DSP Component Details
+---------------------
+
+
+     . MULT18X18D  u_dut/n2_n1_mant_mul_e3:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		CLK3	CE3	RST3
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+
+                                    Page 6
+
+
+
+
+Design:  top_tommath_mul_e8_m17_round_even_p2          Date:  05/24/26  13:50:18
+
+DSP Component Details (cont)
+----------------------------
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: u_dut/n2_n1_mant_mul_e3
+         Type: MULT18X18D
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'rst_c' of the design has been inferred as Global Set
+        Reset (GSR). The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'rst_c' via the local reset on the component and not the GSR component.
+
+     Type and number of components of the type: 
+   Register = 2 
+
+     Type and instance name of component: 
+   Register : out_valid_r_15
+   Register : in_valid_r_14
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 185 MB
+        
+
+
+
+
+
+
+
+
+
+                                    Page 7
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

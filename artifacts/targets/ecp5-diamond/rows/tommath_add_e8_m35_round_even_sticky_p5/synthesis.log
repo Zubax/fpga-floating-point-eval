@@ -1,0 +1,173 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sun May 24 14:00:29 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/lse.synproj 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_tommath_add_e8_m35_round_even_sticky_p5.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5 (searchpath added)
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/tommath_add_e8_m35_round_even_sticky_p5.v
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/top_tommath_add_e8_m35_round_even_sticky_p5.v
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/top_tommath_add_e8_m35_round_even_sticky_p5.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/tommath_add_e8_m35_round_even_sticky_p5.v. VERI-1482
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/top_tommath_add_e8_m35_round_even_sticky_p5.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top_tommath_add_e8_m35_round_even_sticky_p5
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/top_tommath_add_e8_m35_round_even_sticky_p5.v(4): compiling module top_tommath_add_e8_m35_round_even_sticky_p5. VERI-1018
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/src/tommath_add_e8_m35_round_even_sticky_p5.v(7): compiling module FpxxAdd. VERI-1018
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_tommath_add_e8_m35_round_even_sticky_p5.
+WARNING - synthesis: Bit 39 of Register \u_dut/n2_n1_mant_a_adj is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/n2_n1_mant_a_adj is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/n2_n1_mant_a_adj is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/n2_n1_mant_a_adj is stuck at Zero
+
+
+
+WARNING - synthesis: Bit 39 of Register \u_dut/n2_n1_mant_b_adj is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/n1_n0_mant_a_swap is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/n1_n0_mant_b_swap is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/n2_n1_mant_a_adj is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/n2_n1_mant_b_adj is stuck at Zero
+################### Mapped 32 registers to 2 RAM. ##################
+WARNING - synthesis: Removing unused instance \u_dut/n1_n0_exp_add_sft00000_287. VDB-5034
+WARNING - synthesis: Removing unused instance . VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/n1_n0_exp_add_sft00001_288. VDB-5034
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e2_i0_i0 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e1_i0_i0.
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e1_i0_i39 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e1_i0_i40.
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e2_i0_i1 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e2_i0_i40.
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e2_i0_i2 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e2_i0_i39.
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e2_i0_i3 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e2_i0_i2.
+Duplicate register/latch removal. \u_dut/n4_n3_mant_add_res1_e2_i0_i1 is a one-to-one match with \u_dut/n4_n3_mant_add_res1_e2_i0_i3.
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_tommath_add_e8_m35_round_even_sticky_p5_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5/top_tommath_add_e8_m35_round_even_sticky_p5.ngo.
+
+################### Begin Area Report (top_tommath_add_e8_m35_round_even_sticky_p5)######################
+Number of register bits => 486 of 12687 (3 % )
+CCU2C => 113
+FD1S3AX => 386
+FD1S3DX => 5
+FD1S3IX => 84
+FD1S3JX => 11
+GSR => 1
+IB => 91
+LUT4 => 971
+OB => 45
+PFUMX => 46
+SPR16X4C => 2
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 488
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_dut/_zz_n5_exp_add_m_lz_3_3, loads : 106
+  Net : u_dut/_zz_n5_exp_add_m_lz_3_4, loads : 91
+  Net : u_dut/_zz_n5_exp_add_m_lz_3_5, loads : 89
+  Net : n0_exp_diff_a_b_8, loads : 87
+  Net : u_dut/_zz_n5_exp_add_m_lz_3_2, loads : 84
+  Net : u_dut/_zz_n5_exp_add_m_lz_3_1, loads : 77
+  Net : n2_mant_b_opt_inv_40_N_221_40, loads : 76
+  Net : u_dut/n2_n0_sign_a_swap, loads : 76
+  Net : u_dut/n2_n0_sign_b_swap, loads : 76
+  Net : u_dut/n4944, loads : 71
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   48.558 MHz|    22 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 240.328  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.626  secs
+--------------------------------------------------------------

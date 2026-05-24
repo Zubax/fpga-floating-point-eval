@@ -1,0 +1,220 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sun May 24 13:51:38 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/lse.synproj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_tommath_div_e8_m17_compact_p2.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2 (searchpath added)
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/tommath_div_e8_m17_compact_p2.v
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/top_tommath_div_e8_m17_compact_p2.v
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/top_tommath_div_e8_m17_compact_p2.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/tommath_div_e8_m17_compact_p2.v. VERI-1482
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/top_tommath_div_e8_m17_compact_p2.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top_tommath_div_e8_m17_compact_p2
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/top_tommath_div_e8_m17_compact_p2.v(4): compiling module top_tommath_div_e8_m17_compact_p2. VERI-1018
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/tommath_div_e8_m17_compact_p2.v(7): compiling module FpxxDiv. VERI-1018
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/tommath_div_e8_m17_compact_p2.v(117): net div_table does not have a driver. VDB-1002
+Last elaborated design is top_tommath_div_e8_m17_compact_p2()
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_tommath_div_e8_m17_compact_p2.
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/src/tommath_div_e8_m17_compact_p2.v(117): ram div_table_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: Bit 12 of Register \u_dut/recip_yh2_p2 is stuck at One
+WARNING - synthesis: Bit 12 of Register \u_dut/recip_yh2_p3 is stuck at One
+WARNING - synthesis: Bit 12 of Register \u_dut/recip_yh2_p4 is stuck at One
+
+
+
+WARNING - synthesis: Bit 17 of Register \u_dut/x_mul_yhyl_p3_res3_e2 is stuck at One
+WARNING - synthesis: Bit 12 of Register \u_dut/div_p5_res5_e1 is stuck at One
+
+The number of registers created due to operator pipelining is 41.
+
+######## Missing driver on net n2042. Patching with GND.
+######## Missing driver on net n2041. Patching with GND.
+######## Missing driver on net n2040. Patching with GND.
+######## Missing driver on net n2039. Patching with GND.
+######## Missing driver on net n2038. Patching with GND.
+######## Missing driver on net n2037. Patching with GND.
+######## Missing driver on net n2036. Patching with GND.
+######## Missing driver on net n2034. Patching with GND.
+######## Missing driver on net n2035. Patching with GND.
+WARNING - synthesis: Bit 9 of Register \u_dut/exp_p1_res1_ret5_i0 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/exp_p1_res1_ret5_i0 is stuck at One
+WARNING - synthesis: Bit 9 of Register \u_dut/exp_p1_res1_ret4_i0 is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_dut/exp_p1_res1_ret4_i0 is stuck at One
+WARNING - synthesis: Bit 18 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at One
+WARNING - synthesis: Bit 8 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/yh_m_yl_p1_res2_ret1_i0 is stuck at One
+WARNING - synthesis: Bit 18 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 17 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 16 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 15 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 14 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 13 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 12 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 11 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 10 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 9 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_dut/yh_m_yl_p1_res2_ret0_i0 is stuck at One
+WARNING - synthesis: Bit 8 of Register \u_dut/exp_full_p2_e3_ret2_i0 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_dut/exp_full_p2_e3_ret2_i0 is stuck at Zero
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+Duplicate register/latch removal. \u_dut/exp_full_p2_e3_ret3_i0_i8 is a one-to-one match with \u_dut/exp_full_p2_e3_ret3_i0_i9.
+Duplicate register/latch removal. \u_dut/exp_full_p2_e3_ret2_i0_i3 is a one-to-one match with \u_dut/exp_full_p2_e3_ret2_i0_i4.
+Duplicate register/latch removal. \u_dut/exp_full_p2_e3_ret2_i0_i5 is a one-to-one match with \u_dut/exp_full_p2_e3_ret2_i0_i3.
+Duplicate register/latch removal. \u_dut/exp_full_p2_e3_ret2_i0_i6 is a one-to-one match with \u_dut/exp_full_p2_e3_ret2_i0_i5.
+Duplicate register/latch removal. \u_dut/exp_full_p2_e3_ret2_i0_i7 is a one-to-one match with \u_dut/exp_full_p2_e3_ret2_i0_i6.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_tommath_div_e8_m17_compact_p2_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/top_tommath_div_e8_m17_compact_p2.ngo.
+
+################### Begin Area Report (top_tommath_div_e8_m17_compact_p2)######################
+Number of register bits => 295 of 12687 (2 % )
+ALU54B => 1
+CCU2C => 26
+FD1P3AX => 191
+FD1P3IX => 2
+FD1S3AX => 70
+FD1S3DX => 5
+FD1S3IX => 18
+FD1S3JX => 9
+GSR => 1
+IB => 55
+LUT4 => 120
+MULT18X18D => 3
+OB => 27
+PDPW16KD => 1
+PFUMX => 2
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 299
+Clock Enable Nets
+Number of Clock Enables: 5
+Top 5 highest fanout Clock Enables:
+  Net : u_dut/p2_vld, loads : 48
+  Net : u_dut/p1_vld, loads : 48
+  Net : u_dut/p3_vld, loads : 29
+  Net : u_dut/p4_vld, loads : 26
+  Net : in_valid_r, loads : 19
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : in_valid_r, loads : 59
+  Net : u_dut/p1_vld, loads : 48
+  Net : u_dut/p2_vld, loads : 48
+  Net : u_dut/p4_vld, loads : 35
+  Net : u_dut/div_p5_20, loads : 30
+  Net : u_dut/div_p5_19, loads : 30
+  Net : u_dut/p3_vld, loads : 29
+  Net : u_dut/n2204, loads : 15
+  Net : u_dut/n3071, loads : 15
+  Net : exp_adj_p5_9, loads : 11
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|  113.753 MHz|     9  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 216.793  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.370  secs
+--------------------------------------------------------------
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m17_compact_p2/lse.synproj
+
+
+[exit code 0]

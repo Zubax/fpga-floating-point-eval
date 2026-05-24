@@ -1,0 +1,784 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun May 24 14:05:13 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_tommath_div_e8_m35_compact_p2
+Constraint file: top_tommath_div_e8_m35_compact_p2_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2475
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2659
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2475
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2349
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2475
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2351
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2475
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2363
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2495
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2364
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2475
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2348
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2504
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2364
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2505
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2364
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2482
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2364
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 4.438ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/yh_m_yl_p1_res3_ret0_i0_i1  (from clk +)
+   Destination:    FD1P3AX    D              \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1  (to clk +)
+
+   Delay:                  14.613ns  (59.4% logic, 40.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     14.613ns data_path \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.438ns
+
+ Path Details: \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 to \u_dut/x_mul_yhyl_p3_res4_e3_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/yh_m_yl_p1_res3_ret0_i0_i1 (from clk)
+Route         2   e 1.258                                  n2889
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_add_4_2
+Route         1   e 0.020                                  n3828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_4
+Route         1   e 0.020                                  n3829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_6
+Route         1   e 0.020                                  n3830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_8
+Route         1   e 0.020                                  n3831
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_10
+Route         1   e 0.020                                  n3832
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_12
+Route         1   e 0.020                                  n3833
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_14
+Route         1   e 0.020                                  n3834
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_16
+Route         1   e 0.020                                  n3835
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_18
+Route         1   e 0.020                                  n3836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_20
+Route         1   e 0.020                                  n3837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_22
+Route         1   e 0.020                                  n3838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_24
+Route         1   e 0.020                                  n3839
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_26
+Route         1   e 0.020                                  n3840
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_28
+Route         1   e 0.020                                  n3841
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_30
+Route         1   e 0.020                                  n3842
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_32
+Route         1   e 0.020                                  n3843
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_34
+Route         1   e 0.020                                  n3844
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_add_4_36
+Route         1   e 0.020                                  n3845
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_add_4_38
+Route         2   e 1.258                                  yh_m_yl_p2[35]
+MuPd        ---     2.720          A[18] to P[36]          \u_dut/lat_mult_0
+Route         1   e 1.020                                  \u_dut/n2510
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/lat_alu_3
+Route         1   e 1.020                                  \u_dut/n2364
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/lat_alu_4
+Route         1   e 1.020                                  \u_dut/n184
+                  --------
+                   14.613  (59.4% logic, 40.6% route), 23 logic levels.
+
+Warning: 14.438 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|    14.438 ns|    23 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n2889                                   |       2|    4096|     99.00%
+                                        |        |        |
+n3828                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3829                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3830                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3831                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3832                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3833                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3834                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3835                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3836                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3837                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3838                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3839                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3840                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3841                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3842                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3843                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3844                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3845                                   |       1|    4096|     99.00%
+                                        |        |        |
+yh_m_yl_p2[35]                          |       2|    4096|     99.00%
+                                        |        |        |
+\u_dut/n185                             |       1|    1944|     47.46%
+                                        |        |        |
+\u_dut/n2364                            |       1|    1404|     34.28%
+                                        |        |        |
+\u_dut/n2475                            |       1|     876|     21.39%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 18178048
+
+Constraints cover  87038266 paths, 1341 nets, and 2653 connections (94.1% coverage)
+
+
+Peak memory: 240640000 bytes, TRCE: 2588672 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

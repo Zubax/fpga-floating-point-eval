@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell top_tommath_mul_e8_m35_round_even_p2.TECH
+Register bits:  233 of 12687 (1.837%)
+I/O cells:      136
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         2          100.0
+                              CCU2C        30          100.0
+                            FD1S3AX       186          100.0
+                            FD1S3DX         2          100.0
+                            FD1S3IX         2          100.0
+                            FD1S3JX        43          100.0
+                                GSR         1          100.0
+                                 IB        91          100.0
+                               LUT4       199          100.0
+                         MULT18X18D         4          100.0
+                                 OB        45          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                            FpxxMul         1
+                              TOTAL       607
+----------------------------------------------------------------------
+Report for cell FpxxMul.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         2          100.0
+                            FD1S3AX        78           41.9
+                            FD1S3DX         2          100.0
+                               LUT4       183           92.0
+                         MULT18X18D         4          100.0
+                              PFUMX         1          100.0
+                              TOTAL       270

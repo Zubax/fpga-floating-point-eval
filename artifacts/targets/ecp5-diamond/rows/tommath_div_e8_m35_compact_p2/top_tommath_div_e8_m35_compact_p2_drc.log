@@ -1,0 +1,3 @@
+Results of NGD DRC are available in top_tommath_div_e8_m35_compact_p2_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m35_compact_p2/top_tommath_div_e8_m35_compact_p2.ngo.

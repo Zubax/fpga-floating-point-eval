@@ -1,0 +1,40 @@
+[ActiveSupport MAP]
+Device = LFE5U-12F;
+Package = CABGA381;
+Performance = 6;
+LUTS_avail = 12096;
+LUTS_used = 172;
+FF_avail = 12293;
+FF_used = 295;
+INPUT_LVCMOS25 = 55;
+OUTPUT_LVCMOS25 = 27;
+IO_avail = 197;
+IO_used = 82;
+EBR_avail = 32;
+EBR_used = 1;
+;
+; start of DSP statistics
+MULT18X18D = 3;
+MULT9X9D = 0;
+ALU54B = 1;
+ALU24B = 0;
+PRADD18A = 0;
+PRADD9A = 0;
+DSP_MULT_avail = 56;
+DSP_MULT_used = 6;
+DSP_ALU_avail = 28;
+DSP_ALU_used = 2;
+DSP_PRADD_avail = 56;
+DSP_PRADD_used = 0;
+; end of DSP statistics
+;
+; Begin EBR Section
+Instance_Name = mux_21;
+Type = PDPW16KD;
+Width = 12;
+Depth_R = 64;
+REGMODE = NOREG;
+RESETMODE = ASYNC;
+ASYNC_RESET_RELEASE = SYNC;
+GSR = DISABLED;
+; End EBR Section

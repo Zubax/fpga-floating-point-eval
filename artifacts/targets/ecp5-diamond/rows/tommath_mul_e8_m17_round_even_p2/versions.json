@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-05-24T10:50:12+00:00",
+  "target": {
+    "target_id": "ecp5-diamond",
+    "title": "Lattice ECP5 / Diamond",
+    "toolchain": "diamond-lse-map-par-trce",
+    "device": "LFE5U-12F CABGA381 speed 6",
+    "note": "Diamond ECP5 resources use mapper LUT4/register/PIO/BRAM/DSP counts, with CCU2C/PFUMX/L6MUX21 primitive counts taken from the LSE area report when available."
+  },
+  "tools": {
+    "math_repo": "/mnt/storage/test/zkf-vs-flopoco/third_party/math",
+    "sbt": "java -Dsbt.version=1.10.11 -Dsbt.ivy.home=/tmp/codex-sbt/ivy2 -Dsbt.boot.directory=/tmp/codex-sbt/boot -Dsbt.global.base=/tmp/codex-sbt/global -jar /tmp/codex-sbt/sbt-launch.jar",
+    "synthesis": "/usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis",
+    "ngdbuild": "/usr/local/diamond/3.14/ispfpga/bin/lin64/ngdbuild",
+    "map": "/usr/local/diamond/3.14/ispfpga/bin/lin64/map",
+    "par": "/usr/local/diamond/3.14/ispfpga/bin/lin64/par",
+    "trce": "/usr/local/diamond/3.14/ispfpga/bin/lin64/trce"
+  },
+  "flopoco": [
+    "/mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco: error while loading shared libraries: libsollya.so.8: cannot open shared object file: No such file or directory"
+  ],
+  "kulibin_float_git": "e220f4106876b60a897a05e56321ed8aed6f322b",
+  "flopoco_git": "8aa634812d2c9959ed33718d16648d7afcf7fa23",
+  "tomverbeure_math_git": "0dc01cf1a60aaae7d259fc52cafaad9d73e9fb8c",
+  "diamond_synthesis": [
+    "Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.",
+    "Copyright (c) 1995 AT&T Corp.   All rights reserved.",
+    "Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.",
+    "Copyright (c) 2001 Agere Systems   All rights reserved.",
+    "Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.",
+    "Sun May 24 13:50:12 2026",
+    "",
+    "",
+    "Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -h ",
+    "",
+    "Usage: synthesis",
+    " -a <arch>"
+  ]
+}

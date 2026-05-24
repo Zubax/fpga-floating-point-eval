@@ -1,0 +1,666 @@
+
+Lattice Mapping Report File for Design Module
+     'top_tommath_add_e8_m35_round_even_sticky_p5'
+
+
+Design Information
+------------------
+
+Command line:   /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p
+     LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/
+     artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even_sticky_p5
+     /top_tommath_add_e8_m35_round_even_sticky_p5.ngd -o /mnt/storage/test/zkf-v
+     s-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m35_round_even
+     _sticky_p5/top_tommath_add_e8_m35_round_even_sticky_p5_map.ncd -pr /mnt/sto
+     rage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8
+     _m35_round_even_sticky_p5/top_tommath_add_e8_m35_round_even_sticky_p5.prf
+     -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/to
+     mmath_add_e8_m35_round_even_sticky_p5/top_tommath_add_e8_m35_round_even_sti
+     cky_p5.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-dia
+     mond/rows/tommath_add_e8_m35_round_even_sticky_p5/constraints.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/24/26  14:00:32
+
+Design Summary
+--------------
+
+   Number of registers:    486 out of 12687 (4%)
+      PFU registers:          486 out of 12096 (4%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       755 out of  6048 (12%)
+      SLICEs as Logic/ROM:    749 out of  6048 (12%)
+      SLICEs as RAM:            6 out of  4536 (0%)
+      SLICEs as Carry:        113 out of  6048 (2%)
+   Number of LUT4s:        1208 out of 12096 (10%)
+      Number used as logic LUTs:        970
+      Number used as distributed RAM:    12
+      Number used as ripple logic:      226
+      Number used as shift registers:     0
+   Number of PIO sites used: 136 out of 197 (69%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+                                    Page 1
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+Design Summary (cont)
+---------------------
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 289 loads, 289 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of local set/reset loads for net rst_c merged into GSR:  5
+   Number of LSRs:  16
+     Net _zz_zz_switch_Misc_l241_0: 1 loads, 1 LSLICEs
+     Net rst_c: 2 loads, 2 LSLICEs
+     Net n5_n0_is_nan: 2 loads, 2 LSLICEs
+     Net n10296: 4 loads, 4 LSLICEs
+     Net n3223: 18 loads, 18 LSLICEs
+     Net _zz_zz_switch_Misc_l241_38: 1 loads, 1 LSLICEs
+     Net n2315: 2 loads, 2 LSLICEs
+     Net u_dut/n700: 5 loads, 5 LSLICEs
+     Net u_dut/n10337: 11 loads, 11 LSLICEs
+     Net u_dut/n1_n0_exp_diff_ovfl: 6 loads, 6 LSLICEs
+     Net u_dut/_zz_n1_mant_b_shift_4_37: 1 loads, 1 LSLICEs
+     Net u_dut/n3194: 1 loads, 1 LSLICEs
+     Net u_dut/n2930: 2 loads, 2 LSLICEs
+     Net u_dut/n2934: 1 loads, 1 LSLICEs
+     Net u_dut/n2926: 4 loads, 4 LSLICEs
+     Net u_dut/n3192: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net _zz_n5_exp_add_m_lz_3_3: 107 loads
+     Net _zz_n5_exp_add_m_lz_3_4: 92 loads
+     Net _zz_n5_exp_add_m_lz_3_5: 90 loads
+     Net n0_exp_diff_a_b_8: 87 loads
+     Net _zz_n5_exp_add_m_lz_3_2: 85 loads
+     Net _zz_n5_exp_add_m_lz_3_1: 78 loads
+     Net n2_mant_b_opt_inv_40_N_221_40: 76 loads
+     Net u_dut/n2_n0_sign_a_swap: 76 loads
+     Net u_dut/n2_n0_sign_b_swap: 76 loads
+     Net u_dut/n4944: 71 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+
+
+
+                                    Page 2
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'rst_c' to infer global GSR net.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| out_valid_o         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[43]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[42]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[41]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[40]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[39]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[38]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[37]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[36]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[35]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[34]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[33]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[32]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[31]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[30]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[29]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[28]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[27]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[26]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[25]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[24]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[23]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[22]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+IO (PIO) Attributes (cont)
+--------------------------
+| y_o[21]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[20]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[19]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[18]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[17]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[16]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[15]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[14]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[13]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[10]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| in_valid_i          | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[43]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 4
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+IO (PIO) Attributes (cont)
+--------------------------
+| a_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[33]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 5
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+IO (PIO) Attributes (cont)
+--------------------------
+| a_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[43]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[33]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 6
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+IO (PIO) Attributes (cont)
+--------------------------
+| b_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 7
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+IO (PIO) Attributes (cont)
+--------------------------
+| b_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal u_dut/n0_a_geq_b was merged into signal n0_exp_diff_a_b_8
+Signal u_dut/n3225 was merged into signal u_dut/_zz_n1_mant_b_shift_4_37
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal add_5677_31/S1 undriven or does not drive anything - clipped.
+Signal add_5677_31/S0 undriven or does not drive anything - clipped.
+Signal add_5677_33/S1 undriven or does not drive anything - clipped.
+Signal add_5677_33/S0 undriven or does not drive anything - clipped.
+Signal add_5677_35/S1 undriven or does not drive anything - clipped.
+Signal add_5677_35/S0 undriven or does not drive anything - clipped.
+Signal add_5677_37/S1 undriven or does not drive anything - clipped.
+Signal add_5677_37/S0 undriven or does not drive anything - clipped.
+Signal add_5677_39/S1 undriven or does not drive anything - clipped.
+Signal add_5677_39/S0 undriven or does not drive anything - clipped.
+Signal add_5677_cout/S1 undriven or does not drive anything - clipped.
+Signal add_5677_cout/CO undriven or does not drive anything - clipped.
+Signal _add_2_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_2_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_2_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_524_add_4_37/S0 undriven or does not drive anything - clipped.
+Signal _add_1_524_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_10/CO undriven or does not drive anything - clipped.
+Signal _add_1_517_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_517_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_530_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_530_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_517_add_4_37/S0 undriven or does not drive anything - clipped.
+Signal _add_1_517_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_533_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_533_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_533_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_533_add_4_10/CO undriven or does not drive anything - clipped.
+Signal n4_n3_mant_add_res1_add_4_2/S0 undriven or does not drive anything -
+     clipped.
+Signal n4_n3_mant_add_res1_add_4_2/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_530_add_4_35/CO undriven or does not drive anything - clipped.
+Signal add_5677_1/S1 undriven or does not drive anything - clipped.
+Signal add_5677_1/S0 undriven or does not drive anything - clipped.
+Signal add_5677_1/CI undriven or does not drive anything - clipped.
+Signal add_5677_3/S1 undriven or does not drive anything - clipped.
+Signal add_5677_3/S0 undriven or does not drive anything - clipped.
+Signal add_5677_5/S1 undriven or does not drive anything - clipped.
+Signal add_5677_5/S0 undriven or does not drive anything - clipped.
+Signal n4_n3_mant_add_res1_add_4_42/S1 undriven or does not drive anything -
+     clipped.
+Signal n4_n3_mant_add_res1_add_4_42/CO undriven or does not drive anything -
+     clipped.
+Signal add_5677_7/S1 undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+Removed logic (cont)
+--------------------
+Signal add_5677_7/S0 undriven or does not drive anything - clipped.
+Signal add_5677_9/S1 undriven or does not drive anything - clipped.
+Signal add_5677_9/S0 undriven or does not drive anything - clipped.
+Signal _add_1_524_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_524_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_5677_11/S1 undriven or does not drive anything - clipped.
+Signal add_5677_11/S0 undriven or does not drive anything - clipped.
+Signal add_5677_13/S1 undriven or does not drive anything - clipped.
+Signal add_5677_13/S0 undriven or does not drive anything - clipped.
+Signal add_5677_15/S1 undriven or does not drive anything - clipped.
+Signal add_5677_15/S0 undriven or does not drive anything - clipped.
+Signal add_5677_17/S1 undriven or does not drive anything - clipped.
+Signal add_5677_17/S0 undriven or does not drive anything - clipped.
+Signal add_5677_19/S1 undriven or does not drive anything - clipped.
+Signal add_5677_19/S0 undriven or does not drive anything - clipped.
+Signal add_5677_21/S1 undriven or does not drive anything - clipped.
+Signal add_5677_21/S0 undriven or does not drive anything - clipped.
+Signal add_5677_23/S1 undriven or does not drive anything - clipped.
+Signal add_5677_23/S0 undriven or does not drive anything - clipped.
+Signal add_5677_25/S1 undriven or does not drive anything - clipped.
+Signal add_5677_25/S0 undriven or does not drive anything - clipped.
+Signal add_5677_27/S1 undriven or does not drive anything - clipped.
+Signal add_5677_27/S0 undriven or does not drive anything - clipped.
+Signal add_5677_29/S1 undriven or does not drive anything - clipped.
+Signal add_5677_29/S0 undriven or does not drive anything - clipped.
+Block u_dut/i582_1_lut was optimized away.
+Block u_dut/i1577_1_lut was optimized away.
+Block i17 was optimized away.
+
+Memory Usage
+------------
+
+/u_dut/n1_n0_exp_add_sft00000:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_dut/n1_n0_exp_add_sft00001:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'rst_c' of the design has been inferred as Global Set
+        Reset (GSR). The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+
+                                    Page 9
+
+
+
+
+Design:  top_tommath_add_e8_m35_round_even_sticky_p5   Date:  05/24/26  14:00:32
+
+GSR Usage (cont)
+----------------
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'rst_c' via the local reset on the component and not the GSR component.
+
+     Type and number of components of the type: 
+   Register = 2 
+
+     Type and instance name of component: 
+   Register : out_valid_r_15
+   Register : in_valid_r_14
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 195 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 10
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

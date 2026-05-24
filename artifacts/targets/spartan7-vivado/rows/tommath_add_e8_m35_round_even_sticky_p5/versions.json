@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-05-24T11:58:15+00:00",
+  "target": {
+    "target_id": "spartan7-vivado",
+    "title": "AMD/Xilinx Spartan-7 / Vivado",
+    "toolchain": "vivado",
+    "device": "xc7s50csga324-1",
+    "note": "Spartan-7 resources use LUT primitives, FD* flip-flops, CARRY4 carry, DSP48* DSP, RAMB* BRAM, and top-level IO bit counts."
+  },
+  "tools": {
+    "math_repo": "/mnt/storage/test/zkf-vs-flopoco/third_party/math",
+    "sbt": "java -Dsbt.version=1.10.11 -Dsbt.ivy.home=/tmp/codex-sbt/ivy2 -Dsbt.boot.directory=/tmp/codex-sbt/boot -Dsbt.global.base=/tmp/codex-sbt/global -jar /tmp/codex-sbt/sbt-launch.jar",
+    "vivado": "/mnt/storage/xilinx/2025.2.1/Vivado/bin/vivado"
+  },
+  "flopoco": [
+    "/mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco: error while loading shared libraries: libsollya.so.8: cannot open shared object file: No such file or directory"
+  ],
+  "kulibin_float_git": "17c0304af1686472969c2e8a0cc14709df25cefe",
+  "flopoco_git": "8aa634812d2c9959ed33718d16648d7afcf7fa23",
+  "tomverbeure_math_git": "0dc01cf1a60aaae7d259fc52cafaad9d73e9fb8c",
+  "vivado": [
+    "vivado v2025.2.1 (64-bit)",
+    "Tool Version Limit: 2025.11",
+    "SW Build 6403652 on Thu Mar 19 13:47:00 MDT 2026",
+    "IP Build 6403511 on Thu Mar 19 12:41:45 MDT 2026",
+    "SharedData Build 6403650 on Thu Mar 19 14:02:13 MDT 2026",
+    "Copyright 1986-2022 Xilinx, Inc. All Rights Reserved."
+  ]
+}

@@ -9,9 +9,11 @@ import html
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import sys
+import threading
 import textwrap
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -24,6 +26,8 @@ KULIBIN_REPO = Path("/mnt/storage/zubax/kulibin2")
 OSS_CAD_BIN = Path(os.environ.get("OSS_CAD_BIN", "/mnt/storage/synth_eval/oss-cad-suite/bin"))
 FLOPOCO = Path(os.environ.get("FLOPOCO", ROOT / "third_party/flopoco-5.1/build/bin/flopoco"))
 SOLLYA_LIB = ROOT / "third_party/sollya-install/lib"
+MATH_REPO = Path(os.environ.get("MATH_REPO", ROOT / "third_party/math"))
+MATH_SBT = os.environ.get("SBT", "sbt")
 
 ARTIFACTS = ROOT / "artifacts"
 TARGETS_DIR = ARTIFACTS / "targets"
@@ -118,7 +122,10 @@ TARGET_FREQUENCIES_MHZ = {
 }
 FORMATS = ((8, 18), (8, 36))
 OP_ORDER = {"add": 0, "mul": 1, "div": 2}
-LIB_ORDER = {"zkf": 0, "flopoco": 1}
+LIBRARIES = ("zkf", "flopoco", "tommath")
+LIB_ORDER = {library: i for i, library in enumerate(LIBRARIES)}
+LIB_LABELS = {"zkf": "ZKF", "flopoco": "FloPoCo", "tommath": "Math Fpxx"}
+MATH_GENERATION_LOCK = threading.Lock()
 
 
 def target_frequency_mhz(target_id: str) -> float:
@@ -152,15 +159,24 @@ class RowSpec:
     flopoco_mul_dsp_threshold: float = 0.0
     flopoco_div_srt: int = 42
     flopoco_tune_frequencies_mhz: tuple[float, ...] | None = None
+    math_pipe_stages: int | None = None
+    math_sticky_bit: bool = True
+    math_rounding: str = "even"
+    math_div_table_size_bits: int | None = None
+    math_div_lut_mant_bits: int | None = None
 
     @property
     def width(self) -> int:
-        if self.library == "zkf":
-            return self.wexp + self.wman
-        return self.wexp + (self.wman - 1) + 3
+        if self.library == "flopoco":
+            return self.wexp + (self.wman - 1) + 3
+        return self.wexp + self.wman
 
     @property
     def flopoco_wf(self) -> int:
+        return self.wman - 1
+
+    @property
+    def math_mant_size(self) -> int:
         return self.wman - 1
 
     @property
@@ -171,7 +187,9 @@ class RowSpec:
     def format_label(self) -> str:
         if self.library == "zkf":
             return f"WEXP={self.wexp}, WMAN={self.wman}"
-        return f"wE={self.wexp}, wF={self.flopoco_wf}"
+        if self.library == "flopoco":
+            return f"wE={self.wexp}, wF={self.flopoco_wf}"
+        return f"e{self.wexp}m{self.math_mant_size}"
 
     @property
     def effective_flopoco_frequency_mhz(self) -> float | None:
@@ -229,6 +247,53 @@ def flopoco_base_specs_for_format(wexp: int, wman: int) -> list[RowSpec]:
     return rows
 
 
+def math_latency(op: str, pipe_stages: int) -> int:
+    if op in ("add", "mul"):
+        return pipe_stages
+    if op == "div":
+        if pipe_stages <= 0:
+            return 1
+        if pipe_stages == 1:
+            return 3
+        if pipe_stages == 2:
+            return 5
+        return 6
+    raise ValueError(op)
+
+
+def math_base_specs_for_format(wexp: int, wman: int) -> list[RowSpec]:
+    rows: list[RowSpec] = []
+    entities = {"add": "FpxxAdd", "mul": "FpxxMul", "div": "FpxxDiv"}
+    for op in ("add", "mul", "div"):
+        row_id = f"tommath_{op}_e{wexp}_m{wman - 1}"
+        rows.append(RowSpec(row_id, "tommath", op, wexp, wman, "generated", entities[op], None))
+    return rows
+
+
+def math_div_table_configs(mant_size: int) -> list[tuple[str, int | None, int | None]]:
+    half_bits = (mant_size + 1) // 2
+    default_lut_bits = 2 * half_bits + 2
+    raw = [
+        ("compact", min(half_bits, 6), min(default_lut_bits, 12)),
+        ("balanced", min(half_bits, 8), min(default_lut_bits, 16)),
+        ("large", min(half_bits, 10), min(default_lut_bits, 20)),
+    ]
+    if half_bits <= 10:
+        raw.append(("default", None, None))
+
+    seen: set[tuple[int | None, int | None]] = set()
+    configs: list[tuple[str, int | None, int | None]] = []
+    for name, table_bits, lut_bits in raw:
+        key = (
+            half_bits if table_bits is None else table_bits,
+            default_lut_bits if lut_bits is None else lut_bits,
+        )
+        if key not in seen:
+            seen.add(key)
+            configs.append((name, table_bits, lut_bits))
+    return configs
+
+
 def benchmark_groups() -> list[tuple[tuple[str, str, int, int], list[RowSpec]]]:
     groups: list[tuple[tuple[str, str, int, int], list[RowSpec]]] = []
     for wexp, wman in FORMATS:
@@ -239,6 +304,8 @@ def benchmark_groups() -> list[tuple[tuple[str, str, int, int], list[RowSpec]]]:
             groups.append((("zkf", op, wexp, wman), by_op[op]))
         for spec in flopoco_base_specs_for_format(wexp, wman):
             groups.append((("flopoco", spec.op, wexp, wman), [spec]))
+        for spec in math_base_specs_for_format(wexp, wman):
+            groups.append((("tommath", spec.op, wexp, wman), [spec]))
     return groups
 
 
@@ -328,18 +395,43 @@ def which_or_die(tool: str, env: dict[str, str]) -> str:
     return found
 
 
-def check_tools(target: TargetFlow, env: dict[str, str]) -> dict[str, str]:
-    tools = {"flopoco": str(FLOPOCO)}
-    if not FLOPOCO.exists():
+def math_sbt_command() -> list[str]:
+    cmd = shlex.split(MATH_SBT)
+    if not cmd:
+        raise SystemExit("SBT command is empty; set SBT=/path/to/sbt")
+    return cmd
+
+
+def check_command_or_die(cmd: list[str], env: dict[str, str], label: str) -> str:
+    executable = cmd[0]
+    if Path(executable).exists():
+        return executable
+    found = shutil.which(executable, path=env["PATH"])
+    if not found:
+        raise SystemExit(f"Required tool not found on PATH for {label}: {executable}")
+    return found
+
+
+def check_tools(target: TargetFlow, env: dict[str, str], libraries: tuple[str, ...] | None = None) -> dict[str, str]:
+    selected_libraries = set(libraries or LIBRARIES)
+    tools = {}
+    if "flopoco" in selected_libraries:
+        tools["flopoco"] = str(FLOPOCO)
+    if "tommath" in selected_libraries:
+        tools.update({"math_repo": str(MATH_REPO), "sbt": " ".join(math_sbt_command())})
+
+    if "flopoco" in selected_libraries and not FLOPOCO.exists():
         raise SystemExit(f"FloPoCo binary is missing: {FLOPOCO}")
+    if "tommath" in selected_libraries and not (MATH_REPO / "build.sbt").exists():
+        raise SystemExit(f"tomverbeure/math checkout is missing: {MATH_REPO} (clone https://github.com/tomverbeure/math.git or set MATH_REPO)")
+    if "tommath" in selected_libraries:
+        check_command_or_die(math_sbt_command(), env, "tomverbeure/math")
+
     if target.target_id == "ecp5-yosys":
-        tools.update(
-            {
-                "yosys": which_or_die("yosys", env),
-                "nextpnr-ecp5": which_or_die("nextpnr-ecp5", env),
-                "ghdl": which_or_die("ghdl", env),
-            }
-        )
+        tools["yosys"] = which_or_die("yosys", env)
+        tools["nextpnr-ecp5"] = which_or_die("nextpnr-ecp5", env)
+        if "flopoco" in selected_libraries:
+            tools["ghdl"] = which_or_die("ghdl", env)
     elif target.target_id == "ecp5-diamond":
         denv = env_with_diamond(env)
         tools.update(
@@ -361,9 +453,9 @@ def check_tools(target: TargetFlow, env: dict[str, str]) -> dict[str, str]:
     return tools
 
 
-def run_capture(cmd: list[str], env: dict[str, str]) -> str:
+def run_capture(cmd: list[str], env: dict[str, str], cwd: Path = ROOT) -> str:
     try:
-        return subprocess.run(cmd, cwd=ROOT, env=env, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False).stdout.strip()
+        return subprocess.run(cmd, cwd=cwd, env=env, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False).stdout.strip()
     except FileNotFoundError:
         return "not found"
 
@@ -376,6 +468,7 @@ def write_versions(path: Path, target: TargetFlow, env: dict[str, str], tools: d
         "flopoco": run_capture([str(FLOPOCO), "--version"], env).splitlines()[:8],
         "kulibin_float_git": run_capture(["git", "-C", str(KULIBIN_REPO), "rev-parse", "HEAD"], env),
         "flopoco_git": run_capture(["git", "-C", str(ROOT / "third_party/flopoco-5.1"), "rev-parse", "HEAD"], env),
+        "tomverbeure_math_git": run_capture(["git", "-C", str(MATH_REPO), "rev-parse", "HEAD"], env),
     }
     if target.target_id == "ecp5-yosys":
         versions.update(
@@ -389,7 +482,7 @@ def write_versions(path: Path, target: TargetFlow, env: dict[str, str], tools: d
         versions["vivado"] = run_capture([tools["vivado"], "-version"], env).splitlines()[:6]
     if target.target_id == "ecp5-diamond":
         denv = env_with_diamond(env)
-        versions["diamond_synthesis"] = run_capture([tools["synthesis"], "-h"], denv).splitlines()[:12]
+        versions["diamond_synthesis"] = run_capture([tools["synthesis"], "-h"], denv, cwd=path.parent).splitlines()[:12]
     path.write_text(json.dumps(versions, indent=2) + "\n", encoding="utf-8")
 
 
@@ -429,7 +522,9 @@ def tcl_quote(path: Path | str) -> str:
 def top_io_count(spec: RowSpec, flopoco_has_rst: bool = False) -> int:
     if spec.library == "zkf":
         return 3 * spec.width + 4 + (1 if spec.op == "div" else 0)
-    return 3 * spec.width + 1 + (1 if flopoco_has_rst else 0)
+    if spec.library == "flopoco":
+        return 3 * spec.width + 1 + (1 if flopoco_has_rst else 0)
+    return 3 * spec.width + 4
 
 
 def write_zkf_wrapper(spec: RowSpec, path: Path) -> None:
@@ -513,6 +608,215 @@ def write_zkf_wrapper(spec: RowSpec, path: Path) -> None:
         ),
         encoding="utf-8",
     )
+
+
+MATH_BENCHMARK_GEN_SCALA = textwrap.dedent(
+    """\
+    package math
+
+    import java.nio.file.{Files, Paths, StandardCopyOption}
+    import spinal.core._
+
+    object BenchmarkGen {
+        private def parse(args: Array[String]): Map[String, String] = {
+            val out = scala.collection.mutable.Map[String, String]()
+            var i = 0
+            while (i < args.length) {
+                if (!args(i).startsWith("--") || i + 1 >= args.length) {
+                    throw new IllegalArgumentException("expected --key value arguments")
+                }
+                out += args(i).drop(2) -> args(i + 1)
+                i += 2
+            }
+            out.toMap
+        }
+
+        def main(args: Array[String]): Unit = {
+            val options = parse(args)
+            val op = options("op")
+            val exp = options("exp").toInt
+            val mant = options("mant").toInt
+            val pipeStages = options("pipe-stages").toInt
+            val stickyBit = options.getOrElse("sticky-bit", "true").toBoolean
+            val roundingName = options.getOrElse("rounding", "even")
+            if (roundingName != "even") {
+                throw new IllegalArgumentException(s"unsupported rounding for this benchmark: $roundingName")
+            }
+            val rounding = RoundType.ROUNDTOEVEN
+            val tableSizeBits = options.getOrElse("table-size-bits", "-1").toInt
+            val lutMantBits = options.getOrElse("lut-mant-bits", "-1").toInt
+            val targetDir = Paths.get(options("target-dir")).toAbsolutePath
+            val output = Paths.get(options("output")).toAbsolutePath
+            Files.createDirectories(targetDir)
+
+            val c = FpxxConfig(exp, mant)
+            val config = SpinalConfig(mode = Verilog, targetDirectory = targetDir.toString, fixToWithWrap = false)
+            val generated = op match {
+                case "add" =>
+                    config.generate(new FpxxAdd(FpxxAdd.Options(c, pipeStages = StageMask(Right(pipeStages)), stickyBit = stickyBit, rounding = rounding)))
+                    targetDir.resolve("FpxxAdd.v")
+                case "mul" =>
+                    config.generate(FpxxMul(FpxxMul.Options(c, pipeStages = StageMask(Right(pipeStages)), rounding = rounding)))
+                    targetDir.resolve("FpxxMul.v")
+                case "div" =>
+                    config.generate(new FpxxDiv(c, FpxxDivConfig(pipeStages = pipeStages, tableSizeBits = tableSizeBits, lutMantBits = lutMantBits)))
+                    targetDir.resolve("FpxxDiv.v")
+                case other =>
+                    throw new IllegalArgumentException(s"unknown op: $other")
+            }
+            if (generated != output) {
+                Files.move(generated, output, StandardCopyOption.REPLACE_EXISTING)
+            }
+            println(s"Wrote $output")
+        }
+    }
+    """
+)
+
+
+def ensure_math_generator() -> None:
+    generator = MATH_REPO / "src/main/scala/math/BenchmarkGen.scala"
+    generator.parent.mkdir(parents=True, exist_ok=True)
+    if not generator.exists() or generator.read_text(encoding="utf-8") != MATH_BENCHMARK_GEN_SCALA:
+        generator.write_text(MATH_BENCHMARK_GEN_SCALA, encoding="utf-8")
+
+
+def math_verilog_module_name(op: str) -> str:
+    return {"add": "FpxxAdd", "mul": "FpxxMul", "div": "FpxxDiv"}[op]
+
+
+def math_generator_command(spec: RowSpec, verilog_path: Path, src_dir: Path) -> list[str]:
+    if spec.math_pipe_stages is None:
+        raise ValueError("Math generator requested without math_pipe_stages")
+    command = (
+        "runMain math.BenchmarkGen "
+        f"--op {spec.op} "
+        f"--exp {spec.wexp} "
+        f"--mant {spec.math_mant_size} "
+        f"--pipe-stages {spec.math_pipe_stages} "
+        f"--sticky-bit {str(spec.math_sticky_bit).lower()} "
+        f"--rounding {spec.math_rounding} "
+        f"--table-size-bits {spec.math_div_table_size_bits if spec.math_div_table_size_bits is not None else -1} "
+        f"--lut-mant-bits {spec.math_div_lut_mant_bits if spec.math_div_lut_mant_bits is not None else -1} "
+        f"--target-dir {src_dir} "
+        f"--output {verilog_path}"
+    )
+    return [*math_sbt_command(), command]
+
+
+def write_math_wrapper(spec: RowSpec, path: Path) -> None:
+    width = spec.width
+    mant = spec.math_mant_size
+    exp = spec.wexp
+    exp_hi = mant + exp - 1
+    sign_bit = width - 1
+    module = math_verilog_module_name(spec.op)
+    has_dut_clock = spec.op == "div" or (spec.math_pipe_stages or 0) > 0
+
+    if spec.op == "add":
+        dut_ports = [
+            ".io_op_valid(in_valid_r)",
+            f".io_op_payload_a_mant(a_r[{mant - 1}:0])",
+            f".io_op_payload_a_exp(a_r[{exp_hi}:{mant}])",
+            f".io_op_payload_a_sign(a_r[{sign_bit}])",
+            f".io_op_payload_b_mant(b_r[{mant - 1}:0])",
+            f".io_op_payload_b_exp(b_r[{exp_hi}:{mant}])",
+            f".io_op_payload_b_sign(b_r[{sign_bit}])",
+            ".io_result_valid(dut_valid)",
+            ".io_result_payload_mant(dut_mant)",
+            ".io_result_payload_exp(dut_exp)",
+            ".io_result_payload_sign(dut_sign)",
+        ]
+    elif spec.op == "mul":
+        dut_ports = [
+            ".io_input_valid(in_valid_r)",
+            f".io_input_payload_a_mant(a_r[{mant - 1}:0])",
+            f".io_input_payload_a_exp(a_r[{exp_hi}:{mant}])",
+            f".io_input_payload_a_sign(a_r[{sign_bit}])",
+            f".io_input_payload_b_mant(b_r[{mant - 1}:0])",
+            f".io_input_payload_b_exp(b_r[{exp_hi}:{mant}])",
+            f".io_input_payload_b_sign(b_r[{sign_bit}])",
+            ".io_result_valid(dut_valid)",
+            ".io_result_payload_mant(dut_mant)",
+            ".io_result_payload_exp(dut_exp)",
+            ".io_result_payload_sign(dut_sign)",
+        ]
+    elif spec.op == "div":
+        dut_ports = [
+            ".io_op_vld(in_valid_r)",
+            f".io_op_a_mant(a_r[{mant - 1}:0])",
+            f".io_op_a_exp(a_r[{exp_hi}:{mant}])",
+            f".io_op_a_sign(a_r[{sign_bit}])",
+            f".io_op_b_mant(b_r[{mant - 1}:0])",
+            f".io_op_b_exp(b_r[{exp_hi}:{mant}])",
+            f".io_op_b_sign(b_r[{sign_bit}])",
+            ".io_result_vld(dut_valid)",
+            ".io_result_mant(dut_mant)",
+            ".io_result_exp(dut_exp)",
+            ".io_result_sign(dut_sign)",
+        ]
+    else:
+        raise ValueError(spec.op)
+
+    if has_dut_clock:
+        dut_ports.extend([".clk(clk)", ".reset(rst)"])
+    dut_port_lines = [f"{port}{',' if i < len(dut_ports) - 1 else ''}" for i, port in enumerate(dut_ports)]
+    dut_port_map = "\n".join(f"        {port}" for port in dut_port_lines)
+
+    body = textwrap.dedent(
+        f"""\
+            `default_nettype none
+
+            (* keep_hierarchy = "yes" *)
+            module {spec.top} (
+                input wire                  clk,
+                input wire                  rst,
+                input wire                  in_valid_i,
+                input wire [{width - 1}:0]  a_i,
+                input wire [{width - 1}:0]  b_i,
+                output wire                 out_valid_o,
+                output wire [{width - 1}:0] y_o
+            );
+                (* keep = 1, preserve = 1, syn_keep = 1, syn_preserve = 1, no_retiming = 1, DONT_TOUCH = "true" *) reg [{width - 1}:0] a_r;
+                (* keep = 1, preserve = 1, syn_keep = 1, syn_preserve = 1, no_retiming = 1, DONT_TOUCH = "true" *) reg [{width - 1}:0] b_r;
+                (* keep = 1, preserve = 1, syn_keep = 1, syn_preserve = 1, no_retiming = 1, DONT_TOUCH = "true" *) reg in_valid_r;
+
+                wire                 dut_valid;
+                wire [{mant - 1}:0]  dut_mant;
+                wire [{exp - 1}:0]   dut_exp;
+                wire                 dut_sign;
+                wire [{width - 1}:0] dut_y = {{dut_sign, dut_exp, dut_mant}};
+
+                (* keep_hierarchy = "yes" *)
+                {module} u_dut (
+                __DUT_PORT_MAP__
+                );
+
+                (* keep = 1, preserve = 1, syn_keep = 1, syn_preserve = 1, no_retiming = 1, DONT_TOUCH = "true" *) reg [{width - 1}:0] y_r;
+                (* keep = 1, preserve = 1, syn_keep = 1, syn_preserve = 1, no_retiming = 1, DONT_TOUCH = "true" *) reg out_valid_r;
+
+                always @(posedge clk) begin
+                    a_r <= a_i;
+                    b_r <= b_i;
+                    y_r <= dut_y;
+                    if (rst) begin
+                        in_valid_r <= 1'b0;
+                        out_valid_r <= 1'b0;
+                    end else begin
+                        in_valid_r <= in_valid_i;
+                        out_valid_r <= dut_valid;
+                    end
+                end
+
+                assign out_valid_o = out_valid_r;
+                assign y_o = y_r;
+            endmodule
+
+            `default_nettype wire
+            """
+    )
+    body = body.replace("    __DUT_PORT_MAP__", dut_port_map)
+    path.write_text(body, encoding="utf-8")
 
 
 def flopoco_command(spec: RowSpec, vhdl_path: Path) -> list[str]:
@@ -678,6 +982,19 @@ def generate_sources(spec: RowSpec, row_dir: Path, env: dict[str, str], force: b
             write_zkf_wrapper(spec, wrapper)
         return {"wrapper": wrapper}, spec.latency_cycles, False, None
 
+    if spec.library == "tommath":
+        verilog = src_dir / f"{spec.row_id}.v"
+        math_log = row_dir / "math.log"
+        if force or not verilog.exists():
+            with MATH_GENERATION_LOCK:
+                ensure_math_generator()
+                rc = run_logged(math_generator_command(spec, verilog, src_dir), math_log, env, cwd=MATH_REPO)
+            if rc != 0:
+                return {"math_verilog": verilog}, None, False, f"tomverbeure/math generation failed with exit code {rc}"
+        wrapper = src_dir / f"{spec.top}.v"
+        write_math_wrapper(spec, wrapper)
+        return {"math_verilog": verilog, "wrapper": wrapper}, spec.latency_cycles, False, None
+
     vhdl = src_dir / f"{spec.entity}.vhdl"
     flopoco_log = row_dir / "flopoco.log"
     if force or not vhdl.exists():
@@ -710,9 +1027,14 @@ def write_yosys_script(spec: RowSpec, row_dir: Path, source_paths: dict[str, Pat
     if spec.library == "zkf":
         lines = [f"read_verilog -sv {ys_quote(p)}" for p in zkf_hdl_files(spec.op)]
         lines.append(f"read_verilog -sv {ys_quote(source_paths['wrapper'])}")
-    else:
+    elif spec.library == "flopoco":
         lines = [
             f"ghdl --std=08 --ieee=synopsys -frelaxed-rules {source_paths['flopoco_vhdl']} {source_paths['wrapper']} -e {spec.top}"
+        ]
+    else:
+        lines = [
+            f"read_verilog -sv {ys_quote(source_paths['math_verilog'])}",
+            f"read_verilog -sv {ys_quote(source_paths['wrapper'])}",
         ]
     synth_line = " ".join(arg.format(top=spec.top, json=netlist) for arg in SYNTH_ECP5_ARGS)
     lines.append(synth_line)
@@ -735,9 +1057,12 @@ def write_vivado_files(target: TargetFlow, spec: RowSpec, row_dir: Path, source_
         for path in zkf_hdl_files(spec.op):
             lines.append(f"read_verilog -sv {tcl_quote(path)}")
         lines.append(f"read_verilog -sv {tcl_quote(source_paths['wrapper'])}")
-    else:
+    elif spec.library == "flopoco":
         lines.append(f"read_vhdl -vhdl2008 {tcl_quote(source_paths['flopoco_vhdl'])}")
         lines.append(f"read_vhdl -vhdl2008 {tcl_quote(source_paths['wrapper'])}")
+    else:
+        lines.append(f"read_verilog -sv {tcl_quote(source_paths['math_verilog'])}")
+        lines.append(f"read_verilog -sv {tcl_quote(source_paths['wrapper'])}")
     lines.extend(
         [
             f"synth_design -top {spec.top} -part $part -mode out_of_context -flatten_hierarchy rebuilt",
@@ -831,10 +1156,13 @@ def write_diamond_files(target: TargetFlow, spec: RowSpec, row_dir: Path, source
     if spec.library == "zkf":
         source_list = [*zkf_hdl_files(spec.op), source_paths["wrapper"]]
         lines.append("-ver " + " ".join(f'"{path}"' for path in source_list))
-    else:
+    elif spec.library == "flopoco":
         source_list = [source_paths["flopoco_vhdl"], source_paths["wrapper"]]
         lines.append("-lib work")
         lines.append("-vhd " + " ".join(f'"{path}"' for path in source_list))
+    else:
+        source_list = [source_paths["math_verilog"], source_paths["wrapper"]]
+        lines.append("-ver " + " ".join(f'"{path}"' for path in source_list))
     lines.extend(
         [
             f'-ngo "{ngo}"',
@@ -1055,6 +1383,12 @@ def base_row(target: TargetFlow, spec: RowSpec) -> dict[str, Any]:
         "wexp": spec.wexp,
         "wman": spec.wman,
         "flopoco_wf": spec.flopoco_wf if spec.library == "flopoco" else None,
+        "math_mant_size": spec.math_mant_size if spec.library == "tommath" else None,
+        "math_pipe_stages": spec.math_pipe_stages if spec.library == "tommath" else None,
+        "math_sticky_bit": spec.math_sticky_bit if spec.library == "tommath" and spec.op == "add" else None,
+        "math_rounding": spec.math_rounding if spec.library == "tommath" and spec.op in ("add", "mul") else None,
+        "math_div_table_size_bits": spec.math_div_table_size_bits if spec.library == "tommath" and spec.op == "div" else None,
+        "math_div_lut_mant_bits": spec.math_div_lut_mant_bits if spec.library == "tommath" and spec.op == "div" else None,
         "target_frequency_mhz": target_freq_mhz,
         "flopoco_target": spec.flopoco_target if spec.library == "flopoco" else None,
         "flopoco_frequency_mhz": spec.effective_flopoco_frequency_mhz,
@@ -1097,6 +1431,8 @@ def run_ecp5_candidate(target: TargetFlow, spec: RowSpec, env: dict[str, str], t
     row["latency_cycles"] = latency
     row["io"] = top_io_count(spec, has_rst)
     row["artifacts"].update({k: rel(v) for k, v in sources.items() if v.exists()})
+    if spec.library == "tommath" and (row_dir / "math.log").exists():
+        row["artifacts"]["math_log"] = rel(row_dir / "math.log")
     if gen_error:
         row["status"] = "generate_failed"
         row["error"] = gen_error
@@ -1108,6 +1444,8 @@ def run_ecp5_candidate(target: TargetFlow, spec: RowSpec, env: dict[str, str], t
     row["artifacts"]["yosys_script"] = rel(yosys_script)
     if spec.library == "flopoco" and (row_dir / "flopoco.log").exists():
         row["artifacts"]["flopoco_log"] = rel(row_dir / "flopoco.log")
+    if spec.library == "tommath" and (row_dir / "math.log").exists():
+        row["artifacts"]["math_log"] = rel(row_dir / "math.log")
 
     yosys_log = row_dir / "yosys.log"
     netlist = row_dir / "netlist.json"
@@ -1187,6 +1525,8 @@ def run_vivado_candidate(target: TargetFlow, spec: RowSpec, env: dict[str, str],
     row["latency_cycles"] = latency
     row["io"] = top_io_count(spec, has_rst)
     row["artifacts"].update({k: rel(v) for k, v in sources.items() if v.exists()})
+    if spec.library == "tommath" and (row_dir / "math.log").exists():
+        row["artifacts"]["math_log"] = rel(row_dir / "math.log")
     if gen_error:
         row["status"] = "generate_failed"
         row["error"] = gen_error
@@ -1253,6 +1593,8 @@ def run_diamond_candidate(target: TargetFlow, spec: RowSpec, env: dict[str, str]
     row["latency_cycles"] = latency
     row["io"] = top_io_count(spec, has_rst)
     row["artifacts"].update({k: rel(v) for k, v in sources.items() if v.exists()})
+    if spec.library == "tommath" and (row_dir / "math.log").exists():
+        row["artifacts"]["math_log"] = rel(row_dir / "math.log")
     if gen_error:
         row["status"] = "generate_failed"
         row["error"] = gen_error
@@ -1573,9 +1915,48 @@ def flopoco_operator_configs(base_spec: RowSpec, target_id: str) -> list[RowSpec
 
 
 def candidate_specs_for_group(target_id: str, key: tuple[str, str, int, int], base_specs: list[RowSpec]) -> list[RowSpec]:
-    library, _op, _wexp, _wman = key
+    library, op, _wexp, _wman = key
     if library == "zkf":
         return base_specs
+    if library == "tommath":
+        base_spec = base_specs[0]
+        max_pipe_stages = {"add": 5, "mul": 2, "div": 3}[op]
+        candidates = []
+        if op == "add":
+            profiles = [
+                ("round_even_sticky", {"math_rounding": "even", "math_sticky_bit": True}),
+            ]
+        elif op == "mul":
+            profiles = [
+                ("round_even", {"math_rounding": "even"}),
+            ]
+        elif op == "div":
+            profiles = [
+                (
+                    name,
+                    {
+                        "math_div_table_size_bits": table_bits,
+                        "math_div_lut_mant_bits": lut_bits,
+                    },
+                )
+                for name, table_bits, lut_bits in math_div_table_configs(base_spec.math_mant_size)
+            ]
+        else:
+            raise ValueError(op)
+        for profile_name, kwargs in profiles:
+            for pipe_stages in range(max_pipe_stages + 1):
+                row_id = f"{base_spec.row_id}_{profile_name}_p{pipe_stages}"
+                candidates.append(
+                    dataclasses.replace(
+                        base_spec,
+                        row_id=row_id,
+                        variant=f"{profile_name}_p{pipe_stages}",
+                        latency_cycles=math_latency(op, pipe_stages),
+                        math_pipe_stages=pipe_stages,
+                        **kwargs,
+                    )
+                )
+        return candidates
     base_spec = base_specs[0]
     candidates: list[RowSpec] = []
     for cfg_spec in flopoco_operator_configs(base_spec, target_id):
@@ -1616,6 +1997,12 @@ def attempt_summary(spec: RowSpec, row: dict[str, Any]) -> dict[str, Any]:
         "flopoco_use_target_opt": spec.flopoco_use_target_opt if spec.library == "flopoco" else None,
         "flopoco_use_hard_mult": True if spec.library == "flopoco" else None,
         "flopoco_config_name": spec.flopoco_config_name if spec.library == "flopoco" else None,
+        "math_mant_size": spec.math_mant_size if spec.library == "tommath" else None,
+        "math_pipe_stages": spec.math_pipe_stages if spec.library == "tommath" else None,
+        "math_sticky_bit": spec.math_sticky_bit if spec.library == "tommath" and spec.op == "add" else None,
+        "math_rounding": spec.math_rounding if spec.library == "tommath" and spec.op in ("add", "mul") else None,
+        "math_div_table_size_bits": spec.math_div_table_size_bits if spec.library == "tommath" and spec.op == "div" else None,
+        "math_div_lut_mant_bits": spec.math_div_lut_mant_bits if spec.library == "tommath" and spec.op == "div" else None,
         "status": row.get("status"),
         "timing_status": row.get("timing_status"),
         "fmax_mhz": row.get("fmax_mhz"),
@@ -1677,9 +2064,40 @@ def tune_group(target: TargetFlow, key: tuple[str, str, int, int], base_specs: l
     return selected
 
 
-def clear_selected_flags(target_id: str) -> None:
+def row_json_library(path: Path) -> str | None:
+    if not path.exists():
+        return None
+    try:
+        row = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+    library = row.get("library")
+    return str(library) if library is not None else None
+
+
+def row_dir_matches_libraries(row_dir: Path, libraries: set[str] | None) -> bool:
+    if libraries is None:
+        return True
+    library = row_json_library(row_dir / "row.json")
+    if library in libraries:
+        return True
+    return any(row_dir.name.startswith(f"{library}_") for library in libraries)
+
+
+def remove_library_rows(target_id: str, libraries: set[str]) -> None:
+    rows_dir = TARGETS_DIR / target_id / "rows"
+    if not rows_dir.exists():
+        return
+    for row_dir in rows_dir.glob("*"):
+        if row_dir.is_dir() and row_dir_matches_libraries(row_dir, libraries):
+            shutil.rmtree(row_dir, ignore_errors=True)
+
+
+def clear_selected_flags(target_id: str, libraries: set[str] | None = None) -> None:
     rows_dir = TARGETS_DIR / target_id / "rows"
     for path in rows_dir.glob("*/row.json"):
+        if not row_dir_matches_libraries(path.parent, libraries):
+            continue
         try:
             row = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
@@ -1689,10 +2107,12 @@ def clear_selected_flags(target_id: str) -> None:
             path.write_text(json.dumps(row, indent=2) + "\n", encoding="utf-8")
 
 
-def prune_unselected_target_rows(target_id: str) -> None:
+def prune_unselected_target_rows(target_id: str, libraries: set[str] | None = None) -> None:
     rows_dir = TARGETS_DIR / target_id / "rows"
     for row_dir in rows_dir.glob("*"):
         if not row_dir.is_dir():
+            continue
+        if not row_dir_matches_libraries(row_dir, libraries):
             continue
         row_json = row_dir / "row.json"
         selected = False
@@ -1705,15 +2125,27 @@ def prune_unselected_target_rows(target_id: str) -> None:
             shutil.rmtree(row_dir, ignore_errors=True)
 
 
-def run_target(target_id: str, force: bool, jobs: int) -> int:
+def filter_groups_by_libraries(
+    groups: list[tuple[tuple[str, str, int, int], list[RowSpec]]],
+    libraries: set[str] | None,
+) -> list[tuple[tuple[str, str, int, int], list[RowSpec]]]:
+    if libraries is None:
+        return groups
+    return [(key, specs) for key, specs in groups if key[0] in libraries]
+
+
+def run_target(target_id: str, force: bool, jobs: int, libraries: tuple[str, ...] | None = None) -> int:
     ensure_dirs()
     target = TARGET_FLOWS[target_id]
-    if force:
+    selected_libraries = set(libraries) if libraries else None
+    if force and selected_libraries is None:
         shutil.rmtree(TARGETS_DIR / target_id, ignore_errors=True)
-    clear_selected_flags(target_id)
+    elif force and selected_libraries is not None:
+        remove_library_rows(target_id, selected_libraries)
+    clear_selected_flags(target_id, selected_libraries)
     env = env_with_tools()
-    tools = check_tools(target, env)
-    groups = benchmark_groups()
+    tools = check_tools(target, env, libraries)
+    groups = filter_groups_by_libraries(benchmark_groups(), selected_libraries)
     worker_count = max(1, min(jobs, len(groups)))
     if worker_count == 1:
         for key, specs in groups:
@@ -1724,7 +2156,7 @@ def run_target(target_id: str, force: bool, jobs: int) -> int:
             future_to_key = {executor.submit(tune_group, target, key, specs, env, tools): key for key, specs in groups}
             for future in concurrent.futures.as_completed(future_to_key):
                 future.result()
-    prune_unselected_target_rows(target_id)
+    prune_unselected_target_rows(target_id, selected_libraries)
     rows = load_existing_rows()
     generate_report(rows, f"{target_id}")
     return 1 if validate_rows(rows) else 0
@@ -1771,6 +2203,18 @@ def _number(value: Any) -> float | None:
     return None
 
 
+def timing_closed(row: dict[str, Any]) -> bool:
+    return row.get("status") == "ok" and row.get("timing_status") == "PASS"
+
+
+def rounding_comparable(row: dict[str, Any]) -> bool:
+    return not (row.get("library") == "tommath" and row.get("operator") == "div")
+
+
+def metric_eligible(row: dict[str, Any]) -> bool:
+    return timing_closed(row) and rounding_comparable(row)
+
+
 def metric_heat_classes(rows: list[dict[str, Any]]) -> dict[tuple[str, str, str], str]:
     by_group: dict[tuple[str, str, int, int], list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -1786,15 +2230,16 @@ def metric_heat_classes(rows: list[dict[str, Any]]) -> dict[tuple[str, str, str]
 
     classes: dict[tuple[str, str, str], str] = {}
     for group_rows in by_group.values():
+        eligible_rows = [row for row in group_rows if metric_eligible(row)]
         for metric in HEAT_METRICS:
-            values = [_number(row.get(metric)) for row in group_rows]
+            values = [_number(row.get(metric)) for row in eligible_rows]
             values = [v for v in values if v is not None]
             if not values:
                 continue
             high = max(values)
             low = min(values)
             best_is_high = metric in HIGHER_IS_BETTER_METRICS
-            for row in group_rows:
+            for row in eligible_rows:
                 value = _number(row.get(metric))
                 if value is None:
                     continue
@@ -1844,6 +2289,8 @@ def validate_rows(rows: list[dict[str, Any]]) -> list[str]:
         for label in required_artifacts.get(str(row.get("target_id")), ()):
             if label not in row.get("artifacts", {}):
                 issues.append(f"{rid}: missing artifact link {label}")
+        if row.get("library") == "tommath" and "math_verilog" not in row.get("artifacts", {}):
+            issues.append(f"{rid}: missing artifact link math_verilog")
     return issues
 
 
@@ -1858,7 +2305,7 @@ def row_sort_key(row: dict[str, Any]) -> tuple[int, int, int, int, str]:
 
 
 def format_heading(wexp: int, wman: int) -> str:
-    return f"ZKF WEXP={wexp}, WMAN={wman} / FloPoCo wE={wexp}, wF={wman - 1}"
+    return f"ZKF WEXP={wexp}, WMAN={wman} / FloPoCo wE={wexp}, wF={wman - 1} / Math Fpxx e{wexp}m{wman - 1}"
 
 
 def target_frequency_summary() -> str:
@@ -1897,6 +2344,29 @@ def zkf_param_variant(row: dict[str, Any]) -> str:
 def report_variant(row: dict[str, Any]) -> str:
     if row.get("library") == "zkf":
         return zkf_param_variant(row)
+    if row.get("library") == "tommath":
+        op_name = {"add": "FpxxAdd", "mul": "FpxxMul", "div": "FpxxDiv"}.get(str(row.get("operator")), "Fpxx")
+        parts = [op_name, f"pipeStages={option_value(row.get('math_pipe_stages'))}"]
+        if row.get("operator") == "add":
+            parts.extend(
+                [
+                    f"stickyBit={option_value(row.get('math_sticky_bit'))}",
+                    f"rounding={option_value(row.get('math_rounding'))}",
+                ]
+            )
+        elif row.get("operator") == "mul":
+            parts.append(f"rounding={option_value(row.get('math_rounding'))}")
+        elif row.get("operator") == "div":
+            table_bits = row.get("math_div_table_size_bits")
+            lut_bits = row.get("math_div_lut_mant_bits")
+            parts.extend(
+                [
+                    "rounding=native",
+                    f"tableSizeBits={option_value(table_bits) if table_bits is not None else 'default'}",
+                    f"lutMantBits={option_value(lut_bits) if lut_bits is not None else 'default'}",
+                ]
+            )
+        return "; ".join(parts)
     if row.get("library") != "flopoco":
         return str(row.get("variant", ""))
 
@@ -1983,13 +2453,14 @@ def comparison_bar(
     comparison_class: str = "",
 ) -> str:
     library = str(row.get("library", ""))
-    label = "ZKF" if library == "zkf" else "FloPoCo" if library == "flopoco" else library
+    label = LIB_LABELS.get(library, library)
     status = str(row.get("timing_status") or "")
+    lib_class = library if library in LIB_ORDER else ""
     fill_classes = " ".join(
         x
         for x in [
             "bar-fill",
-            "zkf" if library == "zkf" else "flopoco" if library == "flopoco" else "",
+            lib_class,
             "timing-fail" if status == "FAIL" else "",
         ]
         if x
@@ -2019,33 +2490,37 @@ def count_target_wins(
     rows_by_key: dict[tuple[str, int, int, str, str], dict[str, Any]],
     value_fn: Callable[[dict[str, Any]], float | int | None],
 ) -> dict[str, int]:
-    wins = {"zkf": 0, "flopoco": 0}
+    wins = {library: 0 for library in LIBRARIES}
     for wexp, wman in FORMATS:
         for op in OP_ORDER:
             paired = {
                 lib: rows_by_key.get((target_id, wexp, wman, op, lib))
-                for lib in ("zkf", "flopoco")
+                for lib in LIBRARIES
             }
-            if not paired["zkf"] or not paired["flopoco"]:
+            if sum(1 for row in paired.values() if row is not None) < 2:
                 continue
-            values = {lib: value_fn(row) for lib, row in paired.items() if row is not None}
-            if values["zkf"] is None or values["flopoco"] is None or values["zkf"] == values["flopoco"]:
+            values = {lib: value_fn(row) for lib, row in paired.items() if row is not None and metric_eligible(row)}
+            values = {lib: value for lib, value in values.items() if value is not None}
+            if not values:
                 continue
-            wins[min(values, key=lambda lib: values[lib])] += 1
+            best_value = min(values.values())
+            best_libraries = [lib for lib, value in values.items() if value == best_value]
+            if len(best_libraries) == 1:
+                wins[best_libraries[0]] += 1
     return wins
 
 
 def target_win_summary(target_id: str, rows_by_key: dict[tuple[str, int, int, str, str], dict[str, Any]]) -> str:
     latency_wins = count_target_wins(target_id, rows_by_key, lambda row: _number(row.get("latency_cycles")))
     fabric_wins = count_target_wins(target_id, rows_by_key, fabric_area)
+    latency_labels = "".join(f'<strong>{html.escape(LIB_LABELS[lib])} {latency_wins[lib]}</strong>' for lib in LIBRARIES)
+    fabric_labels = "".join(f'<strong>{html.escape(LIB_LABELS[lib])} {fabric_wins[lib]}</strong>' for lib in LIBRARIES)
     return (
         '<div class="target-win-summary">'
-        '<div><span>Latency wins</span>'
-        f'<strong>ZKF {latency_wins["zkf"]}</strong>'
-        f'<strong>FloPoCo {latency_wins["flopoco"]}</strong></div>'
-        '<div><span>Fabric wins</span>'
-        f'<strong>ZKF {fabric_wins["zkf"]}</strong>'
-        f'<strong>FloPoCo {fabric_wins["flopoco"]}</strong></div>'
+        '<div><span>Latency wins, eligible PASS only</span>'
+        f"{latency_labels}</div>"
+        '<div><span>Fabric wins, eligible PASS only</span>'
+        f"{fabric_labels}</div>"
         "</div>"
     )
 
@@ -2059,7 +2534,7 @@ def comparison_card(
     card_rows = [
         rows_by_key[key]
         for op in OP_ORDER
-        for lib in ("zkf", "flopoco")
+        for lib in LIBRARIES
         if (key := (target_id, wexp, wman, op, lib)) in rows_by_key
     ]
     if not card_rows:
@@ -2076,15 +2551,19 @@ def comparison_card(
     for op in OP_ORDER:
         op_rows = [
             rows_by_key[key]
-            for lib in ("zkf", "flopoco")
+            for lib in LIBRARIES
             if (key := (target_id, wexp, wman, op, lib)) in rows_by_key
         ]
         if not op_rows:
             continue
         latency_bars = []
         area_bars = []
-        latency_values = [_number(row.get("latency_cycles")) or 0 for row in op_rows]
-        area_values = [fabric_area(row) for row in op_rows]
+        latency_values = [
+            _number(row.get("latency_cycles")) or 0
+            for row in op_rows
+            if metric_eligible(row) and _number(row.get("latency_cycles")) is not None
+        ]
+        area_values = [fabric_area(row) for row in op_rows if metric_eligible(row)]
         for row in op_rows:
             latency = _number(row.get("latency_cycles")) or 0
             latency_bars.append(
@@ -2095,7 +2574,7 @@ def comparison_card(
                     maximum=max_latency,
                     primary=f"{fmt_num(row.get('latency_cycles'), 0)} cycles",
                     detail=chart_status(row),
-                    comparison_class=comparison_class(latency, latency_values),
+                    comparison_class=comparison_class(latency, latency_values) if metric_eligible(row) else "",
                 )
             )
             area = fabric_area(row)
@@ -2116,7 +2595,7 @@ def comparison_card(
                     maximum=max_area,
                     primary=f"{fmt_count(area)} fabric",
                     detail=resource_detail,
-                    comparison_class=comparison_class(area, area_values),
+                    comparison_class=comparison_class(area, area_values) if metric_eligible(row) else "",
                 )
             )
         operator_blocks.append(
@@ -2167,8 +2646,9 @@ def comparison_charts(rows: list[dict[str, Any]]) -> str:
   <div class="chart-legend">
     <span><i class="swatch zkf"></i>ZKF</span>
     <span><i class="swatch flopoco"></i>FloPoCo</span>
-    <span><i class="winner-swatch"></i>Metric winner</span>
-    <span><i class="loser-swatch"></i>Metric loser</span>
+    <span><i class="swatch tommath"></i>Math Fpxx</span>
+    <span><i class="winner-swatch"></i>Metric winner, eligible PASS only</span>
+    <span><i class="loser-swatch"></i>Metric loser, eligible PASS only</span>
     <span><i class="fail-swatch"></i>Timing failure</span>
   </div>
   <div class="comparison-grid">
@@ -2204,7 +2684,7 @@ def target_sections(rows: list[dict[str, Any]], heat: dict[tuple[str, str, str],
             for row in sorted(format_rows, key=row_sort_key):
                 status = row.get("timing_status") or ("ERROR" if row.get("status") != "ok" else "")
                 cls = "pass" if status == "PASS" else "fail" if status in ("FAIL", "ERROR") else ""
-                lib_cls = "lib-flopoco" if row.get("library") == "flopoco" else "lib-zkf" if row.get("library") == "zkf" else ""
+                lib_cls = f"lib-{row.get('library')}" if row.get("library") in LIB_ORDER else ""
                 op_start = previous_op is not None and row.get("operator") != previous_op
                 previous_op = str(row.get("operator", ""))
                 row_classes = " ".join(x for x in [lib_cls, "op-start" if op_start else ""] if x)
@@ -2214,6 +2694,8 @@ def target_sections(rows: list[dict[str, Any]], heat: dict[tuple[str, str, str],
                     for x in [
                         rel_link(arts.get("wrapper"), "wrapper"),
                         rel_link(arts.get("flopoco_vhdl"), "source"),
+                        rel_link(arts.get("math_verilog"), "source"),
+                        rel_link(arts.get("math_log"), "math log"),
                         rel_link(arts.get("yosys_script"), "ys"),
                         rel_link(arts.get("yosys_log"), "yosys log"),
                         rel_link(arts.get("nextpnr_log"), "pnr log"),
@@ -2236,7 +2718,7 @@ def target_sections(rows: list[dict[str, Any]], heat: dict[tuple[str, str, str],
                 )
                 table_rows.append(
                     f"<tr class=\"{row_classes}\">"
-                    f"<td class=\"left\">{html.escape(row.get('library', ''))}</td>"
+                    f"<td class=\"left\">{html.escape(LIB_LABELS.get(str(row.get('library', '')), str(row.get('library', ''))))}</td>"
                     f"<td class=\"left\">{html.escape(row.get('operator', ''))}</td>"
                     f"<td class=\"left\">{html.escape(report_variant(row))}</td>"
                     f"<td class=\"left\"><code>{html.escape(row.get('entity', ''))}</code></td>"
@@ -2264,7 +2746,7 @@ def target_sections(rows: list[dict[str, Any]], heat: dict[tuple[str, str, str],
         <th class="left">Op</th>
         <th class="left">Variant</th>
         <th class="left">Entity</th>
-        <th class="left">FloPoCo target</th>
+        <th class="left">Generator target</th>
         <th>Gen MHz</th>
         <th>Latency</th>
         <th>{target_freq:g} MHz</th>
@@ -2302,7 +2784,7 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ZKF vs FloPoCo FPGA Benchmark</title>
+  <title>ZKF vs FloPoCo vs Math Fpxx FPGA Benchmark</title>
   <style>
     :root {{ color-scheme: light dark; }}
     body {{ font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; margin: 24px; }}
@@ -2316,6 +2798,7 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     td.left, th.left {{ text-align: left; }}
     tbody tr.lib-zkf {{ background: color-mix(in srgb, #e5f3ff 42%, Canvas); }}
     tbody tr.lib-flopoco {{ background: color-mix(in srgb, #fff3d8 46%, Canvas); }}
+    tbody tr.lib-tommath {{ background: color-mix(in srgb, #e8f7e9 42%, Canvas); }}
     tbody tr.op-start td {{ border-top: 3px solid #666; }}
     td.heat-best {{ background: #cfeeda !important; color: #064719; font-weight: 650; }}
     td.heat-mid {{ background: #fff1b8 !important; color: #5d4300; }}
@@ -2324,12 +2807,21 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     .fail {{ color: #b00020; font-weight: 700; }}
     .muted {{ color: #777; }}
     .artifacts a {{ display: inline-block; margin-right: 6px; }}
+    .report-policy {{ max-width: 1180px; margin: 10px 0 14px; }}
+    .library-notes {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 1180px; margin: 12px 0 24px; }}
+    .library-note {{ border-left: 4px solid #9998; padding: 2px 0 2px 10px; }}
+    .library-note.zkf {{ border-color: #1976b8; }}
+    .library-note.flopoco {{ border-color: #c26a00; }}
+    .library-note.tommath {{ border-color: #198754; }}
+    .library-note strong {{ display: block; margin-bottom: 3px; }}
+    .library-note p {{ margin: 0; color: #555; }}
     .chart-intro {{ max-width: 1180px; }}
     .chart-legend {{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 8px 0 14px; color: #555; }}
     .chart-legend span {{ display: inline-flex; align-items: center; gap: 6px; }}
     .swatch, .fail-swatch, .winner-swatch, .loser-swatch {{ display: inline-block; width: 18px; height: 10px; border-radius: 999px; }}
     .swatch.zkf {{ background: linear-gradient(90deg, #1976b8, #62b6ff); }}
     .swatch.flopoco {{ background: linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .swatch.tommath {{ background: linear-gradient(90deg, #198754, #7bd88f); }}
     .fail-swatch {{ border: 2px solid #b00020; box-sizing: border-box; background: transparent; }}
     .winner-swatch {{ background: #d8f3df; }}
     .loser-swatch {{ background: #ffe1dc; }}
@@ -2350,7 +2842,7 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     .op-chart:first-of-type {{ border-top: 0; padding-top: 0; }}
     .op-chip {{ display: inline-flex; align-items: center; justify-content: center; min-width: 42px; height: 22px; border-radius: 999px; background: color-mix(in srgb, #334155 12%, Canvas); color: #334155; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; }}
     .metric-title {{ margin: 8px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #666; font-weight: 800; }}
-    .bar-row {{ display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 2px 8px; align-items: center; margin: 7px 0; }}
+    .bar-row {{ display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 2px 8px; align-items: center; margin: 7px 0; }}
     .bar-name {{ align-self: stretch; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start; min-height: 16px; padding: 0 6px; border-radius: 5px; font-size: 12px; font-weight: 700; }}
     .bar-name.winner {{ background: color-mix(in srgb, #cfeeda 78%, Canvas); color: #064719; }}
     .bar-name.loser {{ background: color-mix(in srgb, #ffd6d1 76%, Canvas); color: #78180e; }}
@@ -2359,9 +2851,11 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     .bar-fill {{ height: 100%; border-radius: inherit; }}
     .bar-fill.zkf {{ background: linear-gradient(90deg, #1976b8, #62b6ff); }}
     .bar-fill.flopoco {{ background: linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .bar-fill.tommath {{ background: linear-gradient(90deg, #198754, #7bd88f); }}
     .bar-fill.timing-fail {{ box-shadow: inset 0 0 0 2px #b00020; }}
     .bar-fill.zkf.timing-fail {{ background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #1976b8, #62b6ff); }}
     .bar-fill.flopoco.timing-fail {{ background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #c26a00, #ffc85a); }}
+    .bar-fill.tommath.timing-fail {{ background-image: repeating-linear-gradient(45deg, #b0002030 0 6px, transparent 6px 12px), linear-gradient(90deg, #198754, #7bd88f); }}
     .bar-value {{ grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 6px; color: #555; font-size: 12px; }}
     .bar-value strong {{ color: CanvasText; }}
     .chart-status {{ display: inline-flex; align-items: center; border-radius: 999px; padding: 1px 7px; font-size: 11px; background: color-mix(in srgb, #94a3b8 16%, Canvas); }}
@@ -2371,15 +2865,17 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
     code {{ font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }}
     @media (max-width: 1100px) {{
       .chart-row {{ grid-template-columns: 1fr; }}
-      .bar-row {{ grid-template-columns: 58px minmax(0, 1fr); }}
+      .library-notes {{ grid-template-columns: 1fr; }}
+      .bar-row {{ grid-template-columns: 76px minmax(0, 1fr); }}
     }}
     @media (prefers-color-scheme: dark) {{
       tbody tr.lib-zkf {{ background: color-mix(in srgb, #12344d 50%, Canvas); }}
       tbody tr.lib-flopoco {{ background: color-mix(in srgb, #4c3510 50%, Canvas); }}
+      tbody tr.lib-tommath {{ background: color-mix(in srgb, #143822 50%, Canvas); }}
       td.heat-best {{ background: #143d22 !important; color: #d7f6df; }}
       td.heat-mid {{ background: #4a3c12 !important; color: #fff0ad; }}
       td.heat-worst {{ background: #4b1f1a !important; color: #ffd4cd; }}
-      .chart-legend, .chart-target p, .chart-card-head span, .metric-title, .bar-value, .resource-detail, .target-win-summary span {{ color: #bbb; }}
+      .chart-legend, .chart-target p, .chart-card-head span, .metric-title, .bar-value, .resource-detail, .target-win-summary span, .library-note p {{ color: #bbb; }}
       .chart-target {{ background: color-mix(in srgb, #18202b 58%, Canvas); }}
       .compare-card {{ background: color-mix(in srgb, #111827 58%, Canvas); }}
       .op-chip {{ color: #d6e0ec; background: color-mix(in srgb, #cbd5e1 18%, Canvas); }}
@@ -2389,10 +2885,14 @@ def generate_report(rows: list[dict[str, Any]], mode: str) -> None:
   </style>
 </head>
 <body>
-  <h1><a href="https://github.com/Zubax/kulibin">ZKF</a> vs <a href="https://gitlab.com/flopoco/flopoco">FloPoCo</a> FPGA Benchmark</h1>
+  <h1><a href="https://github.com/Zubax/kulibin">ZKF</a> vs <a href="https://gitlab.com/flopoco/flopoco">FloPoCo</a> vs <a href="https://github.com/tomverbeure/math">Math Fpxx</a> FPGA Benchmark</h1>
   <p class="muted">Generated {html.escape(generated)}. Mode: <code>{html.escape(mode)}</code>. Target frequencies: <code>{html.escape(target_frequency_summary())}</code>.</p>
-  <p>ZKF semantics differ from IEEE/FloPoCo around NaN, subnormals, signed zero, and exception encoding. FloPoCo <code>wF</code> excludes the hidden bit, so ZKF <code>WMAN=18/36</code> is compared with FloPoCo <code>wF=17/35</code>. FloPoCo 5.1 <code>FPAdd</code>, <code>FPMult</code>, and <code>FPDiv</code> do not expose a documented command-line option to disable NaN handling; the native FloPoCo format already does not support IEEE subnormals. Each target/toolchain tunes ZKF staging and FloPoCo generation parameters independently; the report shows the selected best candidate per library/operator/format using this policy: lowest latency among rows that pass the target frequency, then lowest resource use, then highest Fmax. If no candidate passes, the highest-Fmax failing candidate is shown and marked <code>FAIL</code>.</p>
-  <p>FloPoCo appears to have difficulty closing timing for wide hard-multiplier implementations in some flows. Using <code>useHardMult=0</code> can avoid that hard-multiplier path, but at the cost of greatly increased latency and fabric area, making it impractical. This report therefore keeps <code>useHardMult=1</code> for multiplication everywhere and marks any remaining timing failures explicitly.</p>
+  <p class="muted report-policy">Selection is lowest-latency timing PASS, then lowest area, then highest Fmax. If none pass, the best failing row is shown as <code>FAIL</code>; summary wins and winner highlights require timing PASS and RNE-comparable semantics.</p>
+  <div class="library-notes">
+    <div class="library-note zkf"><strong>ZKF</strong><p>Native <code>WEXP/WMAN</code>; staging autotuned. Semantics differ from IEEE edge-case behavior.</p></div>
+    <div class="library-note flopoco"><strong>FloPoCo</strong><p><code>wF</code> excludes the hidden bit. Generation parameters are autotuned; wide hard-multiplier rows may miss timing.</p></div>
+    <div class="library-note tommath"><strong>Math Fpxx</strong><p><code>m</code> excludes the hidden bit. Add/mul use RNE; <code>FpxxDiv</code> is table-based, native-rounding, and excluded from wins.</p></div>
+  </div>
 """
     footer = """
 </body>
@@ -2412,12 +2912,12 @@ def clean_artifacts() -> None:
         RESULTS_JSON.unlink()
 
 
-def run_full(force: bool, jobs: int) -> int:
-    if force:
+def run_full(force: bool, jobs: int, libraries: tuple[str, ...] | None = None) -> int:
+    if force and libraries is None:
         clean_artifacts()
     rc = 0
     for target_id in TARGET_ORDER:
-        rc |= run_target(target_id, force=False, jobs=jobs)
+        rc |= run_target(target_id, force=force and libraries is not None, jobs=jobs, libraries=libraries)
     rows = load_existing_rows()
     generate_report(rows, "full")
     return rc
@@ -2432,14 +2932,22 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--force", action="store_true", help="remove generated target artifacts before running")
     parser.add_argument("--jobs", type=int, default=DEFAULT_JOBS, help=f"parallel synthesis jobs (default: {DEFAULT_JOBS})")
+    parser.add_argument(
+        "--library",
+        action="append",
+        choices=LIBRARIES,
+        help="limit synthesis/listing to one library; can be repeated",
+    )
     args = parser.parse_args(argv)
     jobs = max(1, args.jobs)
+    libraries = tuple(dict.fromkeys(args.library)) if args.library else None
 
     if args.mode == "clean":
         clean_artifacts()
         return 0
     if args.mode == "list":
-        for key, specs in benchmark_groups():
+        selected_libraries = set(libraries) if libraries else None
+        for key, specs in filter_groups_by_libraries(benchmark_groups(), selected_libraries):
             print(f"{key[0]} {key[1]} WEXP={key[2]} WMAN={key[3]}: {len(specs)} base candidate(s)")
         return 0
     if args.mode == "report":
@@ -2450,9 +2958,9 @@ def main(argv: list[str] | None = None) -> int:
         generate_report(rows, "report")
         return 0
     if args.mode == "full":
-        return run_full(args.force, jobs)
+        return run_full(args.force, jobs, libraries)
     if args.mode in TARGET_FLOWS:
-        return run_target(args.mode, args.force, jobs)
+        return run_target(args.mode, args.force, jobs, libraries)
     raise AssertionError(args.mode)
 
 

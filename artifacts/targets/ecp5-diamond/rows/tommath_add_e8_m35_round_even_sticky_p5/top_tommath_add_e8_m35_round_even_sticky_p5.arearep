@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell top_tommath_add_e8_m35_round_even_sticky_p5.TECH
+Register bits:  486 of 12687 (3.831%)
+I/O cells:      136
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       113          100.0
+                            FD1S3AX       386          100.0
+                            FD1S3DX         5          100.0
+                            FD1S3IX        84          100.0
+                            FD1S3JX        11          100.0
+                                GSR         1          100.0
+                                 IB        91          100.0
+                               LUT4       971          100.0
+                                 OB        45          100.0
+                              PFUMX        46          100.0
+                           SPR16X4C         2          100.0
+SUB MODULES
+                            FpxxAdd         1
+                              TOTAL      1756
+----------------------------------------------------------------------
+Report for cell FpxxAdd.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       184           47.7
+                            FD1S3DX         5          100.0
+                            FD1S3IX        45           53.6
+                            FD1S3JX         2           18.2
+                               LUT4       939           96.7
+                              PFUMX        46          100.0
+                           SPR16X4C         2          100.0
+                              TOTAL      1223

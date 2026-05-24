@@ -1,10 +1,11 @@
 <h1>FPGA Floating-Point Evaluation</h1>
 
 <p>
-  This repository contains a generated benchmark report comparing ZKF and
-  FloPoCo floating-point add, multiply, and divide implementations at 100 MHz.
-  The current report covers Lattice ECP5 using Yosys/nextpnr and AMD/Xilinx
-  Spartan-7 using Vivado.
+  This repository contains a generated benchmark report comparing ZKF,
+  FloPoCo, and tomverbeure/math Fpxx floating-point add, multiply, and divide
+  implementations at target-specific clocks.
+  The current report covers Lattice ECP5 using Yosys/nextpnr and Diamond, and
+  AMD/Xilinx Spartan-7 using Vivado.
 </p>
 
 <p>
@@ -32,9 +33,25 @@
 
 <p>
   Run <code>python3 scripts/benchmark.py full --force</code> to remove generated
-  artifacts and rebuild both targets. The script tunes ZKF staging and FloPoCo
-  generation parameters per target, then publishes only the selected best
-  passing candidate for each library/operator/format combination.
+  artifacts and rebuild all targets. The script tunes ZKF staging, FloPoCo
+  generation parameters, and Math Fpxx pipeline/divider table parameters per
+  target, then publishes the selected best timing-closing candidate for each
+  library/operator/format combination. If no candidate closes timing, the report
+  shows the highest-Fmax failing candidate and marks it <code>FAIL</code>.
+</p>
+
+<p>
+  The Math Fpxx source tree is expected at <code>third_party/math</code> by
+  default, or at <code>$MATH_REPO</code> if set. Verilog generation uses
+  <code>sbt</code>, overridable with <code>$SBT</code>.
+</p>
+
+<p>
+  Math Fpxx add and multiply candidates are generated with
+  <code>RoundType.ROUNDTOEVEN</code>. Math Fpxx <code>FpxxDiv</code> does not
+  expose a rounding-mode option in the evaluated checkout, so its divider rows
+  use the library's native divider behavior and are not counted as
+  rounding-comparable wins in the report.
 </p>
 
 <h2>Notes</h2>

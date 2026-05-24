@@ -1,0 +1,3 @@
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_mul_e8_m17_round_even_p2/src/tommath_mul_e8_m17_round_even_p2.v"
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_mul_e8_m17_round_even_p2/src/top_tommath_mul_e8_m17_round_even_p2.v"
+synth_ecp5 -top top_tommath_mul_e8_m17_round_even_p2 -abc2 -dff -retime -noabc9 -json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_mul_e8_m17_round_even_p2/netlist.json

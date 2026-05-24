@@ -1,0 +1,83 @@
+[ START MERGED ]
+u_dut/n3225 u_dut/_zz_n1_mant_b_shift_4_37
+u_dut/n0_a_geq_b n0_exp_diff_a_b_8
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+add_5677_31/S1
+add_5677_31/S0
+add_5677_33/S1
+add_5677_33/S0
+add_5677_35/S1
+add_5677_35/S0
+add_5677_37/S1
+add_5677_37/S0
+add_5677_39/S1
+add_5677_39/S0
+add_5677_cout/S1
+add_5677_cout/CO
+_add_2_add_4_1/S0
+_add_2_add_4_1/CI
+_add_2_add_4_9/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+_add_1_524_add_4_37/S0
+_add_1_524_add_4_37/CO
+_add_1_add_4_10/CO
+_add_1_517_add_4_1/S0
+_add_1_517_add_4_1/CI
+_add_1_530_add_4_1/S0
+_add_1_530_add_4_1/CI
+_add_1_517_add_4_37/S0
+_add_1_517_add_4_37/CO
+_add_1_533_add_4_2/S0
+_add_1_533_add_4_2/CI
+_add_1_533_add_4_10/S1
+_add_1_533_add_4_10/CO
+n4_n3_mant_add_res1_add_4_2/S0
+n4_n3_mant_add_res1_add_4_2/CI
+_add_1_530_add_4_35/CO
+add_5677_1/S1
+add_5677_1/S0
+add_5677_1/CI
+add_5677_3/S1
+add_5677_3/S0
+add_5677_5/S1
+add_5677_5/S0
+n4_n3_mant_add_res1_add_4_42/S1
+n4_n3_mant_add_res1_add_4_42/CO
+add_5677_7/S1
+add_5677_7/S0
+add_5677_9/S1
+add_5677_9/S0
+_add_1_524_add_4_1/S0
+_add_1_524_add_4_1/CI
+add_5677_11/S1
+add_5677_11/S0
+add_5677_13/S1
+add_5677_13/S0
+add_5677_15/S1
+add_5677_15/S0
+add_5677_17/S1
+add_5677_17/S0
+add_5677_19/S1
+add_5677_19/S0
+add_5677_21/S1
+add_5677_21/S0
+add_5677_23/S1
+add_5677_23/S0
+add_5677_25/S1
+add_5677_25/S0
+add_5677_27/S1
+add_5677_27/S0
+add_5677_29/S1
+add_5677_29/S0
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sun May 24 14:00:33 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

@@ -1,0 +1,269 @@
+
+Lattice Place and Route Report for Design "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5_map.ncd"
+Sun May 24 13:49:10 2026
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: /usr/local/diamond/3.14/ispfpga/bin/lin64/par -w -l 5 -i 6 -t 1 -c 0 -e 0 -exp
+parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5_map.ncd
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5.ncd
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5.prf
+
+Preference file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5_map.ncd.
+Design name: top_tommath_add_e8_m17_round_even_sticky_p5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-12F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      82/197          41% used
+                     82/197          41% bonded
+
+   SLICE            427/6048          7% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 1012
+Number of Connections: 2732
+
+Pin Constraint Summary:
+   0 out of 82 pins locked (0% locked).
+
+The following 2 signals are selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk/ce/sr load #: 176/0/0)
+    n1864 (driver: u_dut/SLICE_347, clk/ce/sr load #: 0/0/10)
+
+
+Signal rst_c is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+...............
+Finished Placer Phase 0.  REAL time: 3 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 393666.
+Finished Placer Phase 1.  REAL time: 9 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  379229
+Finished Placer Phase 2.  REAL time: 9 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 12 (8%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 2 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "B11 (PT29A)", CLK/CE/SR load = 5
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Quadrant BL Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "B11 (PT29A)", CLK/CE/SR load = 50
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Quadrant BR Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "B11 (PT29A)", CLK/CE/SR load = 121
+  PRIMARY "n1864" from F0 on comp "u_dut/SLICE_347" on site "R28C50D", CLK/CE/SR load = 10
+
+  PRIMARY  : 2 out of 16 (12%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   82 out of 197 (41.6%) PIO sites used.
+   82 out of 197 (41.6%) bonded PIO sites used.
+   Number of PIO comps: 82; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 9 / 24 ( 37%)  | 2.5V       | -          | -          |
+| 1        | 11 / 32 ( 34%) | 2.5V       | -          | -          |
+| 2        | 7 / 32 ( 21%)  | 2.5V       | -          | -          |
+| 3        | 16 / 32 ( 50%) | 2.5V       | -          | -          |
+| 6        | 23 / 32 ( 71%) | 2.5V       | -          | -          |
+| 7        | 4 / 32 ( 12%)  | 2.5V       | -          | -          |
+| 8        | 12 / 13 ( 92%) | 2.5V       | -          | -          |
++----------+----------------+------------+------------+------------+
+
+Total placer CPU time: 9 secs 
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5.ncd.
+
+0 connections routed; 2732 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 13 secs 
+
+Start NBR router at Sun May 24 13:49:23 EEST 2026
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at Sun May 24 13:49:23 EEST 2026
+
+Start NBR section for initial routing at Sun May 24 13:49:23 EEST 2026
+Level 1, iteration 1
+36(0.00%) conflicts; 2163(79.17%) untouched conns; 2033101 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.857ns/-2033.101ns; real time: 13 secs 
+Level 2, iteration 1
+157(0.01%) conflicts; 1723(63.07%) untouched conns; 1771769 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.724ns/-1771.770ns; real time: 14 secs 
+Level 3, iteration 1
+109(0.01%) conflicts; 1228(44.95%) untouched conns; 596809 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.877ns/-596.809ns; real time: 14 secs 
+Level 4, iteration 1
+110(0.01%) conflicts; 0(0.00%) untouched conn; 531136 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.613ns/-531.137ns; real time: 14 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Sun May 24 13:49:24 EEST 2026
+Level 1, iteration 1
+60(0.01%) conflicts; 81(2.96%) untouched conns; 519003 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.581ns/-519.004ns; real time: 14 secs 
+Level 4, iteration 1
+86(0.01%) conflicts; 0(0.00%) untouched conn; 511950 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.619ns/-511.950ns; real time: 15 secs 
+Level 4, iteration 2
+65(0.01%) conflicts; 0(0.00%) untouched conn; 531699 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.619ns/-531.699ns; real time: 15 secs 
+Level 4, iteration 3
+52(0.00%) conflicts; 0(0.00%) untouched conn; 526291 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.618ns/-526.292ns; real time: 15 secs 
+Level 4, iteration 4
+38(0.00%) conflicts; 0(0.00%) untouched conn; 526291 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.618ns/-526.292ns; real time: 15 secs 
+Level 4, iteration 5
+25(0.00%) conflicts; 0(0.00%) untouched conn; 556885 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.622ns/-556.885ns; real time: 15 secs 
+Level 4, iteration 6
+27(0.00%) conflicts; 0(0.00%) untouched conn; 556885 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.622ns/-556.885ns; real time: 15 secs 
+Level 4, iteration 7
+23(0.00%) conflicts; 0(0.00%) untouched conn; 556973 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-556.974ns; real time: 15 secs 
+Level 4, iteration 8
+16(0.00%) conflicts; 0(0.00%) untouched conn; 556973 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-556.974ns; real time: 15 secs 
+Level 4, iteration 9
+10(0.00%) conflicts; 0(0.00%) untouched conn; 595451 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-595.451ns; real time: 16 secs 
+Level 4, iteration 10
+7(0.00%) conflicts; 0(0.00%) untouched conn; 595451 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-595.451ns; real time: 16 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 593693 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-593.693ns; real time: 16 secs 
+Level 4, iteration 12
+0(0.00%) conflict; 0(0.00%) untouched conn; 593693 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-593.693ns; real time: 16 secs 
+
+Start NBR section for performance tuning (iteration 1) at Sun May 24 13:49:26 EEST 2026
+Level 4, iteration 1
+5(0.00%) conflicts; 0(0.00%) untouched conn; 618320 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.784ns/-618.321ns; real time: 16 secs 
+
+Start NBR section for re-routing at Sun May 24 13:49:26 EEST 2026
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 593703 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.610ns/-593.703ns; real time: 16 secs 
+
+Start NBR section for post-routing at Sun May 24 13:49:26 EEST 2026
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 393 (14.39%)
+  Estimated worst slack<setup> : -2.610ns
+  Timing score<setup> : 8289672
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 16 secs 
+Total REAL time: 17 secs 
+Completely routed.
+End of route.  2732 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 8289672 
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_add_e8_m17_round_even_sticky_p5/top_tommath_add_e8_m17_round_even_sticky_p5.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -2.610
+PAR_SUMMARY::Timing score<setup/<ns>> = 8289.672
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.152
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 16 secs 
+Total REAL time to completion: 17 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.

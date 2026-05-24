@@ -1,0 +1,21 @@
+---------------------------------------------------
+Report for cell top_tommath_mul_e8_m17_round_even_p2
+   Instance path: top_tommath_mul_e8_m17_round_even_p2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     151.00        100.0
+                                  LUT4	     124.00        100.0
+                                 IOBUF	         82        100.0
+                                PFUREG	        143        100.0
+                                RIPPLE	         21        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               FpxxMul	          1        57.3
+---------------------------------------------------
+Report for cell FpxxMul
+   Instance path: top_tommath_mul_e8_m17_round_even_p2/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      86.50        57.3
+                                  LUT4	     108.00        87.1
+                                PFUREG	         44        30.8

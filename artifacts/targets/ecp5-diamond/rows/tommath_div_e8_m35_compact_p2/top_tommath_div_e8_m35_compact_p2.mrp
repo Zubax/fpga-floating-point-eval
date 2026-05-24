@@ -1,0 +1,1392 @@
+
+Lattice Mapping Report File for Design Module
+     'top_tommath_div_e8_m35_compact_p2'
+
+
+Design Information
+------------------
+
+Command line:   /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p
+     LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/
+     artifacts/targets/ecp5-diamond/rows/tommath_div_e8_m35_compact_p2/top_tomma
+     th_div_e8_m35_compact_p2.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/
+     targets/ecp5-diamond/rows/tommath_div_e8_m35_compact_p2/top_tommath_div_e8_
+     m35_compact_p2_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/artifacts/targe
+     ts/ecp5-diamond/rows/tommath_div_e8_m35_compact_p2/top_tommath_div_e8_m35_c
+     ompact_p2.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-d
+     iamond/rows/tommath_div_e8_m35_compact_p2/top_tommath_div_e8_m35_compact_p2
+     .mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/r
+     ows/tommath_div_e8_m35_compact_p2/constraints.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/24/26  14:05:14
+
+Design Summary
+--------------
+
+   Number of registers:    443 out of 12687 (3%)
+      PFU registers:          443 out of 12096 (4%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       338 out of  6048 (6%)
+      SLICEs as Logic/ROM:    338 out of  6048 (6%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         66 out of  6048 (1%)
+   Number of LUT4s:        310 out of 12096 (3%)
+      Number used as logic LUTs:        178
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      132
+      Number used as shift registers:     0
+   Number of PIO sites used: 136 out of 197 (69%)
+   Number of block RAMs:  1 out of 32 (3%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+
+                                    Page 1
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+Design Summary (cont)
+---------------------
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          7
+   MULT9X9D            0
+   ALU54B              3
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  14 out of 56 (25 %)
+   Number of Used DSP ALU Sites:  6 out of 28 (21 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 259 loads, 259 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  9
+     Net in_valid_r: 32 loads, 31 LSLICEs
+     Net u_dut/p1_vld: 8 loads, 8 LSLICEs
+     Net u_dut/clk_c_enable_105: 28 loads, 28 LSLICEs
+     Net u_dut/p3_vld: 18 loads, 15 LSLICEs
+     Net u_dut/clk_c_enable_127: 30 loads, 30 LSLICEs
+     Net u_dut/p2_vld: 8 loads, 8 LSLICEs
+     Net p4_vld: 19 loads, 19 LSLICEs
+     Net u_dut/n4444: 4 loads, 0 LSLICEs
+     Net clk_c_enable_44: 18 loads, 18 LSLICEs
+   Number of local set/reset loads for net rst_c merged into GSR:  9
+   Number of LSRs:  5
+     Net n3265: 18 loads, 18 LSLICEs
+     Net rst_c: 2 loads, 2 LSLICEs
+     Net n4170: 1 loads, 1 LSLICEs
+     Net when_FpxxDiv_l198: 1 loads, 1 LSLICEs
+     Net n1380: 4 loads, 4 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net in_valid_r: 71 loads
+     Net div_p5_37: 49 loads
+     Net div_p5_38: 49 loads
+     Net u_dut/n4369: 33 loads
+     Net u_dut/clk_c_enable_127: 31 loads
+     Net u_dut/clk_c_enable_105: 29 loads
+     Net p4_vld: 20 loads
+     Net u_dut/p3_vld: 20 loads
+     Net clk_c_enable_44: 18 loads
+     Net n3265: 18 loads
+
+
+
+
+   Number of warnings:  62
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: u_dut/lat_alu_3 : removed the input signal of SIGNEDCIN pin
+     because it's not legal.
+
+                                    Page 2
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: u_dut/lat_alu_6 : removed the input signal of SIGNEDCIN pin
+     because it's not legal.
+WARNING - map: Using local reset signal 'rst_c' to infer global GSR net.
+WARNING - map: u_dut/lat_alu_4 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP0 control.
+WARNING - map: u_dut/lat_alu_4 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP1 control.
+WARNING - map: u_dut/lat_alu_4 : A/B data pipe not consistent with non-pipelined
+     OPCODEIN control.
+WARNING - map: u_dut/lat_alu_4 : R53 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R52 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R51 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R50 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R49 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R48 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R47 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R46 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R45 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R44 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R43 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R42 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R41 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R40 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R39 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R38 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R37 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_4 : R36 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP0 control.
+WARNING - map: u_dut/lat_alu_3 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP1 control.
+WARNING - map: u_dut/lat_alu_3 : A/B data pipe not consistent with non-pipelined
+     OPCODEIN control.
+WARNING - map: u_dut/lat_alu_3 : R53 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R52 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R51 pin may contain garbage data if ternary 36
+
+                                    Page 3
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+Design Errors/Warnings (cont)
+-----------------------------
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R50 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R49 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R48 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R47 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R46 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R45 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R44 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R43 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R42 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R41 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R40 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R39 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R38 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R37 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_3 : R36 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP0 control.
+WARNING - map: u_dut/lat_alu_6 : A/B data pipe not consistent with non-pipelined
+     OPCODEOP1 control.
+WARNING - map: u_dut/lat_alu_6 : A/B data pipe not consistent with non-pipelined
+     OPCODEIN control.
+WARNING - map: u_dut/lat_alu_6 : R48 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R47 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R46 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R45 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R44 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R43 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R42 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R41 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R40 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R39 pin may contain garbage data if ternary 36
+
+                                    Page 4
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+Design Errors/Warnings (cont)
+-----------------------------
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R38 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R37 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: u_dut/lat_alu_6 : R36 pin may contain garbage data if ternary 36
+     bit operation.
+WARNING - map: The reset of EBR 'mux_21' cannot be controlled. The local reset
+     is not connected to any control signal and set to GND. The global reset is
+     disabled via GSR property. To control the EBR reset, either connect the
+     local reset to a control signal or force the GSR property to be enabled.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| y_o[43]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| out_valid_o         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[42]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[41]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[40]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[39]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[38]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[37]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[36]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[35]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[34]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[33]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[32]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[31]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[30]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[29]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[28]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[27]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[26]             | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 5
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| y_o[25]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[24]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[23]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[22]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[21]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[20]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[19]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[18]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[17]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[16]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[15]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[14]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[13]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[10]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
+
+                                    Page 6
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| in_valid_i          | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[43]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[33]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[17]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 7
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| a_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[43]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[33]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 8
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| b_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[5]              | INPUT     | LVCMOS25  |            |
+
+                                    Page 9
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| b_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal add_277_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal add_277_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_277_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal add_277_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal add_277_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal add_277_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal add_277_add_4_50/S1 undriven or does not drive anything - clipped.
+Signal add_277_add_4_50/CO undriven or does not drive anything - clipped.
+Signal _add_1_196_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_196_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_196_add_4_10/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_190_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_190_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_190_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_190_add_4_11/CO undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_0/S1 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_0/S0 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_0/CI undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_30/S1 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_30/S0 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_32/S1 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_32/S0 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_34/S1 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_34/S0 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_36_1407/S1 undriven or does not drive anything -
+     clipped.
+Signal u_dut/equal_1404_36_1407/S0 undriven or does not drive anything -
+     clipped.
+Signal u_dut/equal_1404_36/S1 undriven or does not drive anything - clipped.
+Signal u_dut/equal_1404_36/CO undriven or does not drive anything - clipped.
+Signal u_dut/exp_full_p2_add_4_2/S0 undriven or does not drive anything -
+
+                                   Page 10
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal u_dut/exp_full_p2_add_4_2/CI undriven or does not drive anything -
+     clipped.
+Signal u_dut/exp_full_p2_add_4_10/CO undriven or does not drive anything -
+     clipped.
+Block i17 was optimized away.
+
+Memory Usage
+------------
+
+/:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 158
+    PFU Registers: 229
+    -Contains EBR mux_21:  TYPE= PDPW16KD,  Width= 12,  Depth_R= 64,  REGMODE=
+         NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+
+DSP Component Details
+---------------------
+
+
+     . MULT18X18D  u_dut/lat_mult_5:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+
+                                   Page 11
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/mult_181_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+
+                                   Page 12
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+     . ALU54B  u_dut/lat_alu_4:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		1
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+
+                                   Page 13
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . ALU54B  u_dut/lat_alu_3:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+
+                                   Page 14
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . MULT18X18D  u_dut/x_mul_yhyl_p3_res4_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+
+                                   Page 15
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/mult_182_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . ALU54B  u_dut/lat_alu_6:
+
+     54-Bit ALU
+	Opcode  0		1
+
+                                   Page 16
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+
+                                   Page 17
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . MULT18X18D  u_dut/lat_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/lat_mult_1:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+
+                                   Page 18
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/lat_mult_0:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK3	CE3	RST3
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+
+                                   Page 19
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+DSP Component Details (cont)
+----------------------------
+		A		CLK3	CE3	RST3	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: u_dut/lat_mult_5
+         Type: MULT18X18D
+Instance Name: u_dut/mult_181_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/lat_alu_4
+         Type: ALU54B
+Instance Name: u_dut/lat_alu_3
+         Type: ALU54B
+Instance Name: u_dut/x_mul_yhyl_p3_res4_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/mult_182_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/lat_alu_6
+         Type: ALU54B
+Instance Name: u_dut/lat_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/lat_mult_1
+         Type: MULT18X18D
+Instance Name: u_dut/lat_mult_0
+         Type: MULT18X18D
+Instance Name: mux_21
+         Type: PDPW16KD
+
+
+                                   Page 20
+
+
+
+
+Design:  top_tommath_div_e8_m35_compact_p2             Date:  05/24/26  14:05:14
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'rst_c' of the design has been inferred as Global Set
+        Reset (GSR). The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'rst_c' via the local reset on the component and not the GSR component.
+
+     Type and number of components of the type: 
+   Register = 2 
+
+     Type and instance name of component: 
+   Register : out_valid_r_15
+   Register : in_valid_r_14
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 191 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 21
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

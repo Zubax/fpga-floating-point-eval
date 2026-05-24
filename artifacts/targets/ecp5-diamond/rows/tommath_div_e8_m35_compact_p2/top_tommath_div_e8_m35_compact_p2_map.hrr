@@ -1,0 +1,23 @@
+---------------------------------------------------
+Report for cell top_tommath_div_e8_m35_compact_p2
+   Instance path: top_tommath_div_e8_m35_compact_p2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     338.00        100.0
+                                  LUT4	     178.00        100.0
+                                 IOBUF	        136        100.0
+                                PFUREG	        443        100.0
+                                RIPPLE	         66        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               FpxxDiv	          1        61.0
+---------------------------------------------------
+Report for cell FpxxDiv
+   Instance path: top_tommath_div_e8_m35_compact_p2/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     206.17        61.0
+                                  LUT4	     139.00        78.1
+                                PFUREG	        260        58.7
+                                RIPPLE	         11        16.7

@@ -1,0 +1,365 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      1049/24288     4%
+Info:         logic LUTs:    875/24288     3%
+Info:         carry LUTs:    174/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:       289/24288     1%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     120 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0x038197c8
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:      82/    197    41%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       0/     28     0%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:     289/  24288     1%
+Info: 	        TRELLIS_COMB:    1111/  24288     4%
+Info: 	        TRELLIS_RAMW:       0/   3036     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 632 cells, random placement wirelen = 44985.
+Info:     at initial placer iter 0, wirelen = 4594
+Info:     at initial placer iter 1, wirelen = 3932
+Info:     at initial placer iter 2, wirelen = 3915
+Info:     at initial placer iter 3, wirelen = 3904
+Info: Running main analytical placer, max placement attempts per cell = 274911.
+Info:     at iteration #1, type ALL: wirelen solved = 3920, spread = 8444, legal = 8577; time = 0.04s
+Info:     at iteration #2, type ALL: wirelen solved = 4179, spread = 7483, legal = 7616; time = 0.03s
+Info:     at iteration #3, type ALL: wirelen solved = 4390, spread = 7322, legal = 7409; time = 0.03s
+Info:     at iteration #4, type ALL: wirelen solved = 4577, spread = 6969, legal = 7073; time = 0.03s
+Info:     at iteration #5, type ALL: wirelen solved = 4635, spread = 6801, legal = 6900; time = 0.04s
+Info:     at iteration #6, type ALL: wirelen solved = 4762, spread = 6771, legal = 6946; time = 0.02s
+Info:     at iteration #7, type ALL: wirelen solved = 4870, spread = 6701, legal = 6864; time = 0.03s
+Info:     at iteration #8, type ALL: wirelen solved = 4967, spread = 6698, legal = 6853; time = 0.03s
+Info:     at iteration #9, type ALL: wirelen solved = 5039, spread = 6595, legal = 6804; time = 0.02s
+Info:     at iteration #10, type ALL: wirelen solved = 5099, spread = 6832, legal = 7023; time = 0.02s
+Info:     at iteration #11, type ALL: wirelen solved = 5158, spread = 6627, legal = 6818; time = 0.02s
+Info:     at iteration #12, type ALL: wirelen solved = 5195, spread = 6683, legal = 6823; time = 0.02s
+Info:     at iteration #13, type ALL: wirelen solved = 5220, spread = 6626, legal = 6816; time = 0.02s
+Info:     at iteration #14, type ALL: wirelen solved = 5281, spread = 6573, legal = 6760; time = 0.02s
+Info:     at iteration #15, type ALL: wirelen solved = 5323, spread = 6770, legal = 6883; time = 0.01s
+Info:     at iteration #16, type ALL: wirelen solved = 5487, spread = 7168, legal = 7313; time = 0.02s
+Info:     at iteration #17, type ALL: wirelen solved = 5682, spread = 7311, legal = 7373; time = 0.02s
+Info:     at iteration #18, type ALL: wirelen solved = 5835, spread = 7359, legal = 7460; time = 0.02s
+Info:     at iteration #19, type ALL: wirelen solved = 5993, spread = 7071, legal = 7239; time = 0.02s
+Info: HeAP Placer Time: 0.73s
+Info:   of which solving equations: 0.35s
+Info:   of which spreading cells: 0.08s
+Info:   of which strict legalisation: 0.04s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 306, wirelen = 6760
+Info:   at iteration #5: temp = 0.000000, timing cost = 245, wirelen = 5698
+Info:   at iteration #10: temp = 0.000000, timing cost = 220, wirelen = 5524
+Info:   at iteration #12: temp = 0.000000, timing cost = 211, wirelen = 5472 
+Info: SA placement time 1.19s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 64.73 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 6.56 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 5.97 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ -5448,  -4725) |******** 
+Info: [ -4725,  -4002) |********* 
+Info: [ -4002,  -3279) |*** 
+Info: [ -3279,  -2556) |***** 
+Info: [ -2556,  -1833) | 
+Info: [ -1833,  -1110) | 
+Info: [ -1110,   -387) |************ 
+Info: [  -387,    336) |******************************* 
+Info: [   336,   1059) |********* 
+Info: [  1059,   1782) |*** 
+Info: [  1782,   2505) |*************** 
+Info: [  2505,   3228) |********************** 
+Info: [  3228,   3951) |*********** 
+Info: [  3951,   4674) |***** 
+Info: [  4674,   5397) |************ 
+Info: [  5397,   6120) |****************** 
+Info: [  6120,   6843) |*********** 
+Info: [  6843,   7566) |********************** 
+Info: [  7566,   8289) |************ 
+Info: [  8289,   9012) |************************************************** 
+Info: Checksum: 0xa7dd091b
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 3543 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      279        720 |  279   720 |      2856|       0.27       0.27|
+Info:       2000 |      613       1386 |  334   666 |      2239|       0.22       0.49|
+Info:       3000 |      815       2107 |  202   721 |      1465|       0.21       0.70|
+Info:       4000 |      976       2863 |  161   756 |       648|       0.17       0.87|
+Info:       4668 |      997       3281 |   21   418 |         0|       0.15       1.02|
+Info: Routing complete.
+Info: Router1 time 1.02s
+Info: Checksum: 0x4d0ab2f1
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source u_dut.n5_n4_lz_LUT4_Z_1_D_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_D_Z_TRELLIS_FF_DI_Q_TRELLIS_FF_Q_4.Q
+Info:    routing  1.17  1.69 Net u_dut.n5_n4_lz_LUT4_Z_1_D_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_D_Z_TRELLIS_FF_DI_Q[0] (20,21) -> (20,18)
+Info:                          Sink u_dut.n5_n4_lz_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.A
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.40  2.10 Source u_dut.n5_n4_lz_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  2.10 Net u_dut.n5_n4_lz_L6MUX21_Z_D0 (20,18) -> (20,18)
+Info:                          Sink u_dut.n5_n4_lz_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:141.34-141.36
+Info:      logic  0.24  2.33 Source u_dut.n5_n4_lz_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.91  3.24 Net u_dut._zz_n5_exp_add_m_lz_3[2] (20,18) -> (22,19)
+Info:                          Sink u_dut.n5_mant_renormed_LUT4_Z_5_C_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:157.23-157.31
+Info:      logic  0.26  3.50 Source u_dut.n5_mant_renormed_LUT4_Z_5_C_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  1.29  4.79 Net u_dut.n5_mant_renormed_LUT4_Z_2_D[0] (22,19) -> (18,14)
+Info:                          Sink u_dut.n5_mant_renormed_LUT4_Z_1.C
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  5.02 Source u_dut.n5_mant_renormed_LUT4_Z_1.F
+Info:    routing  0.86  5.88 Net u_dut.n5_mant_renormed[4] (18,14) -> (18,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0$CCU2_COMB1.B
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:292.23-292.39
+Info:      logic  0.45  6.33 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0$CCU2_COMB1.FCO
+Info:    routing  0.00  6.33 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[2] (18,15) -> (18,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.40 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  6.40 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1$CCU2_FCI_INT (18,15) -> (18,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  6.40 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  6.40 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[4] (18,15) -> (18,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.47 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0$CCU2_COMB0.FCO
+Info:    routing  0.00  6.47 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0$CCU2_FCI_INT (18,15) -> (18,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0$CCU2_COMB1.FCI
+Info:      logic  0.00  6.47 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0$CCU2_COMB1.FCO
+Info:    routing  0.00  6.47 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[6] (18,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.54 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_1$CCU2_COMB0.FCO
+Info:    routing  0.00  6.54 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_1$CCU2_FCI_INT (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_1$CCU2_COMB1.FCI
+Info:      logic  0.00  6.54 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_1$CCU2_COMB1.FCO
+Info:    routing  0.00  6.54 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[8] (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.61 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_2$CCU2_COMB0.FCO
+Info:    routing  0.00  6.61 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_2$CCU2_FCI_INT (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_2$CCU2_COMB1.FCI
+Info:      logic  0.00  6.61 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_2$CCU2_COMB1.FCO
+Info:    routing  0.00  6.61 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[10] (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.68 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_4$CCU2_COMB0.FCO
+Info:    routing  0.00  6.68 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_4$CCU2_FCI_INT (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_4$CCU2_COMB1.FCI
+Info:      logic  0.00  6.68 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_4$CCU2_COMB1.FCO
+Info:    routing  0.00  6.68 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[12] (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.76 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  6.76 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT$CCU2_FCI_INT (19,15) -> (19,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  6.76 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  6.76 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[14] (19,15) -> (20,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_3$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.83 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_3$CCU2_COMB0.FCO
+Info:    routing  0.00  6.83 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_3$CCU2_FCI_INT (20,15) -> (20,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_3$CCU2_COMB1.FCI
+Info:      logic  0.00  6.83 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT_CCU2C_COUT_3$CCU2_COMB1.FCO
+Info:    routing  0.00  6.83 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[16] (20,15) -> (20,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  6.90 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  6.90 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1_1$CCU2_FCI_INT (20,15) -> (20,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  6.90 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  6.90 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_COUT[18] (20,15) -> (20,15)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.44  7.34 Source u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1_CCU2C_S0_1$CCU2_COMB0.F
+Info:    routing  0.63  7.98 Net u_dut.io_result_payload_mant_PFUMX_Z_1_ALUT_LUT4_Z_A_CCU2C_S0_S1[18] (20,15) -> (21,15)
+Info:                          Sink u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C_LUT4_Z.A
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/tommath_add_e8_m17_round_even_sticky_p4.v:845.32-845.91
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:34.26-34.27
+Info:      logic  0.24  8.21 Source u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C_LUT4_Z.F
+Info:    routing  0.71  8.93 Net u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C[0] (21,15) -> (21,14)
+Info:                          Sink u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C_LUT4_C.C
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  9.16 Source u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C_LUT4_C.F
+Info:    routing  0.85  10.01 Net u_dut.n5_n4_lz_LUT4_Z_1_D_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_2_C_LUT4_C_Z[0] (21,14) -> (22,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1$CCU2_COMB1.B
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/techmap.v:200.21-200.22
+Info:      logic  0.45  10.46 Source u_dut._zz_n5_exp_final_1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.46 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_COUT[2] (22,14) -> (22,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  10.53 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.53 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_1$CCU2_FCI_INT (22,14) -> (22,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.53 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.53 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_COUT[4] (22,14) -> (22,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  10.60 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  10.60 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_2$CCU2_FCI_INT (22,14) -> (22,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.00  10.60 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_2$CCU2_COMB1.FCO
+Info:    routing  0.00  10.60 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_COUT[6] (22,14) -> (23,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_3$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.07  10.67 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_3$CCU2_COMB0.FCO
+Info:    routing  0.00  10.67 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_3$CCU2_FCI_INT (23,14) -> (23,14)
+Info:                          Sink u_dut._zz_n5_exp_final_1_CCU2C_S1_3$CCU2_COMB1.FCI
+Info:      logic  0.00  10.67 Source u_dut._zz_n5_exp_final_1_CCU2C_S1_3$CCU2_COMB1.FCO
+Info:    routing  0.00  10.67 Net u_dut._zz_n5_exp_final_1_CCU2C_S1_COUT[8] (23,14) -> (23,14)
+Info:                          Sink u_dut.n5_exp_add_m_lz_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:65.22-65.25
+Info:      logic  0.44  11.11 Source u_dut.n5_exp_add_m_lz_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.67  11.78 Net u_dut._zz_n5_exp_final_1[8] (23,14) -> (24,14)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_C0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.26  12.04 Source u_dut.io_result_payload_mant_PFUMX_Z_C0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  12.04 Net u_dut.io_result_payload_mant_PFUMX_Z_C0_L6MUX21_Z_D0 (24,14) -> (24,14)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_C0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:141.34-141.36
+Info:      logic  0.24  12.28 Source u_dut.io_result_payload_mant_PFUMX_Z_C0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.91  13.19 Net u_dut.io_result_payload_mant_PFUMX_Z_C0[4] (24,14) -> (24,17)
+Info:                          Sink u_dut.io_result_payload_mant_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.26  13.44 Source u_dut.io_result_payload_mant_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.46  13.90 Net dut_mant[16] (24,17) -> (24,17)
+Info:                          Sink y_o_TRELLIS_FF_Q_17.M
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/top_tommath_add_e8_m17_round_even_sticky_p4.v:21.17-21.22
+Info:      setup  0.00  13.90 Source y_o_TRELLIS_FF_Q_17.M
+Info: 5.44 ns logic, 8.46 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source a_i[11]$tr_io.O
+Info:    routing  4.18  4.18 Net a_i[11]$TRELLIS_IO_IN (72,29) -> (13,22)
+Info:                          Sink a_r_TRELLIS_FF_Q_12.M
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/top_tommath_add_e8_m17_round_even_sticky_p4.v:8.24-8.27
+Info:      setup  0.00  4.18 Source a_r_TRELLIS_FF_Q_12.M
+Info: 0.00 ns logic, 4.18 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source y_o_TRELLIS_FF_Q_1.Q
+Info:    routing  3.37  3.90 Net y_o[0]$TRELLIS_IO_OUT (25,18) -> (72,20)
+Info:                          Sink y_o[0]$tr_io.I
+Info:                          Defined in:
+Info:                               /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/src/top_tommath_add_e8_m17_round_even_sticky_p4.v:40.115-40.118
+Info: 0.52 ns logic, 3.37 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 71.93 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.18 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 3.90 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ -3903,  -3255) |************* 
+Info: [ -3255,  -2607) |************ 
+Info: [ -2607,  -1959) | 
+Info: [ -1959,  -1311) | 
+Info: [ -1311,   -663) |**************************** 
+Info: [  -663,    -15) |*********************** 
+Info: [   -15,    633) |** 
+Info: [   633,   1281) |* 
+Info: [  1281,   1929) |** 
+Info: [  1929,   2577) |**** 
+Info: [  2577,   3225) |*********************** 
+Info: [  3225,   3873) |*************** 
+Info: [  3873,   4521) |************ 
+Info: [  4521,   5169) |************** 
+Info: [  5169,   5817) |*********** 
+Info: [  5817,   6465) |************* 
+Info: [  6465,   7113) |****************** 
+Info: [  7113,   7761) |**** 
+Info: [  7761,   8409) |*********** 
+Info: [  8409,   9057) |**************************************************** 
+
+1 warning, 0 errors
+
+Info: Program finished normally.
+$ nextpnr-ecp5 --json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/netlist.json --write /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/nextpnr-routed.json --12k --package CABGA381 --speed 6 --freq 100 --timing-allow-fail --lpf-allow-unconstrained --report /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_add_e8_m17_round_even_sticky_p4/nextpnr-report.json
+
+
+[exit code 0]

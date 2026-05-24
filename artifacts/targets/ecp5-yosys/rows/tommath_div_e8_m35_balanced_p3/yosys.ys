@@ -1,0 +1,3 @@
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_div_e8_m35_balanced_p3/src/tommath_div_e8_m35_balanced_p3.v"
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_div_e8_m35_balanced_p3/src/top_tommath_div_e8_m35_balanced_p3.v"
+synth_ecp5 -top top_tommath_div_e8_m35_balanced_p3 -abc2 -dff -retime -noabc9 -json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/tommath_div_e8_m35_balanced_p3/netlist.json

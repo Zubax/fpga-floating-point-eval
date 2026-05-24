@@ -1,0 +1,39 @@
+----------------------------------------------------------------------
+Report for cell top_tommath_div_e8_m17_compact_p2.TECH
+Register bits:  295 of 12687 (2.325%)
+I/O cells:      82
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         1          100.0
+                              CCU2C        26          100.0
+                            FD1P3AX       191          100.0
+                            FD1P3IX         2          100.0
+                            FD1S3AX        70          100.0
+                            FD1S3DX         5          100.0
+                            FD1S3IX        18          100.0
+                            FD1S3JX         9          100.0
+                                GSR         1          100.0
+                                 IB        55          100.0
+                               LUT4       120          100.0
+                         MULT18X18D         3          100.0
+                                 OB        27          100.0
+                           PDPW16KD         1          100.0
+                              PFUMX         2          100.0
+SUB MODULES
+                            FpxxDiv         1
+                              TOTAL       532
+----------------------------------------------------------------------
+Report for cell FpxxDiv.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         1          100.0
+                              CCU2C         5           19.2
+                            FD1P3AX       181           94.8
+                            FD1P3IX         2          100.0
+                            FD1S3AX        17           24.3
+                            FD1S3DX         5          100.0
+                               LUT4       103           85.8
+                         MULT18X18D         3          100.0
+                              PFUMX         2          100.0
+                              TOTAL       319

@@ -1,0 +1,23 @@
+---------------------------------------------------
+Report for cell top_tommath_add_e8_m35_round_even_sticky_p5
+   Instance path: top_tommath_add_e8_m35_round_even_sticky_p5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     755.00        100.0
+                                  LUT4	     970.00        100.0
+                               DISTRAM	       6.00        100.0
+                                 IOBUF	        136        100.0
+                                PFUREG	        486        100.0
+                                RIPPLE	        113        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               FpxxAdd	          1        71.5
+---------------------------------------------------
+Report for cell FpxxAdd
+   Instance path: top_tommath_add_e8_m35_round_even_sticky_p5/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     539.92        71.5
+                                  LUT4	     937.67        96.7
+                               DISTRAM	       6.00        100.0
+                                PFUREG	        236        48.6

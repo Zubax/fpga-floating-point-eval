@@ -1,0 +1,30 @@
+ngdbuild:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Reading '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommath_mul_e8_m17_round_even_p2.ngo' ...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+    376 blocks expanded
+Complete the first expansion.
+Writing '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommath_mul_e8_m17_round_even_p2.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 71 MB
+
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/ngdbuild -a ECP5U -d LFE5U-12F -p /usr/local/diamond/3.14/ispfpga/sa5p00/data -p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2 /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommath_mul_e8_m17_round_even_p2.ngo /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m17_round_even_p2/top_tommath_mul_e8_m17_round_even_p2.ngd
+
+
+[exit code 0]

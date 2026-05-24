@@ -1,0 +1,33 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by net.openhft.hashing.UnsafeAccess (file:/tmp/codex-sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.10.11/zero-allocation-hashing-0.16.jar)
+WARNING: Please consider reporting this to the maintainers of class net.openhft.hashing.UnsafeAccess
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/tmp/codex-sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.10.11/jna-5.12.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[info] welcome to sbt 1.10.11 (Arch Linux Java 26.0.1)
+[info] loading settings for project math-build from plugins.sbt...
+[info] loading project definition from /mnt/storage/test/zkf-vs-flopoco/third_party/math/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Fpxx (in build file:/mnt/storage/test/zkf-vs-flopoco/third_party/math/)
+[info] running (fork) math.BenchmarkGen --op mul --exp 8 --mant 35 --pipe-stages 2 --sticky-bit true --rounding even --table-size-bits -1 --lut-mant-bits -1 --target-dir /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src --output /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v
+[info] [Runtime] SpinalHDL v1.10.1    git head : 2527c7c6b0fb0f95e5e1a5722a0be732b364ce43
+[info] [Runtime] JVM max memory : 8008.0MiB
+[info] [Runtime] Current date : 2026.05.24 14:02:19
+[info] [Progress] at 0.000 : Elaborate components
+[error] WARNING: A restricted method in java.lang.System has been called
+[error] WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/mnt/storage/test/zkf-vs-flopoco/third_party/math/target/bg-jobs/sbt_39776b1a/target/9011c941/5e7caf9d/jna-5.12.1.jar)
+[error] WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[error] WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[info] [Progress] at 0.347 : Checks and transforms
+[info] [Progress] at 0.470 : Generate Verilog
+[info] [Warning] 4 signals were pruned. You can call printPruned on the backend report to get more informations.
+[info] [Done] at 0.544
+[info] Wrote /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v
+[success] Total time: 1 s, completed May 24, 2026, 2:02:20 PM
+$ java -Dsbt.version=1.10.11 -Dsbt.ivy.home=/tmp/codex-sbt/ivy2 -Dsbt.boot.directory=/tmp/codex-sbt/boot -Dsbt.global.base=/tmp/codex-sbt/global -jar /tmp/codex-sbt/sbt-launch.jar runMain math.BenchmarkGen --op mul --exp 8 --mant 35 --pipe-stages 2 --sticky-bit true --rounding even --table-size-bits -1 --lut-mant-bits -1 --target-dir /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src --output /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v
+
+
+[exit code 0]

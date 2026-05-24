@@ -1,0 +1,168 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sun May 24 14:02:20 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/lse.synproj 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_tommath_mul_e8_m35_round_even_p2.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2 (searchpath added)
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/top_tommath_mul_e8_m35_round_even_p2.v
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/top_tommath_mul_e8_m35_round_even_p2.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v. VERI-1482
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/top_tommath_mul_e8_m35_round_even_p2.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top_tommath_mul_e8_m35_round_even_p2
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/top_tommath_mul_e8_m35_round_even_p2.v(4): compiling module top_tommath_mul_e8_m35_round_even_p2. VERI-1018
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/src/tommath_mul_e8_m35_round_even_p2.v(7): compiling module FpxxMul. VERI-1018
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_tommath_mul_e8_m35_round_even_p2.
+WARNING - synthesis: Bit 35 of Register \u_dut/n1_n0_mant_a is stuck at One
+WARNING - synthesis: Bit 35 of Register \u_dut/n1_n0_mant_b is stuck at One
+
+
+
+WARNING - synthesis: Bit 35 of Register \u_dut/n2_n1_mant_mul_e2 is stuck at One
+WARNING - synthesis: Bit 35 of Register \u_dut/n2_n1_mant_mul_e1 is stuck at One
+
+The number of registers created due to operator pipelining is -7.
+
+######## Missing driver on net n1523. Patching with GND.
+######## Missing driver on net n1522. Patching with GND.
+######## Missing driver on net n1521. Patching with GND.
+######## Missing driver on net n1520. Patching with GND.
+######## Missing driver on net n1519. Patching with GND.
+######## Missing driver on net n1518. Patching with GND.
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_tommath_mul_e8_m35_round_even_p2_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/tommath_mul_e8_m35_round_even_p2/top_tommath_mul_e8_m35_round_even_p2.ngo.
+
+################### Begin Area Report (top_tommath_mul_e8_m35_round_even_p2)######################
+Number of register bits => 233 of 12687 (1 % )
+ALU54B => 2
+CCU2C => 30
+FD1S3AX => 186
+FD1S3DX => 2
+FD1S3IX => 2
+FD1S3JX => 43
+GSR => 1
+IB => 91
+LUT4 => 199
+MULT18X18D => 4
+OB => 45
+PFUMX => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 235
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_dut/when_FpxxMul_l81, loads : 43
+  Net : u_dut/_zz_n2_exp_mul_adj_1_0, loads : 37
+  Net : _zz_io_result_payload_exp_9, loads : 37
+  Net : u_dut/n2008, loads : 36
+  Net : u_dut/n2_n0_is_inf, loads : 36
+  Net : u_dut/n2_n0_is_zero, loads : 36
+  Net : u_dut/n2_n0_is_nan, loads : 35
+  Net : u_dut/n2688, loads : 8
+  Net : _zz_n1_exp_mul_0, loads : 7
+  Net : u_dut/n633, loads : 7
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   36.567 MHz|    35 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 227.969  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.571  secs
+--------------------------------------------------------------
