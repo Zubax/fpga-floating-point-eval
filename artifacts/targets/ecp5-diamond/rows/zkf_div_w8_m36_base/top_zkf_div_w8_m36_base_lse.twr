@@ -1,0 +1,474 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat May 23 22:28:17 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_zkf_div_w8_m36_base
+Constraint file: top_zkf_div_w8_m36_base_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i0  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i0 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_2_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n14
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n8
+LUT4        ---     0.166              C to Z              \u_dut/u_pack/i5_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/result_min_normal_N_272
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i0  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i0 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut_adj_1936
+Route         1   e 1.020                                  \u_dut/u_pack/n12707
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/exp_overflow_N_264
+LUT4        ---     0.166              D to Z              \u_dut/u_pack/force_inf_I_0_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/infinity
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i14  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i14 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_2_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n14
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n8
+LUT4        ---     0.166              C to Z              \u_dut/u_pack/i5_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/result_min_normal_N_272
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i14  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i14 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut_adj_1936
+Route         1   e 1.020                                  \u_dut/u_pack/n12707
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/exp_overflow_N_264
+LUT4        ---     0.166              D to Z              \u_dut/u_pack/force_inf_I_0_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/infinity
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i15  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i15 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut_adj_1936
+Route         1   e 1.020                                  \u_dut/u_pack/n12707
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/exp_overflow_N_264
+LUT4        ---     0.166              D to Z              \u_dut/u_pack/force_inf_I_0_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/infinity
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i15  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i15 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_2_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n14
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n8
+LUT4        ---     0.166              C to Z              \u_dut/u_pack/i5_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/result_min_normal_N_272
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i16  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i16 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i16
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut_adj_1936
+Route         1   e 1.020                                  \u_dut/u_pack/n12707
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/exp_overflow_N_264
+LUT4        ---     0.166              D to Z              \u_dut/u_pack/force_inf_I_0_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/infinity
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i16  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i16 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i16
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_2_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n14
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n8
+LUT4        ---     0.166              C to Z              \u_dut/u_pack/i5_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/result_min_normal_N_272
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i17  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i17 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i17
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_2_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n14
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i2_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/n8
+LUT4        ---     0.166              C to Z              \u_dut/u_pack/i5_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/result_min_normal_N_272
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.673ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             exp_unbiased_res1_e3_i0_i0  (from clk +)
+   Destination:    FD1S3IX    CD             y_r_i17  (to clk +)
+
+   Delay:                   9.502ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.502ns data_path exp_unbiased_res1_e3_i0_i0 to y_r_i17 meets
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 0.673ns
+
+ Path Details: exp_unbiased_res1_e3_i0_i0 to y_r_i17
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              exp_unbiased_res1_e3_i0_i0 (from clk)
+Route         1   e 1.020                                  core_exp_unbiased[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_572_add_4_1
+Route         1   e 0.020                                  n10937
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_3
+Route         1   e 0.020                                  n10938
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_5
+Route         1   e 0.020                                  n10939
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_572_add_4_7
+Route         1   e 0.020                                  n10940
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_572_add_4_9
+Route         3   e 1.339                                  exp_biased_ext[7]
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut_adj_1936
+Route         1   e 1.020                                  \u_dut/u_pack/n12707
+LUT4        ---     0.166              A to Z              \u_dut/u_pack/i1_4_lut
+Route         1   e 1.020                                  \u_dut/u_pack/exp_overflow_N_264
+LUT4        ---     0.166              D to Z              \u_dut/u_pack/force_inf_I_0_4_lut
+Route         9   e 1.459                                  \u_dut/u_pack/infinity
+LUT4        ---     0.166              B to Z              \u_dut/u_pack/i1_3_lut
+Route        35   e 1.731                                  n9682
+                  --------
+                    9.502  (19.3% logic, 80.7% route), 10 logic levels.
+
+Report: 9.327 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|     9.327 ns|    10  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  292191 paths, 8676 nets, and 18288 connections (99.1% coverage)
+
+
+Peak memory: 273821696 bytes, TRCE: 7630848 bytes, DLYMAN: 860160 bytes
+CPU_TIME_REPORT: 0 secs 

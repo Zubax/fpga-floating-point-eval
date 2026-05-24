@@ -1,0 +1,158 @@
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.ngd
+   Picdevice="LFE5U-12F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-12FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+83 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:    115 out of 12687 (1%)
+      PFU registers:          115 out of 12096 (1%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:        78 out of  6048 (1%)
+      SLICEs as Logic/ROM:     78 out of  6048 (1%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         25 out of  6048 (0%)
+   Number of LUT4s:         89 out of 12096 (1%)
+      Number used as logic LUTs:         39
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       50
+      Number used as shift registers:     0
+   Number of PIO sites used: 85 out of 197 (43%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          1
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  2 out of 56 (3 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 63 loads, 63 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  2
+     Net X_r_27: 1 loads, 1 LSLICEs
+     Net exc_d1_1: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net sigProd_35: 20 loads
+     Net expSumPreSub_1: 6 loads
+     Net expSumPreSub_2: 6 loads
+     Net X_r_17: 6 loads
+     Net Y_r_17: 6 loads
+     Net expSumPreSub_3: 5 loads
+     Net expSumPreSub_4: 5 loads
+     Net expSumPreSub_5: 4 loads
+     Net n811: 3 loads
+     Net u_dut/sigProd_17: 3 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+. MULT18X18D  u_dut/SignificandMultiplication/X_17__I_0_mult_2:
+
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 185 MB
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300_map.ncd.
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/constraints.lpf
+
+
+[exit code 0]

@@ -1,0 +1,67 @@
+----------------------------------------------------------------------
+Report for cell top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300.TECH
+Register bits:  478 of 12687 (3.768%)
+I/O cells:      139
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        79          100.0
+                            FD1S3AX       378          100.0
+                            FD1S3IX        98          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB        93          100.0
+                               LUT4       579          100.0
+                                 OB        46          100.0
+                           PDPW16KD         1          100.0
+                              PFUMX        27          100.0
+                           SPR16X4C         3          100.0
+SUB MODULES
+           IntAdder_39_Freq300_uid6         1
+ Normalizer_Z_40_40_40_Freq300_uid8         1
+RightShifterSticky36_by_max_38_Freq300_uid4         1
+flopoco_add_we8_wf35_dummyfpga_plain_single_f300         1
+                              TOTAL      1311
+----------------------------------------------------------------------
+Report for cell flopoco_add_we8_wf35_dummyfpga_plain_single_f300.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       233           61.6
+                            FD1S3IX        96           98.0
+                            FD1S3JX         2          100.0
+                               LUT4       565           97.6
+                           PDPW16KD         1          100.0
+                              PFUMX        26           96.3
+SUB MODULES
+           IntAdder_39_Freq300_uid6         1
+ Normalizer_Z_40_40_40_Freq300_uid8         1
+RightShifterSticky36_by_max_38_Freq300_uid4         1
+                              TOTAL       926
+----------------------------------------------------------------------
+Report for cell IntAdder_39_Freq300_uid6.v1
+Instance Path : u_dut.fracAdder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       109           28.8
+                              TOTAL       109
+----------------------------------------------------------------------
+Report for cell RightShifterSticky36_by_max_38_Freq300_uid4.v1
+Instance Path : u_dut.RightShifterComponent
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         6            1.6
+                            FD1S3IX        69           70.4
+                            FD1S3JX         2          100.0
+                               LUT4       173           29.9
+                              PFUMX         8           29.6
+                              TOTAL       258
+----------------------------------------------------------------------
+Report for cell Normalizer_Z_40_40_40_Freq300_uid8.v1
+Instance Path : u_dut.LZCAndShifter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        59           15.6
+                            FD1S3IX        24           24.5
+                               LUT4       183           31.6
+                              PFUMX        18           66.7
+                              TOTAL       284

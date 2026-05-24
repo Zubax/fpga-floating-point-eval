@@ -1,0 +1,101 @@
+----------------------------------------------------------------------
+Report for cell top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.TECH
+Register bits:  975 of 12687 (7.685%)
+I/O cells:      85
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       241          100.0
+                           DPR16X4C         4          100.0
+                            FD1S3AX       944          100.0
+                            FD1S3IX        29          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB        57          100.0
+                               LUT4       523          100.0
+                                 OB        28          100.0
+                           PDPW16KD         1          100.0
+                              PFUMX        22          100.0
+                          ROM128X1A        12          100.0
+                           SPR16X4C         1          100.0
+SUB MODULES
+flopoco_div_we8_wf17_zynq7000_native_srt_87_f300         1
+        selFunction7_4_Freq300_uid4         1
+     selFunction7_4_Freq300_uid4_U0         1
+     selFunction7_4_Freq300_uid4_U1         1
+     selFunction7_4_Freq300_uid4_U2         1
+     selFunction7_4_Freq300_uid4_U3         1
+     selFunction7_4_Freq300_uid4_U4         1
+     selFunction7_4_Freq300_uid4_U5         1
+                              TOTAL      1873
+----------------------------------------------------------------------
+Report for cell flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       858           90.9
+                            FD1S3IX        27           93.1
+                            FD1S3JX         2          100.0
+                               LUT4       499           95.4
+                           PDPW16KD         1          100.0
+                              PFUMX        22          100.0
+SUB MODULES
+        selFunction7_4_Freq300_uid4         1
+     selFunction7_4_Freq300_uid4_U0         1
+     selFunction7_4_Freq300_uid4_U1         1
+     selFunction7_4_Freq300_uid4_U2         1
+     selFunction7_4_Freq300_uid4_U3         1
+     selFunction7_4_Freq300_uid4_U4         1
+     selFunction7_4_Freq300_uid4_U5         1
+                              TOTAL      1416
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4.v1
+Instance Path : u_dut.SelFunctionTable7
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2            0.4
+                           PDPW16KD         1          100.0
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U0.v1
+Instance Path : u_dut.SelFunctionTable6
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              PFUMX         1            4.5
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U1.v1
+Instance Path : u_dut.SelFunctionTable5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              PFUMX         1            4.5
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U2.v1
+Instance Path : u_dut.SelFunctionTable4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U3.v1
+Instance Path : u_dut.SelFunctionTable3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U4.v1
+Instance Path : u_dut.SelFunctionTable2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U5.v1
+Instance Path : u_dut.SelFunctionTable1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            0.8
+                              TOTAL         4

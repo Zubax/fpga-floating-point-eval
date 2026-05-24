@@ -1,0 +1,62 @@
+[ START MERGED ]
+n1 u_dut/excRt_d4_0
+n989 fracYpadXorOp_20
+u_dut/n987 u_dut/signR_d3
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+_add_1_164_add_4_22/S1
+_add_1_164_add_4_22/S0
+_add_1_164_add_4_24/S1
+_add_1_164_add_4_24/S0
+_add_1_164_add_4_26/S1
+_add_1_164_add_4_26/S0
+_add_1_164_add_4_28/S1
+_add_1_164_add_4_28/S0
+_add_1_164_add_4_cout/S1
+_add_1_164_add_4_cout/CO
+_add_1_161_add_4_2/S0
+_add_1_161_add_4_2/CI
+_add_1_add_4_12/S1
+_add_1_add_4_12/CO
+_add_1_164_add_4_6/S1
+_add_1_164_add_4_6/S0
+_add_1_161_add_4_10/S1
+_add_1_161_add_4_10/CO
+_add_1_158_add_4_2/S0
+_add_1_158_add_4_2/CI
+_add_1_155_add_4_2/S0
+_add_1_155_add_4_2/CI
+_add_1_164_add_4_2/S1
+_add_1_164_add_4_2/S0
+_add_1_164_add_4_2/CI
+_add_1_164_add_4_4/S1
+_add_1_164_add_4_4/S0
+_add_1_164_add_4_12/S1
+_add_1_164_add_4_12/S0
+_add_1_158_add_4_22/S1
+_add_1_158_add_4_22/CO
+_add_1_164_add_4_10/S1
+_add_1_164_add_4_10/S0
+_add_1_164_add_4_8/S1
+_add_1_164_add_4_8/S0
+_add_1_164_add_4_16/S1
+_add_1_164_add_4_16/S0
+_add_1_164_add_4_14/S1
+_add_1_164_add_4_14/S0
+_add_1_164_add_4_18/S1
+_add_1_164_add_4_18/S0
+_add_1_155_add_4_28/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+_add_1_164_add_4_20/S1
+_add_1_164_add_4_20/S0
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat May 23 22:34:52 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

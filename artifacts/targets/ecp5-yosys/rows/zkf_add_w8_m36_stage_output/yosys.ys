@@ -1,0 +1,6 @@
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_rshift_sticky.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_normshift.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/zkf_add.v"
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_add_w8_m36_stage_output/src/top_zkf_add_w8_m36_stage_output.v"
+synth_ecp5 -top top_zkf_add_w8_m36_stage_output -abc2 -dff -retime -noabc9 -json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_add_w8_m36_stage_output/netlist.json

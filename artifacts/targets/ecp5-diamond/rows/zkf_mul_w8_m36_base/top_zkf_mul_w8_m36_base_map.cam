@@ -1,0 +1,41 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+u_dut/u_pack/equal_505_0/S1
+u_dut/u_pack/equal_505_0/S0
+u_dut/u_pack/equal_505_0/CI
+u_dut/u_pack/equal_505_29/S1
+u_dut/u_pack/equal_505_29/S0
+u_dut/u_pack/equal_505_31/S1
+u_dut/u_pack/equal_505_31/S0
+u_dut/u_pack/equal_505_33/S1
+u_dut/u_pack/equal_505_33/S0
+u_dut/u_pack/equal_505_35_508/S1
+u_dut/u_pack/equal_505_35_508/S0
+u_dut/u_pack/equal_505_35/S1
+u_dut/u_pack/equal_505_35/CO
+_add_1_153_add_4_1/S0
+_add_1_153_add_4_1/CI
+_add_1_153_add_4_11/CO
+_add_1_156_add_4_2/S0
+_add_1_156_add_4_2/CI
+_add_1_156_add_4_10/CO
+_add_1_add_4_1/S0
+_add_1_add_4_1/CI
+_add_1_add_4_37/S0
+_add_1_add_4_45/S1
+_add_1_add_4_45/CO
+_add_1_159_add_4_2/S0
+_add_1_159_add_4_2/CI
+_add_1_159_add_4_cout/S1
+_add_1_159_add_4_cout/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat May 23 22:27:57 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

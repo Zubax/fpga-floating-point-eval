@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-05-23T19:15:25+00:00",
+  "target": {
+    "target_id": "ecp5-yosys",
+    "title": "Lattice ECP5 / Yosys + nextpnr",
+    "toolchain": "yosys-nextpnr-ecp5",
+    "device": "LFE5U-12F CABGA381 speed 6",
+    "note": "ECP5 resources use LUT4, TRELLIS_FF, CCU2C carry, MULT18X18D DSP, DP16KD BRAM, and top-level IO bit counts."
+  },
+  "tools": {
+    "flopoco": "/mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco",
+    "yosys": "/mnt/storage/synth_eval/oss-cad-suite/bin/yosys",
+    "nextpnr-ecp5": "/mnt/storage/synth_eval/oss-cad-suite/bin/nextpnr-ecp5",
+    "ghdl": "/mnt/storage/synth_eval/oss-cad-suite/bin/ghdl"
+  },
+  "flopoco": [
+    "5.0.0:8aa6348"
+  ],
+  "kulibin_float_git": "e220f4106876b60a897a05e56321ed8aed6f322b",
+  "flopoco_git": "8aa634812d2c9959ed33718d16648d7afcf7fa23",
+  "yosys": [
+    "Yosys 0.64+215 (git sha1 54866d154, clang++ 18.1.8 -fPIC -O3)"
+  ],
+  "ghdl": [
+    "GHDL 7.0.0-dev (6.0.0.r126.g7c43e7255.dirty) [Dunoon edition]",
+    " Compiled with GNAT Version: 10.5.0",
+    " llvm 14.0.0 code generator",
+    "Written by Tristan Gingold."
+  ],
+  "nextpnr_ecp5": [
+    "\"nextpnr-ecp5\" -- Next Generation Place and Route (Version nextpnr-0.10-69-g8b7dbbed)"
+  ]
+}

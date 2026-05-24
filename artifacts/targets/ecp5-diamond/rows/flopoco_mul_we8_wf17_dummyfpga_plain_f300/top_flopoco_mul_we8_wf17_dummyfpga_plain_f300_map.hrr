@@ -1,0 +1,39 @@
+---------------------------------------------------
+Report for cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+   Instance path: top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.00        100.0
+                                  LUT4	      39.00        100.0
+                                 IOBUF	         85        100.0
+                                PFUREG	        115        100.0
+                                RIPPLE	         25        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+flopoco_mul_we8_wf17_dummyfpga_plain_f300	          1        38.9
+---------------------------------------------------
+Report for cell flopoco_mul_we8_wf17_dummyfpga_plain_f300
+   Instance path: top_flopoco_mul_we8_wf17_dummyfpga_plain_f300/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      30.33        38.9
+                                  LUT4	      30.00        76.9
+                                PFUREG	         38        33.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+   IntMultiplier_18x18_36_Freq300_uid5	          1        21.8
+              IntAdder_27_Freq300_uid9	          1         0.3
+---------------------------------------------------
+Report for cell IntMultiplier_18x18_36_Freq300_uid5
+   Instance path: top_flopoco_mul_we8_wf17_dummyfpga_plain_f300/u_dut/SignificandMultiplication
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.00        21.8
+                                PFUREG	         34        29.6
+---------------------------------------------------
+Report for cell IntAdder_27_Freq300_uid9
+   Instance path: top_flopoco_mul_we8_wf17_dummyfpga_plain_f300/u_dut/RoundingAdder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.3
+                                PFUREG	          1         0.9

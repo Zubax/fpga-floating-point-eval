@@ -1,0 +1,33 @@
+---------------------------------------------------
+Report for cell top_zkf_mul_w8_m36_base
+   Instance path: top_zkf_mul_w8_m36_base
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     155.00        100.0
+                                  LUT4	      87.00        100.0
+                                 IOBUF	        136        100.0
+                                PFUREG	        148        100.0
+                                RIPPLE	         45        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+               zkf_mul(WEXP=8,WMAN=36)	          1        41.5
+---------------------------------------------------
+Report for cell zkf_mul(WEXP=8,WMAN=36)
+   Instance path: top_zkf_mul_w8_m36_base/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      64.25        41.5
+                                  LUT4	      85.00        97.7
+                                PFUREG	          4         2.7
+                                RIPPLE	          6        13.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+             _zkf_pack(WEXP=8,WMAN=36)	          1        10.6
+---------------------------------------------------
+Report for cell _zkf_pack(WEXP=8,WMAN=36)
+   Instance path: top_zkf_mul_w8_m36_base/u_dut/u_pack
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      16.50        10.6
+                                  LUT4	      24.00        27.6
+                                RIPPLE	          6        13.3

@@ -1,0 +1,216 @@
+[ START MERGED ]
+n15498 n15499
+n5_adj_3435 n15365
+n5_adj_3437 n15323
+n5_adj_3434 n15272
+n5 n15229
+n5_adj_3436 n15208
+u_dut/n19134 u_dut/prescaledfY_d8_0
+u_dut/n19141 prescaledfY_d18_0
+n19150 X_r_0
+u_dut/n19152 u_dut/prescaledfY_d29_0
+u_dut/n19149 u_dut/prescaledfY_d27_0
+u_dut/n19139 u_dut/prescaledfY_d15_0
+u_dut/n19129 u_dut/prescaledfY_d1_0
+u_dut/n19128 u_dut/q13_d1_0
+n19127 n17551
+u_dut/n19132 u_dut/prescaledfY_d6_0
+u_dut/n19147 prescaledfY_d25_0
+u_dut/n19136 prescaledfY_d11_0
+u_dut/n19143 u_dut/prescaledfY_d20_0
+u_dut/n19137 u_dut/prescaledfY_d13_0
+u_dut/n19145 u_dut/prescaledfY_d22_0
+u_dut/n19131 u_dut/prescaledfY_d3_0
+u_dut/n22927 n15366
+u_dut/n22930 n15324
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+add_4835_39/S1
+add_4835_39/CO
+add_4835_1/S1
+add_4835_1/S0
+add_4835_1/CI
+add_4833_39/S1
+add_4833_39/CO
+add_4833_1/S1
+add_4833_1/S0
+add_4833_1/CI
+add_4831_39/S1
+add_4831_39/CO
+add_4831_1/S1
+add_4831_1/S0
+add_4831_1/CI
+add_4832_39/S1
+add_4832_39/CO
+add_4832_1/S1
+add_4832_1/S0
+add_4832_1/CI
+add_4828_41/S1
+add_4828_41/CO
+add_4828_1/S1
+add_4828_1/S0
+add_4828_1/CI
+add_4829_41/S1
+add_4829_41/CO
+_add_1_2159_add_4_37/S1
+_add_1_2159_add_4_37/CO
+_add_1_2102_add_4_2/S0
+_add_1_2102_add_4_2/CI
+_add_1_2102_add_4_40/S1
+_add_1_2102_add_4_40/CO
+_add_1_2156_add_4_2/S0
+_add_1_2156_add_4_2/CI
+_add_1_2156_add_4_38/S1
+_add_1_2156_add_4_38/CO
+_add_1_2147_add_4_1/S0
+_add_1_2147_add_4_1/CI
+u_dut/equal_5633_0/S1
+u_dut/equal_5633_0/S0
+u_dut/equal_5633_0/CI
+u_dut/equal_5633_28/S1
+u_dut/equal_5633_28/S0
+u_dut/equal_5633_30/S1
+u_dut/equal_5633_30/S0
+u_dut/equal_5633_32/S1
+u_dut/equal_5633_32/S0
+u_dut/equal_5633_34_5636/S1
+u_dut/equal_5633_34_5636/S0
+u_dut/equal_5633_34/S1
+u_dut/equal_5633_34/CO
+_add_1_2159_add_4_1/S0
+_add_1_2159_add_4_1/CI
+_add_1_2147_add_4_39/CO
+_add_1_2174_add_4_1/S0
+_add_1_2174_add_4_1/CI
+_add_1_2174_add_4_39/CO
+_add_1_2153_add_4_1/S0
+_add_1_2153_add_4_1/CI
+_add_1_2153_add_4_37/CO
+_add_1_2144_add_4_1/S0
+_add_1_2144_add_4_1/CI
+_add_1_2144_add_4_39/CO
+_add_1_2171_add_4_1/S0
+_add_1_2171_add_4_1/CI
+_add_1_2189_add_4_1/S0
+_add_1_2189_add_4_1/CI
+_add_1_2195_add_4_39/CO
+_add_1_2171_add_4_39/CO
+_add_1_2192_add_4_1/S0
+_add_1_2192_add_4_1/CI
+_add_1_2189_add_4_39/CO
+_add_1_2186_add_4_1/S0
+_add_1_2186_add_4_1/CI
+_add_1_2186_add_4_39/CO
+_add_1_2183_add_4_1/S0
+_add_1_2183_add_4_1/CI
+_add_1_2183_add_4_39/CO
+_add_1_2180_add_4_2/S0
+_add_1_2180_add_4_2/CI
+_add_1_2180_add_4_38/CO
+_add_1_2177_add_4_1/S0
+_add_1_2177_add_4_1/CI
+_add_1_2177_add_4_39/CO
+_add_1_2168_add_4_1/S0
+_add_1_2168_add_4_1/CI
+_add_1_2168_add_4_39/CO
+_add_1_2165_add_4_2/S0
+_add_1_2165_add_4_2/CI
+_add_1_2165_add_4_46/S1
+_add_1_2165_add_4_46/CO
+_add_1_2117_add_4_2/S0
+_add_1_2117_add_4_2/CI
+_add_1_2117_add_4_12/S1
+_add_1_2117_add_4_12/CO
+_add_1_2150_add_4_1/S0
+_add_1_2150_add_4_1/CI
+_add_1_2150_add_4_39/CO
+_add_1_2105_add_4_2/S0
+_add_1_2105_add_4_2/CI
+_add_1_2105_add_4_38/CO
+_add_1_2162_add_4_2/S0
+_add_1_2162_add_4_2/CI
+_add_1_2162_add_4_10/CO
+add_4826_1/S1
+add_4826_1/S0
+add_4826_1/CI
+add_4826_39/S1
+add_4826_39/CO
+add_4834_1/S1
+add_4834_1/S0
+add_4834_1/CI
+add_4834_39/S1
+add_4834_39/CO
+add_4837_1/S1
+add_4837_1/S0
+add_4837_1/CI
+add_4837_39/S1
+add_4837_39/CO
+add_4836_1/S1
+add_4836_1/S0
+add_4836_1/CI
+add_4836_39/S1
+add_4836_39/CO
+add_4825_1/S1
+add_4825_1/S0
+add_4825_1/CI
+add_4825_39/S1
+add_4825_39/CO
+add_4824_1/S1
+add_4824_1/S0
+add_4824_1/CI
+add_4824_39/S1
+add_4824_39/CO
+add_4830_1/S1
+add_4830_1/S0
+add_4830_1/CI
+add_4830_39/S1
+add_4830_39/CO
+add_4827_1/S1
+add_4827_1/S0
+add_4827_1/CI
+_add_1_2192_add_4_39/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+add_4827_39/S1
+add_4827_39/CO
+add_4829_1/S1
+add_4829_1/S0
+add_4829_1/CI
+_add_1_add_4_38/CO
+_add_1_2198_add_4_1/S0
+_add_1_2198_add_4_1/CI
+qP9_d1_sft00000/DO3
+qP9_d1_sft00001/DO3
+qP10_d1_sft00000/DO3
+qP10_d1_sft00001/DO3
+qP5_d1/DO3
+qP11_d1_sft00000/DO3
+qP11_d1_sft00001/DO3
+qP6_d1/DO3
+qP7_d1/DO3
+qP12_d1_sft00000/DO3
+qP12_d1_sft00001/DO3
+qP8_d1/DO3
+qP13_d1__28_sft00000/DO2
+qP13_d1__28_sft00000/DO3
+qP13_d1__28_sft00001/DO2
+qP13_d1__28_sft00001/DO3
+sR_d1_821_sft00011/DO2
+sR_d1_821_sft00011/DO3
+sR_d1_821_sft00011/DO1
+sR_d1_821_sft00013/DO2
+sR_d1_821_sft00013/DO3
+sR_d1_821_sft00013/DO1
+_add_1_2198_add_4_39/CO
+_add_1_2195_add_4_1/S0
+_add_1_2195_add_4_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat May 23 22:37:24 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

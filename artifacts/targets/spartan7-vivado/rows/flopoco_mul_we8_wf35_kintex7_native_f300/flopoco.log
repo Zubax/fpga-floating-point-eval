@@ -1,0 +1,190 @@
+[1;37mInfo: [0m[0;34mIntMultiplier.cpp[0m: The selected target Xilinx Kintex7 allows better multiplier tiles but global option useTargetOpt is disabled. Consider turning on for better performance!
+[1;37mInfo: [0m[0;34mIntMultiplier.cpp[0m: The selected target Xilinx Kintex7 allows better multiplier tiles but global option useTargetOpt is disabled. Consider turning on for better performance!
+[1;37mInfo: [0m[0;34mIntMultiplier.cpp[0m: The selected target Xilinx Kintex7 allows better multiplier tiles but global option useTargetOpt is disabled. Consider turning on for better performance!
+[1;37mInfo: [0m[0;34mIntMultiplier.cpp[0m: The selected target Xilinx Kintex7 allows better multiplier tiles but global option useTargetOpt is disabled. Consider turning on for better performance!
+[1;37mInfo: [0m[0;34mIntMultiplier.cpp[0m: errorBudget=0 actualLSB=0  centerErrConstant=0
+first possible position 48
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl
+Pipeline constructed using approximate timings for target Kintex7 @ 300 MHz
+Entity MultTable_Freq300_uid20
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid25
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid30
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid35
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid40
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid45
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid50
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid55
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid60
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid65
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid70
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid75
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid80
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid85
+   Y: (c0, 0.543000ns)
+Entity MultTable_Freq300_uid90
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid95
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid100
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid105
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid110
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid115
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid120
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid125
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid130
+   Y: (c0, 0.619000ns)
+Entity MultTable_Freq300_uid135
+   Y: (c0, 0.619000ns)
+Entity Compressor_23_3_Freq300_uid139
+   R: (c0, 0.543000ns)
+Entity Compressor_3_2_Freq300_uid157
+   R: (c0, 0.543000ns)
+Entity Compressor_14_3_Freq300_uid161
+   R: (c0, 0.543000ns)
+Entity Compressor_6_3_Freq300_uid169
+   R: (c0, 0.619000ns)
+|   |---Entity DSPBlock_24x17_Freq300_uid10
+|   |      R: (c0, 2.892000ns)
+|   |---Entity DSPBlock_24x17_Freq300_uid12
+|   |      R: (c0, 2.892000ns)
+|   |   |---Entity DSPBlock_25x18_Freq300_uid16
+|   |   |      R: (c0, 2.892000ns)
+|   |---Entity IntKaratsuba_16x24_order_0_Freq300_uid14
+|   |      R: (c0, 2.892000ns)
+|   |   |---Entity MultTable_Freq300_uid20
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid18
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid25
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid23
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid30
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid28
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid35
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid33
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid40
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid38
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid45
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid43
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid50
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid48
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid55
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid53
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid60
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid58
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid65
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid63
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid70
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid68
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid75
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid73
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid80
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid78
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid85
+|   |   |      Y: (c0, 0.543000ns)
+|   |---Entity IntMultiplierLUT_3x2_Freq300_uid83
+|   |      R: (c0, 0.543000ns)
+|   |   |---Entity MultTable_Freq300_uid90
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid88
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid95
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid93
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid100
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid98
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid105
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid103
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid110
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid108
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid115
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid113
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid120
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid118
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid125
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid123
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid130
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid128
+|   |      R: (c0, 0.619000ns)
+|   |   |---Entity MultTable_Freq300_uid135
+|   |   |      Y: (c0, 0.619000ns)
+|   |---Entity IntMultiplierLUT_3x3_Freq300_uid133
+|   |      R: (c0, 0.619000ns)
+|   |---Entity Compressor_23_3_Freq300_uid139
+|   |      R: (c0, 0.543000ns)
+|   |---Entity Compressor_3_2_Freq300_uid157
+|   |      R: (c0, 0.543000ns)
+|   |---Entity Compressor_14_3_Freq300_uid161
+|   |      R: (c0, 0.543000ns)
+|   |---Entity Compressor_6_3_Freq300_uid169
+|   |      R: (c0, 0.619000ns)
+|   |---Entity IntAdder_60_Freq300_uid427
+|   |      R: (c1, 3.031667ns)
+|---Entity IntMultiplier_36x36_72_Freq300_uid5
+|      R: (c1, 3.031667ns)
+|---Entity IntAdder_45_Freq300_uid430
+|      R: (c3, 1.051000ns)
+Entity flopoco_mul_we8_wf35_kintex7_native_f300
+   R: (c3, 1.051000ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl frequency=300 target=Kintex7 useTargetOpt=0 useHardMult=1 plainVHDL=0 FPMult name=flopoco_mul_we8_wf35_kintex7_native_f300 wE=8 wF=35 wEY=0 wFY=0 wEOut=0 wFOut=0 correctlyRounded=1 dspThreshold=0
+
+
+[exit code 0]

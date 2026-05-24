@@ -1,0 +1,41 @@
+----------------------------------------------------------------------
+Report for cell top_zkf_mul_w8_m36_base.TECH
+Register bits:  148 of 12687 (1.167%)
+I/O cells:      136
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         2          100.0
+                              CCU2C        45          100.0
+                            FD1S3AX       101          100.0
+                            FD1S3IX        47          100.0
+                                GSR         1          100.0
+                                 IB        91          100.0
+                               LUT4        87          100.0
+                         MULT18X18D         4          100.0
+                                 OB        45          100.0
+SUB MODULES
+          _zkf_pack(WEXP=8,WMAN=36)         1
+            zkf_mul(WEXP=8,WMAN=36)         1
+                              TOTAL       425
+----------------------------------------------------------------------
+Report for cell zkf_mul(WEXP=8,WMAN=36).v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             ALU54B         2          100.0
+                              CCU2C         6           13.3
+                            FD1S3AX         3            3.0
+                            FD1S3IX         1            2.1
+                               LUT4        85           97.7
+                         MULT18X18D         4          100.0
+SUB MODULES
+          _zkf_pack(WEXP=8,WMAN=36)         1
+                              TOTAL       102
+----------------------------------------------------------------------
+Report for cell _zkf_pack(WEXP=8,WMAN=36).v1
+Instance Path : u_dut.u_pack
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         6           13.3
+                               LUT4        24           27.6
+                              TOTAL        30

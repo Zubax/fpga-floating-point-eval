@@ -1,0 +1,83 @@
+---------------------------------------------------
+Report for cell top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     895.00        100.0
+                                  LUT4	     610.00        100.0
+                               DISTRAM	      15.00        100.0
+                                 IOBUF	         85        100.0
+                                PFUREG	        975        100.0
+                                RIPPLE	        241        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+flopoco_div_we8_wf17_zynq7000_native_srt_87_f300	          1        66.8
+---------------------------------------------------
+Report for cell flopoco_div_we8_wf17_zynq7000_native_srt_87_f300
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     598.17        66.8
+                                  LUT4	     491.00        80.5
+                                PFUREG	        887        91.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+        selFunction7_4_Freq300_uid4_U4	          1         0.2
+        selFunction7_4_Freq300_uid4_U5	          1         0.2
+        selFunction7_4_Freq300_uid4_U0	          1         0.3
+        selFunction7_4_Freq300_uid4_U2	          1         0.2
+        selFunction7_4_Freq300_uid4_U3	          1         0.2
+        selFunction7_4_Freq300_uid4_U1	          1         0.3
+           selFunction7_4_Freq300_uid4	          1         0.0
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                  LUT4	       1.00         0.2
+                                   EBR	          1        100.0
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U0
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.75         0.3
+                                  LUT4	       4.00         0.7
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U1
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.75         0.3
+                                  LUT4	       4.00         0.7
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U2
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.2
+                                  LUT4	       4.00         0.7
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U3
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.2
+                                  LUT4	       4.00         0.7
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U4
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.2
+                                  LUT4	       4.00         0.7
+---------------------------------------------------
+Report for cell selFunction7_4_Freq300_uid4_U5
+   Instance path: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/u_dut/SelFunctionTable1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.2
+                                  LUT4	       4.00         0.7

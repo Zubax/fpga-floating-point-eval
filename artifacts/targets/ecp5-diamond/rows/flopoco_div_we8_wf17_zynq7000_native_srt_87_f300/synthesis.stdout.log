@@ -1,0 +1,353 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat May 23 22:37:39 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/lse.synproj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300 (searchpath added)
+VHDL library = work
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300". VHDL-1504
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(24): analyzing entity selfunction7_4_freq300_uid4. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(29): analyzing architecture arch. VHDL-1010
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(193): analyzing entity flopoco_div_we8_wf17_zynq7000_native_srt_87_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(200): analyzing architecture arch. VHDL-1010
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(4): analyzing entity top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(13): analyzing architecture rtl. VHDL-1010
+unit top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300 is not yet analyzed. VHDL-1485
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(4): executing top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300(rtl)
+
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.vhdl(11): replacing existing netlist top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300(rtl). VHDL-1205
+Top module name (VHDL): top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300
+Last elaborated design is top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300(rtl)
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.
+WARNING - synthesis: Bit 23 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w0_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w0_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM1_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM1_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM1_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM1_d2 is stuck at Zero
+
+
+
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec3_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec3_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec3_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec3_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec2_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec2_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec2_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec2_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec1_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec1_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec1_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec1_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec6_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec6_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec5_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec5_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec4_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec4_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec0_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec0_d1 is stuck at Zero
+################### Mapped 246 registers to 5 RAM. ##################
+WARNING - synthesis: Removing unused instance \u_dut/exnR0_d1_sft00003_844. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/exnR0_d1_sft00002_843. VDB-5034
+WARNING - synthesis: Removing unused instance . VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/exnR0_d1_sft00000_842. VDB-5034
+WARNING - synthesis: Removing unused instance _841. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP6_d1_839. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP5_d1_838. VDB-5034
+######## Missing driver on net n6042. Patching with GND.
+######## Missing driver on net n6041. Patching with GND.
+Duplicate register/latch removal. \u_dut/q4_d1_i1 is a one-to-one match with \u_dut/qP4_d1_i0.
+Duplicate register/latch removal. \u_dut/q3_d1_i1 is a one-to-one match with \u_dut/qP3_d1_i0.
+Duplicate register/latch removal. \u_dut/q2_d1_i1 is a one-to-one match with \u_dut/qP2_d1_i0.
+Duplicate register/latch removal. \u_dut/q1_d1_i1 is a one-to-one match with \u_dut/qP1_d1_i0.
+Duplicate register/latch removal. \u_dut/qM6_d1_i1 is a one-to-one match with \u_dut/q6_d1_i3.
+Duplicate register/latch removal. \u_dut/qM5_d1_i1 is a one-to-one match with \u_dut/q5_d1_i3.
+Duplicate register/latch removal. \u_dut/qM4_d1_i1 is a one-to-one match with \u_dut/q4_d1_i3.
+Duplicate register/latch removal. \u_dut/qM3_d1_i1 is a one-to-one match with \u_dut/q3_d1_i3.
+Duplicate register/latch removal. \u_dut/qM2_d1_i1 is a one-to-one match with \u_dut/q2_d1_i3.
+Duplicate register/latch removal. \u_dut/qM1_d1_i1 is a one-to-one match with \u_dut/q1_d1_i3.
+Duplicate register/latch removal. \u_dut/qP1_d1_i1 is a one-to-one match with \u_dut/q1_d1_i2.
+Duplicate register/latch removal. \u_dut/qP2_d1_i1 is a one-to-one match with \u_dut/q2_d1_i2.
+Duplicate register/latch removal. \u_dut/qP3_d1_i1 is a one-to-one match with \u_dut/q3_d1_i2.
+Duplicate register/latch removal. \u_dut/qP4_d1_i1 is a one-to-one match with \u_dut/q4_d1_i2.
+Duplicate register/latch removal. \u_dut/q6_d2_i1 is a one-to-one match with \u_dut/qM6_d2_i1.
+Duplicate register/latch removal. \u_dut/q5_d2_i1 is a one-to-one match with \u_dut/qM5_d2_i1.
+Duplicate register/latch removal. \u_dut/q4_d2_i1 is a one-to-one match with \u_dut/qM4_d2_i1.
+Duplicate register/latch removal. \u_dut/q3_d2_i1 is a one-to-one match with \u_dut/qM3_d2_i1.
+Duplicate register/latch removal. \u_dut/q2_d2_i1 is a one-to-one match with \u_dut/qM2_d2_i1.
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300.ngo.
+
+################### Begin Area Report (top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300)######################
+Number of register bits => 975 of 12687 (7 % )
+CCU2C => 241
+DPR16X4C => 4
+FD1S3AX => 944
+FD1S3IX => 29
+FD1S3JX => 2
+GSR => 1
+IB => 57
+LUT4 => 523
+OB => 28
+PDPW16KD => 1
+PFUMX => 22
+ROM128X1A => 12
+SPR16X4C => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 981
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_dut/q5_d1_1, loads : 46
+  Net : u_dut/q6_d1_1, loads : 45
+  Net : u_dut/qP4_d1_1, loads : 44
+  Net : u_dut/qP3_d1_1, loads : 44
+  Net : u_dut/qP2_d1_1, loads : 44
+  Net : Y_r_16, loads : 43
+  Net : u_dut/SelFunctionTable7/q7_copy5_0, loads : 41
+  Net : u_dut/qM1_d1_2, loads : 40
+  Net : Y_r_15, loads : 38
+  Net : u_dut/qP1_d1_1, loads : 26
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   86.520 MHz|    16 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 267.559  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.603  secs
+--------------------------------------------------------------
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf17_zynq7000_native_srt_87_f300/lse.synproj
+
+
+[exit code 0]

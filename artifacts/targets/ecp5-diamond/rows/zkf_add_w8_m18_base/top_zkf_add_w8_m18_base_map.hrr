@@ -1,0 +1,48 @@
+---------------------------------------------------
+Report for cell top_zkf_add_w8_m18_base
+   Instance path: top_zkf_add_w8_m18_base
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     372.00        100.0
+                                  LUT4	     449.00        100.0
+                                 IOBUF	         82        100.0
+                                PFUREG	        294        100.0
+                                RIPPLE	         68        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                       zkf_add(WEXP=8)	          1        69.7
+---------------------------------------------------
+Report for cell zkf_add(WEXP=8)
+   Instance path: top_zkf_add_w8_m18_base/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     259.17        69.7
+                                  LUT4	     423.00        94.2
+                                PFUREG	        183        62.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+_zkf_normshift(W=21,WSHAMT=5,STAGE_SPLIT=1)	          1        15.5
+_zkf_pack(WEXP=8,WEXP_UNBIASED=9,EXP_IS_BIASED=1)	          1         2.2
+     _zkf_rshift_sticky(W=21,WSHIFT=8)	          1        19.9
+---------------------------------------------------
+Report for cell _zkf_normshift(W=21,WSHAMT=5,STAGE_SPLIT=1)
+   Instance path: top_zkf_add_w8_m18_base/u_dut/u_sub_norm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      57.50        15.5
+                                  LUT4	      99.00        22.0
+                                PFUREG	         25         8.5
+---------------------------------------------------
+Report for cell _zkf_pack(WEXP=8,WEXP_UNBIASED=9,EXP_IS_BIASED=1)
+   Instance path: top_zkf_add_w8_m18_base/u_dut/u_pack
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.00         2.2
+                                  LUT4	      21.00         4.7
+---------------------------------------------------
+Report for cell _zkf_rshift_sticky(W=21,WSHIFT=8)
+   Instance path: top_zkf_add_w8_m18_base/u_dut/u_align_small
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      74.17        19.9
+                                  LUT4	     154.00        34.3

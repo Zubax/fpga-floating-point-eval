@@ -1,0 +1,14 @@
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/src/flopoco_mul_we8_wf17_dummyfpga_plain_f300.vhdl
+Pipeline constructed using approximate timings for target DummyFPGA @ 300 MHz
+|---Entity IntMultiplier_18x18_36_Freq300_uid5
+|      R: (c0, 0.000000ns)
+|---Entity IntAdder_27_Freq300_uid9
+|      R: (c1, 0.316667ns)
+Entity flopoco_mul_we8_wf17_dummyfpga_plain_f300
+   R: (c1, 0.316667ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/src/flopoco_mul_we8_wf17_dummyfpga_plain_f300.vhdl frequency=300 target=DummyFPGA useTargetOpt=0 useHardMult=1 plainVHDL=1 FPMult name=flopoco_mul_we8_wf17_dummyfpga_plain_f300 wE=8 wF=17 wEY=0 wFY=0 wEOut=0 wFOut=0 correctlyRounded=1 dspThreshold=0
+
+
+[exit code 0]

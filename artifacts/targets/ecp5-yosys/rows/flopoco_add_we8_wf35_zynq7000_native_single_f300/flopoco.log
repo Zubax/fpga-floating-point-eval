@@ -1,0 +1,20 @@
+[1;33mWarning: [0m[0;34mOperator.cpp[0m:[1;37m3213[0m ([1;37mcomputePipelineDepths()[0m): The outputs of operator RightShifterSticky36_by_max_38_Freq300_uid4 are not synchronized!
+[1;33mWarning: [0m[0;34mOperator.cpp[0m:[1;37m3213[0m ([1;37mcomputePipelineDepths()[0m): The outputs of operator RightShifterSticky36_by_max_38_Freq300_uid4 are not synchronized!
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf35_zynq7000_native_single_f300/src/flopoco_add_we8_wf35_zynq7000_native_single_f300.vhdl
+Pipeline constructed using approximate timings for target Zynq7000 @ 300 MHz
+|---Entity RightShifterSticky36_by_max_38_Freq300_uid4
+|      R: (c1, 2.695667ns)   Sticky: (c2, 2.775333ns)
+|---Entity IntAdder_39_Freq300_uid6
+|      R: (c3, 2.750000ns)
+|---Entity Normalizer_Z_40_40_40_Freq300_uid8
+|      Count: (c6, 1.567000ns)   R: (c6, 2.191000ns)
+|---Entity IntAdder_46_Freq300_uid11
+|      R: (c7, 2.513667ns)
+Entity flopoco_add_we8_wf35_zynq7000_native_single_f300
+   R: (c8, 0.946333ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf35_zynq7000_native_single_f300/src/flopoco_add_we8_wf35_zynq7000_native_single_f300.vhdl frequency=300 target=Zynq7000 useTargetOpt=0 useHardMult=1 plainVHDL=0 FPAdd name=flopoco_add_we8_wf35_zynq7000_native_single_f300 wE=8 wF=35 sub=0 dualPath=0 onlyPositiveIO=0
+
+
+[exit code 0]

@@ -1,0 +1,71 @@
+----------------------------------------------------------------------
+Report for cell top_flopoco_add_we8_wf17_zynq7000_native_single_f200.TECH
+Register bits:  272 of 12687 (2.144%)
+I/O cells:      85
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        51          100.0
+                            FD1S3AX       234          100.0
+                            FD1S3IX        38          100.0
+                                GSR         1          100.0
+                                 IB        57          100.0
+                               LUT4       300          100.0
+                                 OB        28          100.0
+                           PDPW16KD         1          100.0
+                              PFUMX         5          100.0
+SUB MODULES
+           IntAdder_21_Freq200_uid6         1
+          IntAdder_28_Freq200_uid11         1
+ Normalizer_Z_22_22_22_Freq200_uid8         1
+RightShifterSticky18_by_max_20_Freq200_uid4         1
+flopoco_add_we8_wf17_zynq7000_native_single_f200         1
+                              TOTAL       720
+----------------------------------------------------------------------
+Report for cell flopoco_add_we8_wf17_zynq7000_native_single_f200.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       114           48.7
+                            FD1S3IX        35           92.1
+                               LUT4       297           99.0
+                           PDPW16KD         1          100.0
+                              PFUMX         5          100.0
+SUB MODULES
+           IntAdder_21_Freq200_uid6         1
+          IntAdder_28_Freq200_uid11         1
+ Normalizer_Z_22_22_22_Freq200_uid8         1
+RightShifterSticky18_by_max_20_Freq200_uid4         1
+                              TOTAL       456
+----------------------------------------------------------------------
+Report for cell IntAdder_28_Freq200_uid11.v1
+Instance Path : u_dut.roundingAdder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        29           12.4
+                              TOTAL        29
+----------------------------------------------------------------------
+Report for cell IntAdder_21_Freq200_uid6.v1
+Instance Path : u_dut.fracAdder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        17            7.3
+                              TOTAL        17
+----------------------------------------------------------------------
+Report for cell RightShifterSticky18_by_max_20_Freq200_uid4.v1
+Instance Path : u_dut.RightShifterComponent
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        20            8.5
+                            FD1S3IX        17           44.7
+                               LUT4        80           26.7
+                              PFUMX         5          100.0
+                              TOTAL       122
+----------------------------------------------------------------------
+Report for cell Normalizer_Z_22_22_22_Freq200_uid8.v1
+Instance Path : u_dut.LZCAndShifter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         9            3.8
+                            FD1S3IX        16           42.1
+                               LUT4        91           30.3
+                              TOTAL       116

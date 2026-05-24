@@ -1,0 +1,6 @@
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_pipe.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/zkf_div.v"
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_div_w8_m36_base/src/top_zkf_div_w8_m36_base.v"
+synth_ecp5 -top top_zkf_div_w8_m36_base -abc2 -dff -retime -noabc9 -json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_div_w8_m36_base/netlist.json

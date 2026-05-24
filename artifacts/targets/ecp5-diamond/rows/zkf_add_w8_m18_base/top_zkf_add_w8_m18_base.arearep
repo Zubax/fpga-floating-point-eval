@@ -1,0 +1,62 @@
+----------------------------------------------------------------------
+Report for cell top_zkf_add_w8_m18_base.TECH
+Register bits:  294 of 12687 (2.317%)
+I/O cells:      82
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        68          100.0
+                            FD1S3AX       222          100.0
+                            FD1S3IX        70          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB        55          100.0
+                               LUT4       454          100.0
+                                 OB        27          100.0
+                              PFUMX        50          100.0
+SUB MODULES
+_zkf_normshift(W=21,WSHAMT=5,STAGE_SPLIT=1)         1
+_zkf_pack(WEXP=8,WEXP_UNBIASED=9,EXP_IS_BIASED=1)         1
+  _zkf_rshift_sticky(W=21,WSHIFT=8)         1
+                    zkf_add(WEXP=8)         1
+                              TOTAL       953
+----------------------------------------------------------------------
+Report for cell zkf_add(WEXP=8).v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       139           62.6
+                            FD1S3IX        42           60.0
+                            FD1S3JX         2          100.0
+                               LUT4       424           93.4
+                              PFUMX        50          100.0
+SUB MODULES
+_zkf_normshift(W=21,WSHAMT=5,STAGE_SPLIT=1)         1
+_zkf_pack(WEXP=8,WEXP_UNBIASED=9,EXP_IS_BIASED=1)         1
+  _zkf_rshift_sticky(W=21,WSHIFT=8)         1
+                              TOTAL       660
+----------------------------------------------------------------------
+Report for cell _zkf_normshift(W=21,WSHAMT=5,STAGE_SPLIT=1).v1
+Instance Path : u_dut.u_sub_norm
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         7            3.2
+                            FD1S3IX        18           25.7
+                               LUT4        99           21.8
+                              PFUMX        19           38.0
+                              TOTAL       143
+----------------------------------------------------------------------
+Report for cell _zkf_pack(WEXP=8,WEXP_UNBIASED=9,EXP_IS_BIASED=1).v1
+Instance Path : u_dut.u_pack
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        21            4.6
+                              PFUMX         2            4.0
+                              TOTAL        23
+----------------------------------------------------------------------
+Report for cell _zkf_rshift_sticky(W=21,WSHIFT=8).v1
+Instance Path : u_dut.u_align_small
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       155           34.1
+                              PFUMX        28           56.0
+                              TOTAL       183

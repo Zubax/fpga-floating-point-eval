@@ -1,0 +1,171 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat May 23 22:27:48 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/lse.synproj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_zkf_add_w8_m36_base.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base (searchpath added)
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_rshift_sticky.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_normshift.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/zkf_add.v
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/src/top_zkf_add_w8_m36_base.v
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_rshift_sticky.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_normshift.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/zkf_add.v. VERI-1482
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/src/top_zkf_add_w8_m36_base.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top_zkf_add_w8_m36_base
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/src/top_zkf_add_w8_m36_base.v(4): compiling module top_zkf_add_w8_m36_base. VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/zkf_add.v(22): compiling module zkf_add(WEXP=8,WMAN=36). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/zkf_add.v(459): compiling module _zkf_add_ge(W=43). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_rshift_sticky.v(19): compiling module _zkf_rshift_sticky(W=39,WSHIFT=8). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_normshift.v(29): compiling module _zkf_normshift(W=39,WSHAMT=6,STAGE_SPLIT=1). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v(21): compiling module _zkf_pack(WEXP=8,WMAN=36,WEXP_UNBIASED=9,EXP_IS_BIASED=1). VERI-1018
+Last elaborated design is top_zkf_add_w8_m36_base()
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_zkf_add_w8_m36_base.
+WARNING - synthesis: Bit 2 of Register \u_dut/s1_large_ext_exp is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/s1_large_ext_exp is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/s1_large_ext_exp is stuck at Zero
+
+
+
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_zkf_add_w8_m36_base_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.ngo.
+
+################### Begin Area Report (top_zkf_add_w8_m36_base)######################
+Number of register bits => 477 of 12687 (3 % )
+CCU2C => 110
+FD1S3AX => 363
+FD1S3IX => 112
+FD1S3JX => 2
+GSR => 1
+IB => 91
+LUT4 => 795
+OB => 45
+PFUMX => 87
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 477
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : diff_43, loads : 97
+  Net : s0_exp_diff_3, loads : 88
+  Net : u_dut/n5005, loads : 88
+  Net : s0_exp_diff_1, loads : 81
+  Net : u_dut/s3_same_sign, loads : 57
+  Net : s0_exp_diff_2, loads : 55
+  Net : u_dut/u_sub_norm/n5538, loads : 50
+  Net : u_dut/raw_a_inf, loads : 47
+  Net : u_dut/n3967, loads : 44
+  Net : u_dut/n3965, loads : 44
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   62.139 MHz|    14 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 220.188  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 3.566  secs
+--------------------------------------------------------------
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/lse.synproj
+
+
+[exit code 0]

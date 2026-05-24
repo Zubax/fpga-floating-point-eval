@@ -1,0 +1,4 @@
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v"
+read_verilog -sv "/mnt/storage/zubax/kulibin2/float/hdl/zkf_mul.v"
+read_verilog -sv "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_mul_w8_m18_base/src/top_zkf_mul_w8_m18_base.v"
+synth_ecp5 -top top_zkf_mul_w8_m18_base -abc2 -dff -retime -noabc9 -json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/zkf_mul_w8_m18_base/netlist.json

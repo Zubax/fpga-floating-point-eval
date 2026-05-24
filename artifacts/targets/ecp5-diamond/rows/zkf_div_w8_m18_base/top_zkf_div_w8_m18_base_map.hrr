@@ -1,0 +1,202 @@
+---------------------------------------------------
+Report for cell top_zkf_div_w8_m18_base
+   Instance path: top_zkf_div_w8_m18_base
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     996.00        100.0
+                                  LUT4	     501.00        100.0
+                                 IOBUF	         83        100.0
+                                PFUREG	        961        100.0
+                                RIPPLE	        382        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                       zkf_div(WEXP=8)	          1        53.6
+---------------------------------------------------
+Report for cell zkf_div(WEXP=8)
+   Instance path: top_zkf_div_w8_m18_base/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     534.00        53.6
+                                  LUT4	     500.00        99.8
+                                PFUREG	        661        68.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     _zkf_pack(WEXP=8)	          1         1.0
+                 _zkf_div_core(WEXP=8)	          1        52.7
+---------------------------------------------------
+Report for cell _zkf_pack(WEXP=8)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_pack
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.50         1.0
+                                  LUT4	      22.00         4.4
+---------------------------------------------------
+Report for cell _zkf_div_core(WEXP=8)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     524.50        52.7
+                                  LUT4	     478.00        95.4
+                                PFUREG	        661        68.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+               _zkf_div_radix4_step_U1	          1         1.9
+            _zkf_div_raw_stage(WIN=11)	          1         0.6
+             _zkf_div_raw_stage(WIN=7)	          1         0.4
+             _zkf_div_raw_stage(WIN=9)	          1         0.5
+            _zkf_div_raw_stage(WIN=17)	          1         0.9
+             _zkf_div_raw_stage(WIN=3)	          1         0.2
+             _zkf_div_raw_stage(WIN=5)	          1         0.3
+            _zkf_div_raw_stage(WIN=19)	          1         1.0
+            _zkf_div_raw_stage(WIN=15)	          1         0.9
+            _zkf_div_raw_stage(WIN=13)	          1         0.7
+               _zkf_div_radix4_step_U6	          1         1.9
+               _zkf_div_radix4_step_U8	          1         1.9
+                    _zkf_div_raw_stage	          1         0.1
+               _zkf_div_radix4_step_U7	          1         1.9
+               _zkf_div_radix4_step_U4	          1         1.9
+               _zkf_div_radix4_step_U5	          1         1.9
+               _zkf_div_radix4_step_U3	          1         1.9
+               _zkf_div_radix4_step_U2	          1         1.9
+                  _zkf_div_radix4_step	          1         1.9
+               _zkf_div_radix4_step_U0	          1         1.9
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_9..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=17)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_9..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.9
+                                PFUREG	         19         2.0
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U0
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_8..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=15)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_8..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.50         0.9
+                                PFUREG	         17         1.8
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U1
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_7..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=13)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_7..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.7
+                                PFUREG	         15         1.6
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U2
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_6..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=11)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_6..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       6.00         0.6
+                                PFUREG	         13         1.4
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U3
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_5..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=9)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_5..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.5
+                                PFUREG	         11         1.1
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U4
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_4..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=7)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_4..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.00         0.4
+                                PFUREG	          9         0.9
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U5
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_3..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=5)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_3..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         0.3
+                                PFUREG	          7         0.7
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U6
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_2..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=3)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_2..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         0.2
+                                PFUREG	          5         0.5
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U7
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_1..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_1..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                PFUREG	          3         0.3
+---------------------------------------------------
+Report for cell _zkf_div_radix4_step_U8
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_10..u_step
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         1.9
+                                  LUT4	      42.00         8.4
+---------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=19)
+   Instance path: top_zkf_div_w8_m18_base/u_dut/u_core/g_stage_10..u_raw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.00         1.0
+                                PFUREG	         21         2.2

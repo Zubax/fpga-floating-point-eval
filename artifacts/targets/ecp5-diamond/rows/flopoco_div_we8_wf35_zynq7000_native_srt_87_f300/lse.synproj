@@ -1,0 +1,31 @@
+-a "ECP5U"
+-d LFE5U-12F
+-t CABGA381
+-s 6
+-frequency 100
+-optimization_goal timing
+-bram_utilization 100
+-ramstyle auto
+-romstyle auto
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr no
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style auto
+-max_fanout 1000
+-fsm_encoding_style auto
+-twr_paths 10
+-use_io_insertion 1
+-use_io_reg 0
+-fix_gated_clocks 1
+-vh2008
+-top top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300
+-sdc "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/constraints.sdc"
+-p "/usr/local/diamond/3.14/ispfpga/sa5p00/data"
+-p "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300"
+-lib work
+-vhd "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl" "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl"
+-ngo "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.ngo"
+-logfile "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/synthesis.log"

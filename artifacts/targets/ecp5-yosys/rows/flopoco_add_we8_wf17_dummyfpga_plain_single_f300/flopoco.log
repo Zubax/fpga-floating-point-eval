@@ -1,0 +1,18 @@
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf17_dummyfpga_plain_single_f300/src/flopoco_add_we8_wf17_dummyfpga_plain_single_f300.vhdl
+Pipeline constructed using approximate timings for target DummyFPGA @ 300 MHz
+|---Entity RightShifterSticky18_by_max_20_Freq300_uid4
+|      R: (c1, 0.766667ns)   Sticky: (c1, 3.056667ns)
+|---Entity IntAdder_21_Freq300_uid6
+|      R: (c2, 1.673333ns)
+|---Entity Normalizer_Z_22_22_22_Freq300_uid8
+|      Count: (c4, 0.446667ns)   R: (c4, 0.996667ns)
+|---Entity IntAdder_28_Freq300_uid11
+|      R: (c4, 2.816667ns)
+Entity flopoco_add_we8_wf17_dummyfpga_plain_single_f300
+   R: (c5, 0.783333ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf17_dummyfpga_plain_single_f300/src/flopoco_add_we8_wf17_dummyfpga_plain_single_f300.vhdl frequency=300 target=DummyFPGA useTargetOpt=0 useHardMult=1 plainVHDL=1 FPAdd name=flopoco_add_we8_wf17_dummyfpga_plain_single_f300 wE=8 wF=17 sub=0 dualPath=0 onlyPositiveIO=0
+
+
+[exit code 0]

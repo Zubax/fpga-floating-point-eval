@@ -1,0 +1,600 @@
+
+   Lattice Mapping Report File for Design Module 'top_zkf_div_w8_m18_base'
+
+
+Design Information
+------------------
+
+Command line:   /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p
+     LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/
+     artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/top_zkf_div_w8_m18_
+     base.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond
+     /rows/zkf_div_w8_m18_base/top_zkf_div_w8_m18_base_map.ncd -pr /mnt/storage/
+     test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base
+     /top_zkf_div_w8_m18_base.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts
+     /targets/ecp5-diamond/rows/zkf_div_w8_m18_base/top_zkf_div_w8_m18_base.mrp
+     -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/z
+     kf_div_w8_m18_base/constraints.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/23/26  22:27:59
+
+Design Summary
+--------------
+
+   Number of registers:    961 out of 12687 (8%)
+      PFU registers:          961 out of 12096 (8%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       996 out of  6048 (16%)
+      SLICEs as Logic/ROM:    996 out of  6048 (16%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:        382 out of  6048 (6%)
+   Number of LUT4s:        1265 out of 12096 (10%)
+      Number used as logic LUTs:        501
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      764
+      Number used as shift registers:     0
+   Number of PIO sites used: 83 out of 197 (42%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+
+                                    Page 1
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+Design Summary (cont)
+---------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 581 loads, 581 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  15
+     Net n3422: 1 loads, 1 LSLICEs
+     Net n3394: 1 loads, 1 LSLICEs
+     Net rst_c: 8 loads, 8 LSLICEs
+     Net n3292: 9 loads, 9 LSLICEs
+     Net n3428: 1 loads, 1 LSLICEs
+     Net n3486: 1 loads, 1 LSLICEs
+     Net n3452: 1 loads, 1 LSLICEs
+     Net n3488: 1 loads, 1 LSLICEs
+     Net n3426: 1 loads, 1 LSLICEs
+     Net n3432: 1 loads, 1 LSLICEs
+     Net n3424: 1 loads, 1 LSLICEs
+     Net n4926: 5 loads, 5 LSLICEs
+     Net initial_bit: 1 loads, 1 LSLICEs
+     Net u_dut/u_core/raw_tri_119: 1 loads, 1 LSLICEs
+     Net u_dut/u_core/n3430: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net diff3_20: 24 loads
+     Net diff3_20_adj_1549: 24 loads
+     Net diff3_20_adj_1605: 24 loads
+     Net diff3_20_adj_1661: 24 loads
+     Net diff3_20_adj_1717: 24 loads
+     Net diff3_20_adj_1773: 24 loads
+     Net diff3_20_adj_1829: 24 loads
+     Net diff3_20_adj_1885: 24 loads
+     Net diff3_20_adj_1941: 24 loads
+     Net diff3_20_adj_1997: 24 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+
+
+
+                                    Page 2
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| b_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[12]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 3
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| a_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| a_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| in_valid_i          | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| div0_o              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[10]             | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 4
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| y_o[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[13]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[14]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[15]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[16]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[17]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[18]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[19]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[20]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[21]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[22]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[23]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[24]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| y_o[25]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| out_valid_o         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| b_i[3]              | INPUT     | LVCMOS25  |            |
+
+                                    Page 5
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| b_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal n3293 was merged into signal initial_bit
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal r_den3_0[[18__869_add_4_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal r_den3_0[[18__869_add_4_cout/CO undriven or does not drive anything -
+     clipped.
+Signal r_den3_0[[18__869_add_4_2/S0 undriven or does not drive anything -
+     clipped.
+Signal r_den3_0[[18__869_add_4_2/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_419_add_4_20/CO undriven or does not drive anything - clipped.
+Signal _add_1_419_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_419_add_4_2/CI undriven or does not drive anything - clipped.
+Signal exp_unbiased_res1_add_4_12/S1 undriven or does not drive anything -
+     clipped.
+Signal exp_unbiased_res1_add_4_12/CO undriven or does not drive anything -
+     clipped.
+Signal exp_unbiased_res1_add_4_2/S0 undriven or does not drive anything -
+     clipped.
+Signal exp_unbiased_res1_add_4_2/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_413_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_413_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_413_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_413_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_413_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_413_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_410_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_407_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_404_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_401_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_401_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_401_add_4_19/S1 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+Removed logic (cont)
+--------------------
+Signal _add_1_401_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_401_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_401_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_398_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_389_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_392_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_338_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_338_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_359_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_359_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_356_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_356_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_377_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_377_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_377_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_374_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_374_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_338_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_335_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_335_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_338_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_338_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_374_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_335_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_335_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_374_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_374_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_335_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_371_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_371_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_395_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_371_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_371_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_371_add_4_21/CO undriven or does not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+Removed logic (cont)
+--------------------
+Signal _add_1_368_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_368_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_368_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_368_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_368_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_365_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_365_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_386_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_380_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_380_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_350_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_350_add_4_27/S1 undriven or does not drive anything - clipped.
+Signal _add_1_350_add_4_27/CO undriven or does not drive anything - clipped.
+Signal _add_1_347_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_347_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_365_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_347_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_344_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_344_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_344_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_344_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_344_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_341_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_341_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_365_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_365_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_341_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_341_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_341_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_326_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_326_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_362_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_362_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_326_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_326_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_326_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_323_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_323_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_323_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_323_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_323_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_320_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_320_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_380_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_380_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_380_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_317_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_356_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_317_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_317_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_383_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_383_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_320_add_4_19/S1 undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  top_zkf_div_w8_m18_base                       Date:  05/23/26  22:27:59
+
+Removed logic (cont)
+--------------------
+Signal _add_1_356_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_356_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_320_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_320_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_317_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_317_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_353_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_353_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_359_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_383_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_383_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_383_add_4_21/CO undriven or does not drive anything - clipped.
+Signal r_exp_unbiased_0[[9__837_add_4_12/S1 undriven or does not drive anything
+     - clipped.
+Signal r_exp_unbiased_0[[9__837_add_4_12/CO undriven or does not drive anything
+     - clipped.
+Signal _add_1_332_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_332_add_4_21/CO undriven or does not drive anything - clipped.
+Signal r_exp_unbiased_0[[9__837_add_4_2/S0 undriven or does not drive anything -
+     clipped.
+Signal r_exp_unbiased_0[[9__837_add_4_2/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_332_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_332_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_332_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_362_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_350_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_350_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_362_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_362_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_377_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_377_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_359_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_359_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_353_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_353_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_353_add_4_19/S1 undriven or does not drive anything - clipped.
+Block i538_1_lut was optimized away.
+Block rem_17__I_0_i2 was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 199 MB
+        
+
+
+
+
+
+
+
+
+                                    Page 9
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

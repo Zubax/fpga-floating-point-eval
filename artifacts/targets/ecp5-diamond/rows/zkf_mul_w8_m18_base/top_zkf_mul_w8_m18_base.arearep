@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell top_zkf_mul_w8_m18_base.TECH
+Register bits:  94 of 12687 (0.741%)
+I/O cells:      82
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        30          100.0
+                            FD1S3AX        65          100.0
+                            FD1S3IX        29          100.0
+                                GSR         1          100.0
+                                 IB        55          100.0
+                               LUT4        77          100.0
+                         MULT18X18D         1          100.0
+                                 OB        27          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                  _zkf_pack(WEXP=8)         1
+                    zkf_mul(WEXP=8)         1
+                              TOTAL       288
+----------------------------------------------------------------------
+Report for cell zkf_mul(WEXP=8).v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         3            4.6
+                            FD1S3IX         1            3.4
+                               LUT4        76           98.7
+                         MULT18X18D         1          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                  _zkf_pack(WEXP=8)         1
+                              TOTAL        83
+----------------------------------------------------------------------
+Report for cell _zkf_pack(WEXP=8).v1
+Instance Path : u_dut.u_pack
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        33           42.9
+                              PFUMX         1          100.0
+                              TOTAL        34

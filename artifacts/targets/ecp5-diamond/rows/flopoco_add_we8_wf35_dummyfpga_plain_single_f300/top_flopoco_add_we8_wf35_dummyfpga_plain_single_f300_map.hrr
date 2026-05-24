@@ -1,0 +1,52 @@
+---------------------------------------------------
+Report for cell top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300
+   Instance path: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     502.00        100.0
+                                  LUT4	     578.00        100.0
+                               DISTRAM	       9.00        100.0
+                                 IOBUF	        139        100.0
+                                PFUREG	        478        100.0
+                                RIPPLE	         79        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+flopoco_add_we8_wf35_dummyfpga_plain_single_f300	          1        74.0
+---------------------------------------------------
+Report for cell flopoco_add_we8_wf35_dummyfpga_plain_single_f300
+   Instance path: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300/u_dut
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     371.33        74.0
+                                  LUT4	     563.00        97.4
+                                PFUREG	        331        69.2
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+RightShifterSticky36_by_max_38_Freq300_uid4	          1        25.1
+    Normalizer_Z_40_40_40_Freq300_uid8	          1        23.3
+              IntAdder_39_Freq300_uid6	          1         7.5
+---------------------------------------------------
+Report for cell IntAdder_39_Freq300_uid6
+   Instance path: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300/u_dut/fracAdder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.50         7.5
+                                PFUREG	        109        22.8
+---------------------------------------------------
+Report for cell RightShifterSticky36_by_max_38_Freq300_uid4
+   Instance path: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300/u_dut/RightShifterComponent
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     126.00        25.1
+                                  LUT4	     173.00        29.9
+                                PFUREG	         77        16.1
+---------------------------------------------------
+Report for cell Normalizer_Z_40_40_40_Freq300_uid8
+   Instance path: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300/u_dut/LZCAndShifter
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     116.92        23.3
+                                  LUT4	     183.00        31.7
+                                PFUREG	         83        17.4

@@ -1,0 +1,263 @@
+----------------------------------------------------------------------
+Report for cell top_zkf_div_w8_m18_base.TECH
+Register bits:  961 of 12687 (7.575%)
+I/O cells:      83
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       382          100.0
+                            FD1S3AX       909          100.0
+                            FD1S3IX        50          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB        55          100.0
+                               LUT4       502          100.0
+                                 OB        28          100.0
+                              PFUMX       160          100.0
+SUB MODULES
+              _zkf_div_core(WEXP=8)         1
+               _zkf_div_radix4_step         1
+            _zkf_div_radix4_step_U0         1
+            _zkf_div_radix4_step_U1         1
+            _zkf_div_radix4_step_U2         1
+            _zkf_div_radix4_step_U3         1
+            _zkf_div_radix4_step_U4         1
+            _zkf_div_radix4_step_U5         1
+            _zkf_div_radix4_step_U6         1
+            _zkf_div_radix4_step_U7         1
+            _zkf_div_radix4_step_U8         1
+                 _zkf_div_raw_stage         1
+         _zkf_div_raw_stage(WIN=11)         1
+         _zkf_div_raw_stage(WIN=13)         1
+         _zkf_div_raw_stage(WIN=15)         1
+         _zkf_div_raw_stage(WIN=17)         1
+         _zkf_div_raw_stage(WIN=19)         1
+          _zkf_div_raw_stage(WIN=3)         1
+          _zkf_div_raw_stage(WIN=5)         1
+          _zkf_div_raw_stage(WIN=7)         1
+          _zkf_div_raw_stage(WIN=9)         1
+                  _zkf_pack(WEXP=8)         1
+                    zkf_div(WEXP=8)         1
+                              TOTAL      2112
+----------------------------------------------------------------------
+Report for cell zkf_div(WEXP=8).v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       647           71.2
+                            FD1S3IX        13           26.0
+                            FD1S3JX         1           50.0
+                               LUT4       500           99.6
+                              PFUMX       160          100.0
+SUB MODULES
+              _zkf_div_core(WEXP=8)         1
+               _zkf_div_radix4_step         1
+            _zkf_div_radix4_step_U0         1
+            _zkf_div_radix4_step_U1         1
+            _zkf_div_radix4_step_U2         1
+            _zkf_div_radix4_step_U3         1
+            _zkf_div_radix4_step_U4         1
+            _zkf_div_radix4_step_U5         1
+            _zkf_div_radix4_step_U6         1
+            _zkf_div_radix4_step_U7         1
+            _zkf_div_radix4_step_U8         1
+                 _zkf_div_raw_stage         1
+         _zkf_div_raw_stage(WIN=11)         1
+         _zkf_div_raw_stage(WIN=13)         1
+         _zkf_div_raw_stage(WIN=15)         1
+         _zkf_div_raw_stage(WIN=17)         1
+         _zkf_div_raw_stage(WIN=19)         1
+          _zkf_div_raw_stage(WIN=3)         1
+          _zkf_div_raw_stage(WIN=5)         1
+          _zkf_div_raw_stage(WIN=7)         1
+          _zkf_div_raw_stage(WIN=9)         1
+                  _zkf_pack(WEXP=8)         1
+                              TOTAL      1343
+----------------------------------------------------------------------
+Report for cell _zkf_pack(WEXP=8).v1
+Instance Path : u_dut.u_pack
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        22            4.4
+                              TOTAL        22
+----------------------------------------------------------------------
+Report for cell _zkf_div_core(WEXP=8).v1
+Instance Path : u_dut.u_core
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       647           71.2
+                            FD1S3IX        13           26.0
+                            FD1S3JX         1           50.0
+                               LUT4       478           95.2
+                              PFUMX       160          100.0
+SUB MODULES
+               _zkf_div_radix4_step         1
+            _zkf_div_radix4_step_U0         1
+            _zkf_div_radix4_step_U1         1
+            _zkf_div_radix4_step_U2         1
+            _zkf_div_radix4_step_U3         1
+            _zkf_div_radix4_step_U4         1
+            _zkf_div_radix4_step_U5         1
+            _zkf_div_radix4_step_U6         1
+            _zkf_div_radix4_step_U7         1
+            _zkf_div_radix4_step_U8         1
+                 _zkf_div_raw_stage         1
+         _zkf_div_raw_stage(WIN=11)         1
+         _zkf_div_raw_stage(WIN=13)         1
+         _zkf_div_raw_stage(WIN=15)         1
+         _zkf_div_raw_stage(WIN=17)         1
+         _zkf_div_raw_stage(WIN=19)         1
+          _zkf_div_raw_stage(WIN=3)         1
+          _zkf_div_raw_stage(WIN=5)         1
+          _zkf_div_raw_stage(WIN=7)         1
+          _zkf_div_raw_stage(WIN=9)         1
+                              TOTAL      1319
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step.v1
+Instance Path : u_dut.u_core.g_stage[9].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=17).v1
+Instance Path : u_dut.u_core.g_stage[9].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        19            2.1
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U0.v1
+Instance Path : u_dut.u_core.g_stage[8].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=15).v1
+Instance Path : u_dut.u_core.g_stage[8].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        17            1.9
+                              TOTAL        17
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U1.v1
+Instance Path : u_dut.u_core.g_stage[7].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=13).v1
+Instance Path : u_dut.u_core.g_stage[7].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        15            1.7
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U2.v1
+Instance Path : u_dut.u_core.g_stage[6].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=11).v1
+Instance Path : u_dut.u_core.g_stage[6].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        13            1.4
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U3.v1
+Instance Path : u_dut.u_core.g_stage[5].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=9).v1
+Instance Path : u_dut.u_core.g_stage[5].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        11            1.2
+                              TOTAL        11
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U4.v1
+Instance Path : u_dut.u_core.g_stage[4].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=7).v1
+Instance Path : u_dut.u_core.g_stage[4].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         9            1.0
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U5.v1
+Instance Path : u_dut.u_core.g_stage[3].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=5).v1
+Instance Path : u_dut.u_core.g_stage[3].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         7            0.8
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U6.v1
+Instance Path : u_dut.u_core.g_stage[2].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=3).v1
+Instance Path : u_dut.u_core.g_stage[2].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         5            0.6
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U7.v1
+Instance Path : u_dut.u_core.g_stage[1].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage.v1
+Instance Path : u_dut.u_core.g_stage[1].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         3            0.3
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell _zkf_div_radix4_step_U8.v1
+Instance Path : u_dut.u_core.g_stage[10].u_step
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            8.4
+                              PFUMX        16           10.0
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell _zkf_div_raw_stage(WIN=19).v1
+Instance Path : u_dut.u_core.g_stage[10].u_raw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        21            2.3
+                              TOTAL        21

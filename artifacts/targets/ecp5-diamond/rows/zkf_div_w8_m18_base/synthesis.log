@@ -1,0 +1,186 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat May 23 22:27:48 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/lse.synproj 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_zkf_div_w8_m18_base.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base (searchpath added)
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pipe.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v
+Verilog design file = /mnt/storage/zubax/kulibin2/float/hdl/zkf_div.v
+Verilog design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/src/top_zkf_div_w8_m18_base.v
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/top_zkf_div_w8_m18_base.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pipe.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v. VERI-1482
+Analyzing Verilog file /mnt/storage/zubax/kulibin2/float/hdl/zkf_div.v. VERI-1482
+Analyzing Verilog file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/src/top_zkf_div_w8_m18_base.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top_zkf_div_w8_m18_base
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/src/top_zkf_div_w8_m18_base.v(4): compiling module top_zkf_div_w8_m18_base. VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/zkf_div.v(16): compiling module zkf_div(WEXP=8). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pipe.v(5): compiling module _zkf_pipe(W=52). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(13): compiling module _zkf_div_core(WEXP=8). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(263): compiling module _zkf_div_radix4_step. VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage. VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=3). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=5). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=7). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=9). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=11). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=13). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=15). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=17). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(250): compiling module _zkf_div_raw_stage(WIN=19). VERI-1018
+WARNING - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(140): Register r_den[0][17]_850 is stuck at One. VDB-5014
+WARNING - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_div_core.v(182): Register r_den[1][17]_922 is stuck at One. VDB-5014
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v(21): compiling module _zkf_pack(WEXP=8). VERI-1018
+INFO - synthesis: /mnt/storage/zubax/kulibin2/float/hdl/_zkf_pack.v(138): compiling module _zkf_pack_delay. VERI-1018
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_zkf_div_w8_m18_base.
+
+
+
+Duplicate register/latch removal. \u_dut/u_core/r_den[0][0]_867 is a one-to-one match with \u_dut/u_core/r_den3[0][0]_887.
+Duplicate register/latch removal. \u_dut/u_core/r_den[1][0]_939 is a one-to-one match with \u_dut/u_core/r_den3[1][0]_959.
+Duplicate register/latch removal. \u_dut/u_core/r_den[2][0]_1010 is a one-to-one match with \u_dut/u_core/r_den3[2][0]_1030.
+Duplicate register/latch removal. \u_dut/u_core/r_den[3][0]_1081 is a one-to-one match with \u_dut/u_core/r_den3[3][0]_1101.
+Duplicate register/latch removal. \u_dut/u_core/r_den[4][0]_1152 is a one-to-one match with \u_dut/u_core/r_den3[4][0]_1172.
+Duplicate register/latch removal. \u_dut/u_core/r_den[5][0]_1223 is a one-to-one match with \u_dut/u_core/r_den3[5][0]_1243.
+Duplicate register/latch removal. \u_dut/u_core/r_den[6][0]_1294 is a one-to-one match with \u_dut/u_core/r_den3[6][0]_1314.
+Duplicate register/latch removal. \u_dut/u_core/r_den[7][0]_1365 is a one-to-one match with \u_dut/u_core/r_den3[7][0]_1385.
+Duplicate register/latch removal. \u_dut/u_core/r_den[8][0]_1436 is a one-to-one match with \u_dut/u_core/r_den3[8][0]_1456.
+Duplicate register/latch removal. \u_dut/u_core/r_den[9][0]_1507 is a one-to-one match with \u_dut/u_core/r_den3[9][0]_1527.
+WARNING - synthesis: Bit 0 of Register \u_dut/u_core/exp_unbiased_res1_e3 is stuck at Zero
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_zkf_div_w8_m18_base_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m18_base/top_zkf_div_w8_m18_base.ngo.
+
+################### Begin Area Report (top_zkf_div_w8_m18_base)######################
+Number of register bits => 961 of 12687 (7 % )
+CCU2C => 382
+FD1S3AX => 909
+FD1S3IX => 50
+FD1S3JX => 2
+GSR => 1
+IB => 55
+LUT4 => 502
+OB => 28
+PFUMX => 160
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 961
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : diff3_20, loads : 24
+  Net : diff3_20_adj_1549, loads : 24
+  Net : diff3_20_adj_1605, loads : 24
+  Net : diff3_20_adj_1661, loads : 24
+  Net : diff3_20_adj_1717, loads : 24
+  Net : diff3_20_adj_1773, loads : 24
+  Net : diff3_20_adj_1829, loads : 24
+  Net : diff3_20_adj_1885, loads : 24
+  Net : diff3_20_adj_1941, loads : 24
+  Net : diff3_20_adj_1997, loads : 24
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|  108.909 MHz|    10  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 225.941  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 4.771  secs
+--------------------------------------------------------------

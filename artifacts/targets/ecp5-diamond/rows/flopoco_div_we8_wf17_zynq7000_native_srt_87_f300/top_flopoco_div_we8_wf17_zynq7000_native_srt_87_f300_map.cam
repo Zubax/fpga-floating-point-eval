@@ -1,0 +1,152 @@
+[ START MERGED ]
+n6526 Y_r_0
+u_dut/n25 w6fulla_23_N_83_0
+u_dut/n6529 prescaledfY_d3_0
+u_dut/n6527 u_dut/q7_copy5_0
+u_dut/n6533 u_dut/prescaledfY_d6_0
+u_dut/n6531 prescaledfY_d5_0
+n6539 X_r_0
+u_dut/n6538 u_dut/prescaledfY_d12_0
+u_dut/n6537 u_dut/prescaledfY_d10_0
+u_dut/n6535 u_dut/prescaledfY_d8_0
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+_add_1_add_4_20/CO
+_add_1_998_add_4_1/S0
+_add_1_998_add_4_1/CI
+_add_1_998_add_4_21/CO
+_add_1_995_add_4_2/S0
+_add_1_995_add_4_2/CI
+_add_1_995_add_4_20/CO
+_add_1_992_add_4_1/S0
+_add_1_992_add_4_1/CI
+add_1946_21/S1
+add_1946_21/CO
+_add_1_992_add_4_21/CO
+_add_1_968_add_4_1/S0
+_add_1_968_add_4_1/CI
+_add_1_950_add_4_1/S0
+_add_1_950_add_4_1/CI
+_add_1_968_add_4_21/CO
+add_1945_1/S1
+add_1945_1/S0
+add_1945_1/CI
+add_1945_3/S1
+add_1945_3/S0
+add_1945_5/S1
+add_1945_5/S0
+add_1945_7/S1
+add_1945_7/S0
+add_1945_9/S1
+add_1945_9/S0
+add_1945_11/S1
+add_1945_11/S0
+add_1945_13/S1
+add_1945_13/S0
+add_1945_15/S1
+add_1945_15/S0
+add_1945_17/S1
+add_1945_17/S0
+add_1945_19/S1
+add_1945_19/S0
+add_1945_21/S1
+add_1945_21/CO
+add_1944_1/S1
+add_1944_1/S0
+add_1944_1/CI
+add_1944_3/S1
+add_1944_3/S0
+add_1944_5/S1
+add_1944_5/S0
+add_1944_7/S1
+add_1944_7/S0
+add_1944_9/S1
+add_1944_9/S0
+add_1944_11/S1
+add_1944_11/S0
+add_1944_13/S1
+add_1944_13/S0
+add_1944_15/S1
+add_1944_15/S0
+add_1944_17/S1
+add_1944_17/S0
+_add_1_947_add_4_21/CO
+add_1944_19/S1
+add_1944_19/S0
+add_1944_21/S1
+add_1944_21/CO
+add_1943_1/S1
+add_1943_1/S0
+add_1943_1/CI
+add_1946_1/S1
+add_1946_1/S0
+add_1946_1/CI
+add_1943_21/S1
+add_1943_21/CO
+add_1942_1/S1
+add_1942_1/S0
+add_1942_1/CI
+add_1942_21/S1
+add_1942_21/CO
+_add_1_974_add_4_21/CO
+add_1941_1/S1
+add_1941_1/S0
+add_1941_1/CI
+_add_1_953_add_4_2/S0
+_add_1_953_add_4_2/CI
+_add_1_953_add_4_10/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+_add_1_935_add_4_12/S1
+_add_1_935_add_4_12/CO
+_add_1_974_add_4_1/S0
+_add_1_974_add_4_1/CI
+_add_1_956_add_4_28/S1
+_add_1_956_add_4_28/CO
+add_1941_21/S1
+add_1941_21/CO
+add_1940_1/S1
+add_1940_1/S0
+add_1940_1/CI
+_add_1_950_add_4_19/S1
+_add_1_950_add_4_19/CO
+_add_1_965_add_4_1/S0
+_add_1_965_add_4_1/CI
+_add_1_965_add_4_19/CO
+_add_1_962_add_4_1/S0
+_add_1_962_add_4_1/CI
+_add_1_962_add_4_21/CO
+_add_1_944_add_4_1/S1
+_add_1_944_add_4_1/S0
+_add_1_944_add_4_1/CI
+_add_1_944_add_4_3/S0
+_add_1_944_add_4_21/CO
+_add_1_938_add_4_2/S0
+_add_1_938_add_4_2/CI
+add_1940_21/S1
+add_1940_21/CO
+add_1939_1/S1
+add_1939_1/S0
+add_1939_1/CI
+qP5_d1/DO3
+qP6_d1/DO3
+_add_1_935_add_4_2/S0
+_add_1_935_add_4_2/CI
+_add_1_938_add_4_22/S1
+_add_1_938_add_4_22/CO
+add_1939_21/S1
+add_1939_21/CO
+_add_1_947_add_4_1/S0
+_add_1_947_add_4_1/CI
+_add_1_956_add_4_2/S0
+_add_1_956_add_4_2/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat May 23 22:37:42 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

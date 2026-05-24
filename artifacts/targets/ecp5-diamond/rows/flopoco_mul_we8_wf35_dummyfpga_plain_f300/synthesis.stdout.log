@@ -1,0 +1,245 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat May 23 22:33:44 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/lse.synproj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300 (searchpath added)
+VHDL library = work
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300". VHDL-1504
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(23): analyzing entity intmultiplier_36x36_72_freq300_uid5. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(30): analyzing architecture arch. VHDL-1010
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(73): analyzing entity intadder_45_freq300_uid9. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(81): analyzing architecture arch. VHDL-1010
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(133): analyzing entity flopoco_mul_we8_wf35_dummyfpga_plain_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(140): analyzing architecture arch. VHDL-1010
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(4): analyzing entity top_flopoco_mul_we8_wf35_dummyfpga_plain_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(13): analyzing architecture rtl. VHDL-1010
+unit top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 is not yet analyzed. VHDL-1485
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(4): executing top_flopoco_mul_we8_wf35_dummyfpga_plain_f300(rtl)
+
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(11): replacing existing netlist top_flopoco_mul_we8_wf35_dummyfpga_plain_f300(rtl). VHDL-1205
+Top module name (VHDL): top_flopoco_mul_we8_wf35_dummyfpga_plain_f300
+Last elaborated design is top_flopoco_mul_we8_wf35_dummyfpga_plain_f300(rtl)
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/src/flopoco_mul_we8_wf35_dummyfpga_plain_f300.vhdl(99): Register \u_dut/RoundingAdder/Y_1_d1_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 45 of Register \u_dut/RoundingAdder/X_1_d1 is stuck at Zero
+
+
+
+WARNING - synthesis: Bit 71 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 70 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 69 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 68 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 67 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 66 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 65 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 64 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 63 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 62 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 61 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 60 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 59 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 58 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 57 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 56 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 55 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 54 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 53 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 52 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 51 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 50 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 49 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 48 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 47 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 45 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 44 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 43 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 42 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 41 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 40 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 39 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 37 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 36 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 35 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 33 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/SignificandMultiplication/X_35__I_0_e3 is stuck at Zero
+WARNING - synthesis: Bit 35 of Register \u_dut/SignificandMultiplication/X_35__I_0_e2 is stuck at One
+WARNING - synthesis: Bit 35 of Register \u_dut/SignificandMultiplication/X_35__I_0_e1 is stuck at One
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_flopoco_mul_we8_wf35_dummyfpga_plain_f300_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.ngo.
+
+################### Begin Area Report (top_flopoco_mul_we8_wf35_dummyfpga_plain_f300)######################
+Number of register bits => 187 of 12687 (1 % )
+ALU54B => 2
+CCU2C => 34
+FD1S3AX => 185
+FD1S3JX => 2
+GSR => 1
+IB => 93
+LUT4 => 62
+MULT18X18D => 4
+OB => 46
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 187
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_dut/SignificandMultiplication/sigProd_71, loads : 36
+  Net : X_r_35, loads : 6
+  Net : Y_r_35, loads : 6
+  Net : expSumPreSub_2, loads : 6
+  Net : expSumPreSub_1, loads : 6
+  Net : expSumPreSub_3, loads : 5
+  Net : expSumPreSub_5, loads : 4
+  Net : expSumPreSub_4, loads : 4
+  Net : expSumPreSub_6, loads : 3
+  Net : n1476, loads : 3
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   66.676 MHz|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 256.469  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 3.249  secs
+--------------------------------------------------------------
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/lse.synproj
+
+
+[exit code 0]

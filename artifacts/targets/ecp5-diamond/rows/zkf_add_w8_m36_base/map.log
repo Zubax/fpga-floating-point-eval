@@ -1,0 +1,129 @@
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.ngd
+   Picdevice="LFE5U-12F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-12FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+224 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:    477 out of 12687 (4%)
+      PFU registers:          477 out of 12096 (4%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       623 out of  6048 (10%)
+      SLICEs as Logic/ROM:    623 out of  6048 (10%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:        110 out of  6048 (2%)
+   Number of LUT4s:        1010 out of 12096 (8%)
+      Number used as logic LUTs:        790
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      220
+      Number used as shift registers:     0
+   Number of PIO sites used: 136 out of 197 (69%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 274 loads, 274 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  18
+     Net n2128: 18 loads, 18 LSLICEs
+     Net rst_c: 4 loads, 4 LSLICEs
+     Net s2_raw_result_0: 2 loads, 2 LSLICEs
+     Net s2_raw_result_3: 1 loads, 1 LSLICEs
+     Net s2_raw_result_2: 1 loads, 1 LSLICEs
+     Net s2_raw_result_1: 1 loads, 1 LSLICEs
+     Net n4988: 5 loads, 5 LSLICEs
+     Net s2_raw_result_38: 1 loads, 1 LSLICEs
+     Net u_dut/s0_small_sig_exp_35: 1 loads, 1 LSLICEs
+     Net u_dut/n5028: 13 loads, 13 LSLICEs
+     Net u_dut/n1503: 11 loads, 11 LSLICEs
+     Net u_dut/n5020: 2 loads, 2 LSLICEs
+     Net u_dut/u_sub_norm/n3: 1 loads, 1 LSLICEs
+     Net u_dut/u_sub_norm/n5015: 1 loads, 1 LSLICEs
+     Net u_dut/u_sub_norm/n2137: 4 loads, 4 LSLICEs
+     Net u_dut/u_sub_norm/n2135: 2 loads, 2 LSLICEs
+     Net u_dut/u_sub_norm/n2138: 4 loads, 4 LSLICEs
+     Net u_dut/u_sub_norm/n4987: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net diff_43: 97 loads
+     Net s0_exp_diff_3: 90 loads
+     Net u_dut/n5005: 88 loads
+     Net s0_exp_diff_1: 81 loads
+     Net s3_same_sign: 58 loads
+     Net s0_exp_diff_2: 55 loads
+     Net u_dut/u_sub_norm/n5538: 50 loads
+     Net u_dut/raw_a_inf: 47 loads
+     Net data_2_38: 44 loads
+     Net u_dut/n3965: 44 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 193 MB
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base_map.ncd.
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/top_zkf_add_w8_m36_base.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_add_w8_m36_base/constraints.lpf
+
+
+[exit code 0]

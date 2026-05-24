@@ -1,0 +1,49 @@
+----------------------------------------------------------------------
+Report for cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.TECH
+Register bits:  115 of 12687 (0.906%)
+I/O cells:      85
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        25          100.0
+                            FD1S3AX       113          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB        57          100.0
+                               LUT4        39          100.0
+                         MULT18X18D         1          100.0
+                                 OB        28          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+           IntAdder_27_Freq300_uid9         1
+IntMultiplier_18x18_36_Freq300_uid5         1
+flopoco_mul_we8_wf17_dummyfpga_plain_f300         1
+                              TOTAL       270
+----------------------------------------------------------------------
+Report for cell flopoco_mul_we8_wf17_dummyfpga_plain_f300.v1
+Instance Path : u_dut
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        37           32.7
+                            FD1S3JX         1           50.0
+                               LUT4        30           76.9
+                         MULT18X18D         1          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+           IntAdder_27_Freq300_uid9         1
+IntMultiplier_18x18_36_Freq300_uid5         1
+                              TOTAL        72
+----------------------------------------------------------------------
+Report for cell IntMultiplier_18x18_36_Freq300_uid5.v1
+Instance Path : u_dut.SignificandMultiplication
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        34           30.1
+                         MULT18X18D         1          100.0
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell IntAdder_27_Freq300_uid9.v1
+Instance Path : u_dut.RoundingAdder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         1            0.9
+                              TOTAL         1

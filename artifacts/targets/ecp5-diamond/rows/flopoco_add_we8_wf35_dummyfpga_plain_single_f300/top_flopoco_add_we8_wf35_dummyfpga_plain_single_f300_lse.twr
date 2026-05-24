@@ -1,0 +1,584 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat May 23 22:36:48 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300
+Constraint file: top_flopoco_add_we8_wf35_dummyfpga_plain_single_f300_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i36_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[35]
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_2_lut_4_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3571
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i34_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[33]
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i35_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[34]
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_2_lut_4_lut_adj_26
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3569
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i35_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[34]
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_2_lut_4_lut_adj_26
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3569
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3003
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4047
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i39_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[38]
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i34_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[33]
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3003
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4047
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i39_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[38]
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3003
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4047
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i32  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i32
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i36_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[35]
+LUT4        ---     0.166              D to Z              \u_dut/LZCAndShifter/i1_2_lut_4_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3571
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3003
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4047
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2960
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[32]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i33  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i33 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i33
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i34_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[33]
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2958
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[33]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 7.712ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/LZCAndShifter/level6_d1_i24  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/LZCAndShifter/level3_d1_i33  (to clk +)
+
+   Delay:                  17.887ns  (12.4% logic, 87.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     17.887ns data_path \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i33 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 7.712ns
+
+ Path Details: \u_dut/LZCAndShifter/level6_d1_i24 to \u_dut/LZCAndShifter/level3_d1_i33
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/LZCAndShifter/level6_d1_i24 (from clk)
+Route         2   e 1.258                                  \u_dut/LZCAndShifter/level6_d1[24]
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_16
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n3561
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_14
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n1345
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3549
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_101
+Route        50   e 1.802                                  \u_dut/LZCAndShifter/n4123
+LUT4        ---     0.166              C to Z              \u_dut/LZCAndShifter/level6_d1_7__I_0_i39_3_lut
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/level5[38]
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_3_lut_adj_19
+Route         2   e 1.158                                  \u_dut/LZCAndShifter/n3573
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_rep_95
+Route        39   e 1.752                                  \u_dut/LZCAndShifter/n4117
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i3006
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/n4051
+LUT4        ---     0.166              B to Z              \u_dut/LZCAndShifter/i1_4_lut_adj_23
+Route        35   e 1.731                                  \u_dut/LZCAndShifter/n15
+LUT4        ---     0.166              A to Z              \u_dut/LZCAndShifter/i2767_2_lut
+Route         8   e 1.435                                  \u_dut/LZCAndShifter/n3728
+MOFX0       ---     0.179             C0 to Z              \u_dut/LZCAndShifter/i2958
+Route         1   e 1.020                                  \u_dut/LZCAndShifter/level3[33]
+                  --------
+                   17.887  (12.4% logic, 87.6% route), 12 logic levels.
+
+Warning: 17.712 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|    17.712 ns|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\u_dut/LZCAndShifter/n15                |      35|    4096|     99.00%
+                                        |        |        |
+\u_dut/LZCAndShifter/n4117              |      39|    4096|     99.00%
+                                        |        |        |
+\u_dut/LZCAndShifter/n4123              |      50|    4096|     99.00%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3728              |       8|    3328|     81.25%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3549              |       2|    3136|     76.56%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3573              |       2|    2242|     54.74%
+                                        |        |        |
+\u_dut/LZCAndShifter/n1345              |       2|    2048|     50.00%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3561              |       1|    1184|     28.91%
+                                        |        |        |
+\u_dut/LZCAndShifter/n4047              |       1|    1082|     26.42%
+                                        |        |        |
+\u_dut/LZCAndShifter/n4051              |       1|    1030|     25.15%
+                                        |        |        |
+\u_dut/LZCAndShifter/level4[33]         |       1|     992|     24.22%
+                                        |        |        |
+\u_dut/LZCAndShifter/level4[38]         |       1|     992|     24.22%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3545              |       2|     960|     23.44%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3571              |       2|     918|     22.41%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3569              |       2|     914|     22.31%
+                                        |        |        |
+\u_dut/LZCAndShifter/level5[33]         |       2|     896|     21.88%
+                                        |        |        |
+\u_dut/LZCAndShifter/level5[34]         |       2|     896|     21.88%
+                                        |        |        |
+\u_dut/LZCAndShifter/level5[35]         |       2|     896|     21.88%
+                                        |        |        |
+\u_dut/LZCAndShifter/level5[38]         |       2|     896|     21.88%
+                                        |        |        |
+\u_dut/LZCAndShifter/n1395              |       8|     768|     18.75%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3535              |       1|     640|     15.62%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3559              |       1|     606|     14.79%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3531              |       1|     544|     13.28%
+                                        |        |        |
+\u_dut/LZCAndShifter/n3533              |       1|     544|     13.28%
+                                        |        |        |
+\u_dut/LZCAndShifter/n4119              |       1|     450|     10.99%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[39]         |       1|     434|     10.60%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[35]         |       1|     414|     10.11%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[36]         |       1|     414|     10.11%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[38]         |       1|     414|     10.11%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[32]         |       1|     413|     10.08%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[33]         |       1|     413|     10.08%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[34]         |       1|     413|     10.08%
+                                        |        |        |
+\u_dut/LZCAndShifter/level3[37]         |       1|     413|     10.08%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 27777216
+
+Constraints cover  148586 paths, 1198 nets, and 3237 connections (93.3% coverage)
+
+
+Peak memory: 274964480 bytes, TRCE: 4661248 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

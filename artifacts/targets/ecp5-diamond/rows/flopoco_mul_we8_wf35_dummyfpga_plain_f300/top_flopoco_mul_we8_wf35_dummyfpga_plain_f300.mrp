@@ -1,0 +1,996 @@
+
+Lattice Mapping Report File for Design Module
+     'top_flopoco_mul_we8_wf35_dummyfpga_plain_f300'
+
+
+Design Information
+------------------
+
+Command line:   /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p
+     LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/
+     artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f3
+     00/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300.ngd -o /mnt/storage/test/z
+     kf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dumm
+     yfpga_plain_f300/top_flopoco_mul_we8_wf35_dummyfpga_plain_f300_map.ncd -pr 
+     /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoc
+     o_mul_we8_wf35_dummyfpga_plain_f300/top_flopoco_mul_we8_wf35_dummyfpga_plai
+     n_f300.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diam
+     ond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/top_flopoco_mul_we8_wf35
+     _dummyfpga_plain_f300.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/t
+     argets/ecp5-diamond/rows/flopoco_mul_we8_wf35_dummyfpga_plain_f300/constrai
+     nts.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/23/26  22:33:49
+
+Design Summary
+--------------
+
+   Number of registers:    187 out of 12687 (1%)
+      PFU registers:          187 out of 12096 (2%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       117 out of  6048 (2%)
+      SLICEs as Logic/ROM:    117 out of  6048 (2%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         34 out of  6048 (1%)
+   Number of LUT4s:        130 out of 12096 (1%)
+      Number used as logic LUTs:         62
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       68
+      Number used as shift registers:     0
+   Number of PIO sites used: 139 out of 197 (71%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+
+                                    Page 1
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+Design Summary (cont)
+---------------------
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          4
+   MULT9X9D            0
+   ALU54B              2
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  8 out of 56 (14 %)
+   Number of Used DSP ALU Sites:  4 out of 28 (14 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 100 loads, 100 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  2
+     Net exc_d1_1: 1 loads, 1 LSLICEs
+     Net X_r_45: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net sigProd_71: 38 loads
+     Net expSumPreSub_1: 6 loads
+     Net expSumPreSub_2: 6 loads
+     Net X_r_35: 6 loads
+     Net Y_r_35: 6 loads
+     Net expSumPreSub_3: 5 loads
+     Net expSumPreSub_4: 4 loads
+     Net expSumPreSub_5: 4 loads
+     Net expSumPreSub_6: 3 loads
+     Net n1476: 3 loads
+
+
+
+
+   Number of warnings:  37
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : removed the input
+     signal of SIGNEDCIN pin because it's not legal.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R53 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R52 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R51 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R50 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R49 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R48 pin may contain
+
+                                    Page 2
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+Design Errors/Warnings (cont)
+-----------------------------
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R47 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R46 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R45 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R44 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R43 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R42 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R41 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R40 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R39 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R38 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R37 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_4 : R36 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R53 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R52 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R51 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R50 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R49 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R48 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R47 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R46 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R45 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R44 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R43 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R42 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R41 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R40 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R39 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R38 pin may contain
+
+                                    Page 3
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+Design Errors/Warnings (cont)
+-----------------------------
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R37 pin may contain
+     garbage data if ternary 36 bit operation.
+WARNING - map: u_dut/SignificandMultiplication/lat_alu_3 : R36 pin may contain
+     garbage data if ternary 36 bit operation.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| R_o[45]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[44]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[43]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[42]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[41]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[40]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[39]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[38]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[37]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[36]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[35]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[34]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[33]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[32]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[31]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[30]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[29]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[28]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[27]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[26]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[25]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[24]             | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 4
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| R_o[23]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[22]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[21]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[20]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[19]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[18]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[17]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[16]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[15]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[14]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[13]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[10]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| R_o[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[45]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[44]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[43]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 5
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| X_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[33]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[15]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 6
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| X_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| X_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[45]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[44]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[43]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[42]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[41]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[40]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[39]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[38]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[37]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[36]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[35]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[34]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[33]             | INPUT     | LVCMOS25  |            |
+
+                                    Page 7
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| Y_i[32]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[5]              | INPUT     | LVCMOS25  |            |
+
+                                    Page 8
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| Y_i[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Y_i[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal _add_1_41_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_41_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_38_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_38_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_41_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_41_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_38_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_38_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_46/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_46/CO undriven or does not drive anything - clipped.
+Block i14 was optimized away.
+
+DSP Component Details
+---------------------
+
+
+     . MULT18X18D  u_dut/SignificandMultiplication/lat_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+                                    Page 9
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/SignificandMultiplication/lat_mult_1:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+
+                                   Page 10
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/SignificandMultiplication/lat_mult_0:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+
+                                   Page 11
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  u_dut/SignificandMultiplication/X_35__I_0_mult_2:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . ALU54B  u_dut/SignificandMultiplication/lat_alu_4:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		1
+	Opcode  5		0
+
+                                   Page 12
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+
+                                   Page 13
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+     . ALU54B  u_dut/SignificandMultiplication/lat_alu_3:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+
+                                   Page 14
+
+
+
+
+Design:  top_flopoco_mul_we8_wf35_dummyfpga_plain_f300 Date:  05/23/26  22:33:49
+
+DSP Component Details (cont)
+----------------------------
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: u_dut/SignificandMultiplication/lat_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/SignificandMultiplication/lat_mult_1
+         Type: MULT18X18D
+Instance Name: u_dut/SignificandMultiplication/lat_mult_0
+         Type: MULT18X18D
+Instance Name: u_dut/SignificandMultiplication/X_35__I_0_mult_2
+         Type: MULT18X18D
+Instance Name: u_dut/SignificandMultiplication/lat_alu_4
+         Type: ALU54B
+Instance Name: u_dut/SignificandMultiplication/lat_alu_3
+         Type: ALU54B
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 187 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 15
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

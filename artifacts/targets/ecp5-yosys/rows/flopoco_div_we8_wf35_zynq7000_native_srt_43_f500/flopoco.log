@@ -1,0 +1,14 @@
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_div_we8_wf35_zynq7000_native_srt_43_f500/src/flopoco_div_we8_wf35_zynq7000_native_srt_43_f500.vhdl
+Pipeline constructed using approximate timings for target Zynq7000 @ 500 MHz
+Entity selFunction_Freq500_uid4
+   Y: (c0, 0.624000ns)
+|---Entity selFunction_Freq500_uid4
+|      Y: (c0, 0.624000ns)
+Entity flopoco_div_we8_wf35_zynq7000_native_srt_43_f500
+   R: (c72, 0.432000ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_div_we8_wf35_zynq7000_native_srt_43_f500/src/flopoco_div_we8_wf35_zynq7000_native_srt_43_f500.vhdl frequency=500 target=Zynq7000 useTargetOpt=0 useHardMult=1 plainVHDL=0 FPDiv name=flopoco_div_we8_wf35_zynq7000_native_srt_43_f500 wE=8 wF=35 srt=43
+
+
+[exit code 0]

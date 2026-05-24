@@ -1,0 +1,326 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:       447/24288     1%
+Info:         logic LUTs:    327/24288     1%
+Info:         carry LUTs:    120/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:       304/24288     1%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     154 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xe58aa7e6
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:      85/    197    43%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       0/     28     0%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:     304/  24288     1%
+Info: 	        TRELLIS_COMB:     481/  24288     1%
+Info: 	        TRELLIS_RAMW:       0/   3036     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 417 cells, random placement wirelen = 31386.
+Info:     at initial placer iter 0, wirelen = 4655
+Info:     at initial placer iter 1, wirelen = 4162
+Info:     at initial placer iter 2, wirelen = 4093
+Info:     at initial placer iter 3, wirelen = 4075
+Info: Running main analytical placer, max placement attempts per cell = 94830.
+Info:     at iteration #1, type ALL: wirelen solved = 4072, spread = 5783, legal = 5852; time = 0.04s
+Info:     at iteration #2, type ALL: wirelen solved = 4177, spread = 5491, legal = 5590; time = 0.03s
+Info:     at iteration #3, type ALL: wirelen solved = 4223, spread = 5458, legal = 5583; time = 0.03s
+Info:     at iteration #4, type ALL: wirelen solved = 4290, spread = 5395, legal = 5492; time = 0.03s
+Info:     at iteration #5, type ALL: wirelen solved = 4323, spread = 5286, legal = 5490; time = 0.03s
+Info:     at iteration #6, type ALL: wirelen solved = 4358, spread = 5136, legal = 5341; time = 0.03s
+Info: HeAP Placer Time: 0.32s
+Info:   of which solving equations: 0.19s
+Info:   of which spreading cells: 0.02s
+Info:   of which strict legalisation: 0.01s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 91, wirelen = 5341
+Info:   at iteration #5: temp = 0.000000, timing cost = 60, wirelen = 4552
+Info:   at iteration #10: temp = 0.000000, timing cost = 49, wirelen = 4454
+Info:   at iteration #11: temp = 0.000000, timing cost = 47, wirelen = 4440 
+Info: SA placement time 1.47s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 98.08 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 7.04 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 6.36 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [  -196,    264) |**************** 
+Info: [   264,    724) | 
+Info: [   724,   1184) |* 
+Info: [  1184,   1644) |********* 
+Info: [  1644,   2104) | 
+Info: [  2104,   2564) | 
+Info: [  2564,   3024) |*** 
+Info: [  3024,   3484) |************************* 
+Info: [  3484,   3944) |**************************** 
+Info: [  3944,   4404) |********* 
+Info: [  4404,   4864) |*************************** 
+Info: [  4864,   5324) |*************************** 
+Info: [  5324,   5784) |******** 
+Info: [  5784,   6244) |************ 
+Info: [  6244,   6704) |*********************** 
+Info: [  6704,   7164) |*************** 
+Info: [  7164,   7624) |******** 
+Info: [  7624,   8084) |******************** 
+Info: [  8084,   8544) |******************* 
+Info: [  8544,   9004) |********************************************** 
+Info: Checksum: 0xfaf855ec
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 1803 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      231        749 |  231   749 |      1056|       0.44       0.44|
+Info:       2000 |      433       1463 |  202   714 |       272|       0.28       0.72|
+Info:       2298 |      459       1713 |   26   250 |         0|       0.32       1.04|
+Info: Routing complete.
+Info: Router1 time 1.04s
+Info: Checksum: 0x07a3b458
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source u_dut.y_TRELLIS_FF_Q_4.Q
+Info:    routing  1.11  1.64 Net y_r[2] (10,20) -> (10,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_3$CCU2_COMB0.B
+Info:      logic  0.45  2.09 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_3$CCU2_COMB0.FCO
+Info:    routing  0.00  2.09 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_3$CCU2_FCI_INT (10,19) -> (10,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_3$CCU2_COMB1.FCI
+Info:      logic  0.00  2.09 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_3$CCU2_COMB1.FCO
+Info:    routing  0.00  2.09 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[4] (10,19) -> (10,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.16 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_4$CCU2_COMB0.FCO
+Info:    routing  0.00  2.16 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_4$CCU2_FCI_INT (10,19) -> (10,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_4$CCU2_COMB1.FCI
+Info:      logic  0.00  2.16 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_4$CCU2_COMB1.FCO
+Info:    routing  0.00  2.16 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[6] (10,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_6$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.23 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_6$CCU2_COMB0.FCO
+Info:    routing  0.00  2.23 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_6$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_6$CCU2_COMB1.FCI
+Info:      logic  0.00  2.23 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_6$CCU2_COMB1.FCO
+Info:    routing  0.00  2.23 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[8] (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_8$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.30 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_8$CCU2_COMB0.FCO
+Info:    routing  0.00  2.30 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_8$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_8$CCU2_COMB1.FCI
+Info:      logic  0.00  2.30 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_8$CCU2_COMB1.FCO
+Info:    routing  0.00  2.30 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[10] (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_10$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.37 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_10$CCU2_COMB0.FCO
+Info:    routing  0.00  2.37 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_10$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_10$CCU2_COMB1.FCI
+Info:      logic  0.00  2.37 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_10$CCU2_COMB1.FCO
+Info:    routing  0.00  2.37 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[12] (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.44 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.44 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_1$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.44 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.44 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[14] (11,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_11$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.51 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_11$CCU2_COMB0.FCO
+Info:    routing  0.00  2.51 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_11$CCU2_FCI_INT (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_11$CCU2_COMB1.FCI
+Info:      logic  0.00  2.51 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_11$CCU2_COMB1.FCO
+Info:    routing  0.00  2.51 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[16] (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_9$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.58 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_9$CCU2_COMB0.FCO
+Info:    routing  0.00  2.58 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_9$CCU2_FCI_INT (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_9$CCU2_COMB1.FCI
+Info:      logic  0.00  2.58 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_9$CCU2_COMB1.FCO
+Info:    routing  0.00  2.58 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[18] (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.65 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.65 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1$CCU2_FCI_INT (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.65 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.65 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[20] (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_7$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.72 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_7$CCU2_COMB0.FCO
+Info:    routing  0.00  2.72 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_7$CCU2_FCI_INT (12,19) -> (12,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_7$CCU2_COMB1.FCI
+Info:      logic  0.00  2.72 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_7$CCU2_COMB1.FCO
+Info:    routing  0.00  2.72 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[22] (12,19) -> (13,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.80 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  2.80 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_FCI_INT (13,19) -> (13,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.00  2.80 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB1.FCO
+Info:    routing  0.00  2.80 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT_S1_CCU2C_S1_COUT[24] (13,19) -> (13,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  2.87 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  2.87 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT$CCU2_FCI_INT (13,19) -> (13,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  2.87 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  2.87 Net $nextpnr_CCU2C_3$CIN (13,19) -> (13,19)
+Info:                          Sink $nextpnr_CCU2C_3$CCU2_COMB0.FCI
+Info:      logic  0.44  3.31 Source $nextpnr_CCU2C_3$CCU2_COMB0.F
+Info:    routing  0.66  3.97 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B[1] (13,19) -> (15,19)
+Info:                          Sink u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C.C
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.24  4.20 Source u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C.F
+Info:    routing  0.68  4.88 Net u_dut.fracy_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C_Z[2] (15,19) -> (16,20)
+Info:                          Sink u_dut.expdiff_LUT4_Z_3_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  5.12 Source u_dut.expdiff_LUT4_Z_3_D_LUT4_Z.F
+Info:    routing  0.04  5.16 Net u_dut.expdiff_LUT4_Z_3_D (16,20) -> (16,20)
+Info:                          Sink u_dut.expdiff_LUT4_Z_3.D
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  5.39 Source u_dut.expdiff_LUT4_Z_3.F
+Info:    routing  1.41  6.80 Net u_dut.expdiff[2] (16,20) -> (14,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.A
+Info:      logic  0.45  7.25 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  7.25 Net u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1$CCU2_FCI_INT (14,17) -> (14,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  7.25 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  7.25 Net u_dut.rightshiftercomponent.ps_LUT4_Z_C[3] (14,17) -> (14,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  7.32 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  7.32 Net u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_FCI_INT (14,17) -> (14,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.00  7.32 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT_S1_CCU2C_S1_2$CCU2_COMB1.FCO
+Info:    routing  0.00  7.32 Net u_dut.rightshiftercomponent.ps_LUT4_Z_C[5] (14,17) -> (15,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:63.22-63.23
+Info:      logic  0.07  7.39 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  7.39 Net u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT$CCU2_FCI_INT (15,17) -> (15,17)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  7.39 Source u_dut.rightshiftercomponent.ps_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  7.39 Net $nextpnr_CCU2C_1$CIN (15,17) -> (15,17)
+Info:                          Sink $nextpnr_CCU2C_1$CCU2_COMB0.FCI
+Info:      logic  0.44  7.83 Source $nextpnr_CCU2C_1$CCU2_COMB0.F
+Info:    routing  0.79  8.62 Net u_dut.expdiff_LUT4_Z_3_D_LUT4_C_Z[2] (15,17) -> (12,18)
+Info:                          Sink u_dut.rightshiftercomponent.ps_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:38.23-38.25
+Info:      logic  0.24  8.86 Source u_dut.rightshiftercomponent.ps_LUT4_Z.F
+Info:    routing  0.65  9.51 Net u_dut.shiftval[4] (12,18) -> (12,17)
+Info:                          Sink u_dut.rightshiftercomponent.level4_d1_TRELLIS_FF_Q_7.LSR
+Info:      setup  0.42  9.93 Source u_dut.rightshiftercomponent.level4_d1_TRELLIS_FF_Q_7.LSR
+Info: 4.60 ns logic, 5.34 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source X_i[20]$tr_io.O
+Info:    routing  4.58  4.58 Net X_i[20]$TRELLIS_IO_IN (72,32) -> (12,20)
+Info:                          Sink u_dut.x_TRELLIS_FF_Q_20.M
+Info:      setup  0.00  4.58 Source u_dut.x_TRELLIS_FF_Q_20.M
+Info: 0.00 ns logic, 4.58 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source R_o_LUT4_Z_1_D_TRELLIS_FF_Q_1.Q
+Info:    routing  0.87  1.39 Net R_o_LUT4_Z_1_D[2] (22,15) -> (23,15)
+Info:                          Sink R_o_LUT4_Z_1.D
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  1.63 Source R_o_LUT4_Z_1.F
+Info:    routing  3.02  4.64 Net R_o[27]$TRELLIS_IO_OUT (23,15) -> (72,14)
+Info:                          Sink R_o[27]$tr_io.I
+Info: 0.76 ns logic, 3.88 ns routing
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 100.67 MHz (PASS at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.58 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 4.64 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [    67,    517) |**************** 
+Info: [   517,    967) |****** 
+Info: [   967,   1417) |**** 
+Info: [  1417,   1867) | 
+Info: [  1867,   2317) |* 
+Info: [  2317,   2767) |************************* 
+Info: [  2767,   3217) |******** 
+Info: [  3217,   3667) |*********************** 
+Info: [  3667,   4117) |************** 
+Info: [  4117,   4567) |***************************** 
+Info: [  4567,   5017) |*********************** 
+Info: [  5017,   5467) |*********** 
+Info: [  5467,   5917) |**************** 
+Info: [  5917,   6367) |****** 
+Info: [  6367,   6817) |******************** 
+Info: [  6817,   7267) | 
+Info: [  7267,   7717) |** 
+Info: [  7717,   8167) |*************** 
+Info: [  8167,   8617) |********************************************* 
+Info: [  8617,   9067) |******************************** 
+
+Info: Program finished normally.
+$ nextpnr-ecp5 --json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf17_dummyfpga_plain_single_f300/netlist.json --write /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf17_dummyfpga_plain_single_f300/nextpnr-routed.json --12k --package CABGA381 --speed 6 --freq 100 --timing-allow-fail --lpf-allow-unconstrained --report /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_add_we8_wf17_dummyfpga_plain_single_f300/nextpnr-report.json
+
+
+[exit code 0]

@@ -1,0 +1,10 @@
+{
+  "timing_status": "PASS",
+  "worst_slack_ns": 0.320000,
+  "fmax_mhz": 157.563017,
+  "lut": 1687,
+  "ff": 3152,
+  "carry": 225,
+  "dsp": 0,
+  "bram": 6
+}

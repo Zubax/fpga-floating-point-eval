@@ -1,0 +1,18 @@
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_add_we8_wf17_zynq7000_native_single_f200/src/flopoco_add_we8_wf17_zynq7000_native_single_f200.vhdl
+Pipeline constructed using approximate timings for target Zynq7000 @ 200 MHz
+|---Entity RightShifterSticky18_by_max_20_Freq200_uid4
+|      R: (c1, 0.177000ns)   Sticky: (c1, 2.901000ns)
+|---Entity IntAdder_21_Freq200_uid6
+|      R: (c2, 0.753000ns)
+|---Entity Normalizer_Z_22_22_22_Freq200_uid8
+|      Count: (c3, 2.115000ns)   R: (c3, 2.739000ns)
+|---Entity IntAdder_28_Freq200_uid11
+|      R: (c4, 0.939000ns)
+Entity flopoco_add_we8_wf17_zynq7000_native_single_f200
+   R: (c4, 2.187000ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_add_we8_wf17_zynq7000_native_single_f200/src/flopoco_add_we8_wf17_zynq7000_native_single_f200.vhdl frequency=200 target=Zynq7000 useTargetOpt=0 useHardMult=1 plainVHDL=0 FPAdd name=flopoco_add_we8_wf17_zynq7000_native_single_f200 wE=8 wF=17 sub=0 dualPath=0 onlyPositiveIO=0
+
+
+[exit code 0]

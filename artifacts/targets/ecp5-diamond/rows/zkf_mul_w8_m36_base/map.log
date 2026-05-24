@@ -1,0 +1,498 @@
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base.ngd
+   Picdevice="LFE5U-12F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-12FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+WARNING - map: u_dut/lat_alu_3 : removed the input signal of SIGNEDCIN pin because it's not legal.
+
+Optimizing...
+
+165 CCU2 constant inputs absorbed.
+
+WARNING - map: u_dut/lat_alu_3 : R53 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R52 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R51 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R50 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R49 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R48 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R47 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R46 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R45 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R44 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R43 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R42 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R41 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R40 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R39 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R38 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R37 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_3 : R36 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R53 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R52 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R51 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R50 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R49 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R48 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R47 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R46 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R45 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R44 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R43 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R42 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R41 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R40 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R39 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R38 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R37 pin may contain garbage data if ternary 36 bit operation.
+
+WARNING - map: u_dut/lat_alu_4 : R36 pin may contain garbage data if ternary 36 bit operation.
+
+
+
+
+Design Summary:
+   Number of registers:    148 out of 12687 (1%)
+      PFU registers:          148 out of 12096 (1%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       155 out of  6048 (3%)
+      SLICEs as Logic/ROM:    155 out of  6048 (3%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         45 out of  6048 (1%)
+   Number of LUT4s:        177 out of 12096 (1%)
+      Number used as logic LUTs:         87
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       90
+      Number used as shift registers:     0
+   Number of PIO sites used: 136 out of 197 (69%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          4
+   MULT9X9D            0
+   ALU54B              2
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  8 out of 56 (14 %)
+   Number of Used DSP ALU Sites:  4 out of 28 (14 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 79 loads, 79 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  3
+     Net n1271: 18 loads, 18 LSLICEs
+     Net rst_c: 2 loads, 2 LSLICEs
+     Net n1679: 5 loads, 5 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net s1_exp_adjust_0: 40 loads
+     Net n1271: 18 loads
+     Net n1679: 13 loads
+     Net u_dut/u_pack/infinity: 9 loads
+     Net u_dut/u_pack/result_min_normal_N_135: 9 loads
+     Net exp_unbiased_in_9_N_87_1: 7 loads
+     Net exp_unbiased_in_9_N_87_2: 6 loads
+     Net exp_unbiased_in_9_N_87_3: 6 loads
+     Net exp_unbiased_in_9_N_87_4: 5 loads
+     Net a_r_35: 4 loads
+ 
+
+   Number of warnings:  37
+   Number of errors:    0
+
+
+. MULT18X18D  u_dut/s1_mag_e3:
+
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+. ALU54B  u_dut/lat_alu_3:
+
+54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		CLK3	CE3	RST3
+		Output1		    	   	    
+
+	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	MULT9_MODE	DISABLED
+
+	LEGACY  	DISABLED
+
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+. MULT18X18D  u_dut/lat_mult_2:
+
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+. MULT18X18D  u_dut/lat_mult_1:
+
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+. MULT18X18D  u_dut/lat_mult_0:
+
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+. ALU54B  u_dut/lat_alu_4:
+
+54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		1
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		CLK3	CE3	RST3
+		Output1		CLK3	CE3	RST3
+
+	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	MULT9_MODE	DISABLED
+
+	LEGACY  	DISABLED
+
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 187 MB
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base_map.ncd.
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/top_zkf_mul_w8_m36_base.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_mul_w8_m36_base/constraints.lpf
+
+
+[exit code 0]

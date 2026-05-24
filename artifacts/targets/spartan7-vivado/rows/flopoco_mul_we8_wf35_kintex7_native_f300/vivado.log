@@ -1,0 +1,1347 @@
+
+****** Vivado v2025.2.1 (64-bit)
+  **** SW Build 6403652 on Thu Mar 19 13:47:00 MDT 2026
+  **** IP Build 6403511 on Thu Mar 19 12:41:45 MDT 2026
+  **** SharedData Build 6403650 on Thu Mar 19 14:02:13 MDT 2026
+  **** Start of session at: Sun May 24 00:05:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/vivado.tcl -notrace
+read_xdc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1552.863 ; gain = 39.840 ; free physical = 15082 ; free virtual = 20145
+Command: synth_design -top top_flopoco_mul_we8_wf35_kintex7_native_f300 -part xc7s50csga324-1 -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 210009
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2193.957 ; gain = 483.844 ; free physical = 14272 ; free virtual = 19335
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_flopoco_mul_we8_wf35_kintex7_native_f300' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/top_flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'flopoco_mul_we8_wf35_kintex7_native_f300' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9069]
+INFO: [Synth 8-3491] module 'IntMultiplier_36x36_72_Freq300_uid5' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3906' bound to instance 'SignificandMultiplication' of component 'IntMultiplier_36x36_72_Freq300_uid5' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9151]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplier_36x36_72_Freq300_uid5' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3913]
+INFO: [Synth 8-3491] module 'DSPBlock_24x17_Freq300_uid10' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2455' bound to instance 't8_tile_0' of component 'DSPBlock_24x17_Freq300_uid10' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6851]
+INFO: [Synth 8-638] synthesizing module 'DSPBlock_24x17_Freq300_uid10' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2462]
+INFO: [Synth 8-256] done synthesizing module 'DSPBlock_24x17_Freq300_uid10' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2462]
+INFO: [Synth 8-3491] module 'DSPBlock_24x17_Freq300_uid12' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2495' bound to instance 't8_tile_1' of component 'DSPBlock_24x17_Freq300_uid12' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6901]
+INFO: [Synth 8-638] synthesizing module 'DSPBlock_24x17_Freq300_uid12' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2502]
+INFO: [Synth 8-256] done synthesizing module 'DSPBlock_24x17_Freq300_uid12' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2502]
+INFO: [Synth 8-3491] module 'IntKaratsuba_16x24_order_0_Freq300_uid14' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2575' bound to instance 't8_tile_2' of component 'IntKaratsuba_16x24_order_0_Freq300_uid14' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6951]
+INFO: [Synth 8-638] synthesizing module 'IntKaratsuba_16x24_order_0_Freq300_uid14' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2582]
+INFO: [Synth 8-3491] module 'DSPBlock_25x18_Freq300_uid16' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2535' bound to instance 'dsp0_0' of component 'DSPBlock_25x18_Freq300_uid16' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2605]
+INFO: [Synth 8-638] synthesizing module 'DSPBlock_25x18_Freq300_uid16' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2542]
+INFO: [Synth 8-256] done synthesizing module 'DSPBlock_25x18_Freq300_uid16' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2542]
+INFO: [Synth 8-256] done synthesizing module 'IntKaratsuba_16x24_order_0_Freq300_uid14' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2582]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid18' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2636' bound to instance 't8_tile_3' of component 'IntMultiplierLUT_3x2_Freq300_uid18' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7001]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid18' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2643]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid20' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:24' bound to instance 'TableMult' of component 'MultTable_Freq300_uid20' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2658]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid20' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:29]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:35]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid20' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:29]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid18' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2643]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid23' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2687' bound to instance 't8_tile_4' of component 'IntMultiplierLUT_3x2_Freq300_uid23' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7015]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid23' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2694]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid25' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:96' bound to instance 'TableMult' of component 'MultTable_Freq300_uid25' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2709]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid25' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:101]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:107]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid25' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:101]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid23' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2694]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid28' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2738' bound to instance 't8_tile_5' of component 'IntMultiplierLUT_3x2_Freq300_uid28' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7029]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid28' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2745]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid30' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:168' bound to instance 'TableMult' of component 'MultTable_Freq300_uid30' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2760]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid30' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:173]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:179]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid30' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:173]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid28' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2745]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid33' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2789' bound to instance 't8_tile_6' of component 'IntMultiplierLUT_3x2_Freq300_uid33' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7043]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid33' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2796]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid35' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:240' bound to instance 'TableMult' of component 'MultTable_Freq300_uid35' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2811]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid35' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:245]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:251]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid35' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:245]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid33' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2796]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid38' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2840' bound to instance 't8_tile_7' of component 'IntMultiplierLUT_3x2_Freq300_uid38' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7057]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid38' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2847]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid40' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:312' bound to instance 'TableMult' of component 'MultTable_Freq300_uid40' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2862]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid40' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:317]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:323]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid40' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:317]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid38' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2847]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid43' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2891' bound to instance 't8_tile_8' of component 'IntMultiplierLUT_3x3_Freq300_uid43' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7071]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid43' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2898]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid45' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:384' bound to instance 'TableMult' of component 'MultTable_Freq300_uid45' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2913]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid45' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:389]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:395]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid45' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:389]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid43' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2898]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid48' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2942' bound to instance 't8_tile_9' of component 'IntMultiplierLUT_3x2_Freq300_uid48' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7086]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid48' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2949]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid50' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:488' bound to instance 'TableMult' of component 'MultTable_Freq300_uid50' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2964]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid50' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:493]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:499]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid50' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:493]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid48' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2949]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid53' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2993' bound to instance 't8_tile_10' of component 'IntMultiplierLUT_3x3_Freq300_uid53' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7100]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid53' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3000]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid55' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:560' bound to instance 'TableMult' of component 'MultTable_Freq300_uid55' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3015]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid55' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:565]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:571]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid55' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:565]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid53' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3000]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid58' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3044' bound to instance 't8_tile_11' of component 'IntMultiplierLUT_3x3_Freq300_uid58' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7115]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid58' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3051]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid60' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:664' bound to instance 'TableMult' of component 'MultTable_Freq300_uid60' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3066]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid60' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:669]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:675]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid60' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:669]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid58' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3051]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid63' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3095' bound to instance 't8_tile_12' of component 'IntMultiplierLUT_3x2_Freq300_uid63' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7130]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid63' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3102]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid65' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:768' bound to instance 'TableMult' of component 'MultTable_Freq300_uid65' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3117]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid65' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:773]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:779]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid65' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:773]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid63' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3102]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid68' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3146' bound to instance 't8_tile_13' of component 'IntMultiplierLUT_3x3_Freq300_uid68' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7144]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid68' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3153]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid70' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:840' bound to instance 'TableMult' of component 'MultTable_Freq300_uid70' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3168]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid70' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:845]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:851]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid70' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:845]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid68' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3153]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid73' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3197' bound to instance 't8_tile_14' of component 'IntMultiplierLUT_3x3_Freq300_uid73' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7159]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid73' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3204]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid75' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:944' bound to instance 'TableMult' of component 'MultTable_Freq300_uid75' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3219]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid75' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:949]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:955]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid75' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:949]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid73' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3204]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid78' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3248' bound to instance 't8_tile_15' of component 'IntMultiplierLUT_3x3_Freq300_uid78' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7174]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid78' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3255]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid80' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1048' bound to instance 'TableMult' of component 'MultTable_Freq300_uid80' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3270]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid80' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1053]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1059]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid80' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1053]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid78' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3255]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x2_Freq300_uid83' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3299' bound to instance 't8_tile_16' of component 'IntMultiplierLUT_3x2_Freq300_uid83' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7189]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid83' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3306]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid85' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1152' bound to instance 'TableMult' of component 'MultTable_Freq300_uid85' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3321]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid85' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1157]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1163]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid85' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1157]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x2_Freq300_uid83' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3306]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid88' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3350' bound to instance 't8_tile_17' of component 'IntMultiplierLUT_3x3_Freq300_uid88' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7203]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid88' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3357]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid90' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1224' bound to instance 'TableMult' of component 'MultTable_Freq300_uid90' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3372]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid90' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1229]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1235]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid90' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1229]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid88' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3357]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid93' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3401' bound to instance 't8_tile_18' of component 'IntMultiplierLUT_3x3_Freq300_uid93' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7218]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid93' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3408]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid95' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1328' bound to instance 'TableMult' of component 'MultTable_Freq300_uid95' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3423]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid95' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1333]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1339]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid95' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1333]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid93' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3408]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid98' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3452' bound to instance 't8_tile_19' of component 'IntMultiplierLUT_3x3_Freq300_uid98' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7233]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid98' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3459]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid100' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1432' bound to instance 'TableMult' of component 'MultTable_Freq300_uid100' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3474]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid100' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1437]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1443]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid100' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1437]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid98' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3459]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid103' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3503' bound to instance 't8_tile_20' of component 'IntMultiplierLUT_3x3_Freq300_uid103' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7248]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid103' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3510]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid105' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1536' bound to instance 'TableMult' of component 'MultTable_Freq300_uid105' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3525]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid105' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1541]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1547]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid105' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1541]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid103' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3510]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid108' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3554' bound to instance 't8_tile_21' of component 'IntMultiplierLUT_3x3_Freq300_uid108' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7263]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid108' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3561]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid110' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1640' bound to instance 'TableMult' of component 'MultTable_Freq300_uid110' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3576]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid110' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1645]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1651]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid110' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1645]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid108' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3561]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid113' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3605' bound to instance 't8_tile_22' of component 'IntMultiplierLUT_3x3_Freq300_uid113' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7278]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid113' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3612]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid115' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1744' bound to instance 'TableMult' of component 'MultTable_Freq300_uid115' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3627]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid115' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1749]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1755]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid115' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1749]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid113' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3612]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid118' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3656' bound to instance 't8_tile_23' of component 'IntMultiplierLUT_3x3_Freq300_uid118' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7293]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid118' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3663]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid120' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1848' bound to instance 'TableMult' of component 'MultTable_Freq300_uid120' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3678]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid120' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1853]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1859]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid120' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1853]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid118' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3663]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid123' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3707' bound to instance 't8_tile_24' of component 'IntMultiplierLUT_3x3_Freq300_uid123' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7308]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid123' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3714]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid125' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1952' bound to instance 'TableMult' of component 'MultTable_Freq300_uid125' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3729]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid125' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1957]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1963]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid125' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:1957]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid123' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3714]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid128' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3758' bound to instance 't8_tile_25' of component 'IntMultiplierLUT_3x3_Freq300_uid128' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7323]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid128' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3765]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid130' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2056' bound to instance 'TableMult' of component 'MultTable_Freq300_uid130' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3780]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid130' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2061]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2067]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid130' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2061]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid128' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3765]
+INFO: [Synth 8-3491] module 'IntMultiplierLUT_3x3_Freq300_uid133' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3809' bound to instance 't8_tile_26' of component 'IntMultiplierLUT_3x3_Freq300_uid133' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7338]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid133' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3816]
+INFO: [Synth 8-3491] module 'MultTable_Freq300_uid135' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2160' bound to instance 'TableMult' of component 'MultTable_Freq300_uid135' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3831]
+INFO: [Synth 8-638] synthesizing module 'MultTable_Freq300_uid135' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2165]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2171]
+INFO: [Synth 8-256] done synthesizing module 'MultTable_Freq300_uid135' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2165]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplierLUT_3x3_Freq300_uid133' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3816]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid140' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7361]
+INFO: [Synth 8-638] synthesizing module 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2270]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2278]
+INFO: [Synth 8-256] done synthesizing module 'Compressor_23_3_Freq300_uid139' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2270]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid142' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7373]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid144' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7385]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid146' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7397]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid148' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7409]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid150' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7421]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid152' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7433]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid154' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7445]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid158' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7455]
+INFO: [Synth 8-638] synthesizing module 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2319]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2327]
+INFO: [Synth 8-256] done synthesizing module 'Compressor_3_2_Freq300_uid157' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2319]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid162' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7466]
+INFO: [Synth 8-638] synthesizing module 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2365]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2373]
+INFO: [Synth 8-256] done synthesizing module 'Compressor_14_3_Freq300_uid161' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2365]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid164' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7478]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid166' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7490]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid170' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7501]
+INFO: [Synth 8-638] synthesizing module 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2413]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2421]
+INFO: [Synth 8-256] done synthesizing module 'Compressor_6_3_Freq300_uid169' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2413]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid172' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7511]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid174' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7521]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid176' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7531]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid178' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7542]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid180' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7553]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid182' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7563]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid184' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7572]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid186' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7582]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid188' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7592]
+INFO: [Synth 8-3491] module 'Compressor_6_3_Freq300_uid169' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2408' bound to instance 'Compressor_6_3_Freq300_uid169_uid190' of component 'Compressor_6_3_Freq300_uid169' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7602]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid192' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7613]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid194' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7623]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid196' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7634]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid198' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7646]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid200' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7656]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid202' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7667]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid204' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7679]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid206' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7691]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid208' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7703]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid210' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7715]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid212' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7727]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid214' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7739]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid216' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7751]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid218' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7761]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid220' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7772]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid222' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7782]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid224' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7793]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid226' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7805]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid228' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7817]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid230' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7827]
+INFO: [Synth 8-3491] module 'Compressor_3_2_Freq300_uid157' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2314' bound to instance 'Compressor_3_2_Freq300_uid157_uid232' of component 'Compressor_3_2_Freq300_uid157' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7836]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid234' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7847]
+INFO: [Synth 8-3491] module 'Compressor_23_3_Freq300_uid139' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2264' bound to instance 'Compressor_23_3_Freq300_uid139_uid236' of component 'Compressor_23_3_Freq300_uid139' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7859]
+INFO: [Synth 8-3491] module 'Compressor_14_3_Freq300_uid161' declared at '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:2359' bound to instance 'Compressor_14_3_Freq300_uid161_uid238' of component 'Compressor_14_3_Freq300_uid161' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:7871]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'IntAdder_60_Freq300_uid427' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3868]
+INFO: [Synth 8-256] done synthesizing module 'IntAdder_60_Freq300_uid427' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3868]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplier_36x36_72_Freq300_uid5' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:3913]
+INFO: [Synth 8-638] synthesizing module 'IntAdder_45_Freq300_uid430' [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:8989]
+INFO: [Synth 8-256] done synthesizing module 'IntAdder_45_Freq300_uid430' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:8989]
+INFO: [Synth 8-226] default block is never used [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9178]
+INFO: [Synth 8-256] done synthesizing module 'flopoco_mul_we8_wf35_kintex7_native_f300' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9069]
+INFO: [Synth 8-256] done synthesizing module 'top_flopoco_mul_we8_wf35_kintex7_native_f300' (0#1) [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/top_flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:13]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid316_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6823]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid320_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6824]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid326_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6825]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid330_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6826]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid336_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6827]
+WARNING: [Synth 8-6014] Unused sequential element Compressor_14_3_Freq300_uid161_bh7_uid358_In1_d1_reg was removed.  [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:6834]
+WARNING: [Synth 8-3936] Found unconnected internal register 'X_1_d1_reg' and it is trimmed from '7' to '6' bits. [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9019]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Y_1_d3_reg' and it is trimmed from '7' to '6' bits. [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9022]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Y_1_d2_reg' and it is trimmed from '7' to '6' bits. [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9021]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Y_1_d1_reg' and it is trimmed from '7' to '6' bits. [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9020]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sigProd_d1_reg' and it is trimmed from '72' to '71' bits. [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/src/flopoco_mul_we8_wf35_kintex7_native_f300.vhdl:9135]
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid133 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid113 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid108 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid103 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid93 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid88 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid83 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid78 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid48 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x3_Freq300_uid43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid38 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid28 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module IntMultiplierLUT_3x2_Freq300_uid18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module DSPBlock_25x18_Freq300_uid16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module DSPBlock_24x17_Freq300_uid12 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module DSPBlock_24x17_Freq300_uid10 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2292.895 ; gain = 582.781 ; free physical = 14165 ; free virtual = 19230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2307.738 ; gain = 597.625 ; free physical = 14153 ; free virtual = 19218
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2307.738 ; gain = 597.625 ; free physical = 14153 ; free virtual = 19218
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2307.738 ; gain = 0.000 ; free physical = 14153 ; free virtual = 19218
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/constraints.xdc]
+Finished Parsing XDC File [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.488 ; gain = 0.000 ; free physical = 14121 ; free virtual = 19185
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.523 ; gain = 0.000 ; free physical = 14121 ; free virtual = 19185
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2368.523 ; gain = 658.410 ; free physical = 14093 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.492 ; gain = 666.379 ; free physical = 14093 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.492 ; gain = 666.379 ; free physical = 14093 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2376.492 ; gain = 666.379 ; free physical = 14089 ; free virtual = 19155
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   60 Bit       Adders := 1     
+	   3 Input   40 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   3 Input    6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               71 Bit    Registers := 1     
+	               46 Bit    Registers := 3     
+	               39 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                3 Bit    Registers := 21    
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 91    
++---Muxes : 
+	   2 Input   72 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 55    
+	   4 Input    2 Bit        Muxes := 27    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP t8_tile_0/Mfull, operation Mode is: A*B.
+DSP Report: operator t8_tile_0/Mfull is absorbed into DSP t8_tile_0/Mfull.
+DSP Report: Generating DSP t8_tile_1/Mfull, operation Mode is: A*B.
+DSP Report: operator t8_tile_1/Mfull is absorbed into DSP t8_tile_1/Mfull.
+DSP Report: Generating DSP t8_tile_2/dsp0_0/Mfull, operation Mode is: A*B.
+DSP Report: operator t8_tile_2/dsp0_0/Mfull is absorbed into DSP t8_tile_2/dsp0_0/Mfull.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2437.500 ; gain = 727.387 ; free physical = 13992 ; free virtual = 19059
+---------------------------------------------------------------------------------
+ Sort Area is  t8_tile_2/dsp0_0/Mfull_3 : 0 0 : 3223 3223 : Used 1 time 0
+ Sort Area is  t8_tile_0/Mfull_0 : 0 0 : 2881 2881 : Used 1 time 0
+ Sort Area is  t8_tile_1/Mfull_2 : 0 0 : 2881 2881 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------------------------------+-------------------------+---------------+----------------+
+|Module Name                         | RTL Object              | Depth x Width | Implemented As | 
++------------------------------------+-------------------------+---------------+----------------+
+|MultTable_Freq300_uid20             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid25             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid30             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid35             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid40             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid45             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid50             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid55             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid60             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid65             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid70             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid75             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid80             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid85             | Y0                      | 32x5          | LUT            | 
+|MultTable_Freq300_uid90             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid95             | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid100            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid105            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid110            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid115            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid120            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid125            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid130            | Y0                      | 64x6          | LUT            | 
+|MultTable_Freq300_uid135            | Y0                      | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_4/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_3/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_5/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_6/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_7/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_9/TableMult/Y0  | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_8/TableMult/Y0  | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_11/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_10/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_12/TableMult/Y0 | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_15/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_14/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_13/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_16/TableMult/Y0 | 32x5          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_17/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_18/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_19/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_20/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_21/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_22/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_23/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_24/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_25/TableMult/Y0 | 64x6          | LUT            | 
+|IntMultiplier_36x36_72_Freq300_uid5 | t8_tile_26/TableMult/Y0 | 64x6          | LUT            | 
++------------------------------------+-------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DSPBlock_24x17_Freq300_uid10 | A*B         | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DSPBlock_24x17_Freq300_uid12 | A*B         | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DSPBlock_25x18_Freq300_uid16 | A*B         | 25     | 18     | -      | -      | 43     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2474.500 ; gain = 764.387 ; free physical = 13953 ; free virtual = 19020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2509.547 ; gain = 799.434 ; free physical = 13925 ; free virtual = 18992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2517.555 ; gain = 807.441 ; free physical = 13909 ; free virtual = 18976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------------------------------+---------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                                  | RTL Name            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------------------------+---------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_flopoco_mul_we8_wf35_kintex7_native_f300 | u_dut/exc_d3_reg[1] | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|top_flopoco_mul_we8_wf35_kintex7_native_f300 | u_dut/sign_d3_reg   | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++---------------------------------------------+---------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DSPBlock_24x17_Freq300_uid10 | A*B         | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DSPBlock_24x17_Freq300_uid12 | A*B         | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DSPBlock_25x18_Freq300_uid16 | A*B         | 24     | 16     | -      | -      | 43     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    30|
+|2     |DSP48E1 |     3|
+|3     |LUT1    |     1|
+|4     |LUT2    |    56|
+|5     |LUT3    |    93|
+|6     |LUT4    |   113|
+|7     |LUT5    |   103|
+|8     |LUT6    |   197|
+|9     |SRL16E  |     3|
+|10    |FDRE    |   431|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.367 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2675.367 ; gain = 904.469 ; free physical = 13740 ; free virtual = 18807
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2675.375 ; gain = 965.254 ; free physical = 13740 ; free virtual = 18807
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2675.375 ; gain = 0.000 ; free physical = 13740 ; free virtual = 18807
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/constraints.xdc]
+Finished Parsing XDC File [/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.375 ; gain = 0.000 ; free physical = 13917 ; free virtual = 18984
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 55e0cfbe
+INFO: [Common 17-83] Releasing license: Synthesis
+266 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:37 . Memory (MB): peak = 2675.402 ; gain = 1122.539 ; free physical = 13917 ; free virtual = 18984
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2239.404; main = 2172.199; forked = 359.741
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3576.605; main = 2675.371; forked = 1018.047
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2675.402 ; gain = 0.000 ; free physical = 13917 ; free virtual = 18984
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2707.367 ; gain = 31.965 ; free physical = 13886 ; free virtual = 18954
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Phase 1 Initialization | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Phase 2 Timer Update And Timing Data Collection | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Retarget | Checksum: 198326ee2
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 198326ee2
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Constant propagation | Checksum: 198326ee2
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Phase 5 Sweep | Checksum: 2195a77e7
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2707.367 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Sweep | Checksum: 2195a77e7
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 276 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 2195a77e7
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+BUFG optimization | Checksum: 2195a77e7
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 2195a77e7
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+Shift Register Optimization | Checksum: 2195a77e7
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 2195a77e7
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+Post Processing Netlist | Checksum: 2195a77e7
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+Phase 9 Finalization | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                            276  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2739.383 ; gain = 32.016 ; free physical = 13891 ; free virtual = 18958
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 18220a2c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13891 ; free virtual = 18958
+INFO: [Common 17-83] Releasing license: Implementation
+288 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2739.383 ; gain = 63.980 ; free physical = 13891 ; free virtual = 18958
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-83] Releasing license: Implementation
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 180665ff4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: efafa19d
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1398b7a29
+
+Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1398b7a29
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+Phase 1 Placer Initialization | Checksum: 1398b7a29
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 147800f5e
+
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1a758294b
+
+Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.7 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 107898e0b
+
+Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13892 ; free virtual = 18959
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1b8246172
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18965
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 13b95aec4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18965
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 20 LUTNM shape to break, 11 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 18, two critical 2, total 20, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 24 nets or LUTs. Breaked 20 LUTs, combined 4 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18965
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           20  |              4  |                    24  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           20  |              4  |                    24  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 1f2ae3529
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13896 ; free virtual = 18966
+Phase 2.5 Global Place Phase2 | Checksum: 13d6f1cb1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13896 ; free virtual = 18966
+Phase 2 Global Placement | Checksum: 13d6f1cb1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13896 ; free virtual = 18966
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 105b69746
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13899 ; free virtual = 18969
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2580d0a52
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13899 ; free virtual = 18969
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 23e6b782d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13899 ; free virtual = 18969
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2214ea5af
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13899 ; free virtual = 18969
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1e1660974
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13899 ; free virtual = 18969
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1d899dc1b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13895 ; free virtual = 18966
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1f94c357e
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13895 ; free virtual = 18966
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1ddd030c3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13895 ; free virtual = 18966
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 17a4a85fe
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18968
+Phase 3 Detail Placement | Checksum: 17a4a85fe
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18968
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 26348f494
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 1 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.527 | TNS=-2.568 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a16a9972
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18968
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1b9d4fcc6
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18968
+Phase 4.1.1.1 BUFG Insertion | Checksum: 26348f494
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13898 ; free virtual = 18968
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.074. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2340fa210
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+Phase 4.1 Post Commit Optimization | Checksum: 2340fa210
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2340fa210
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2340fa210
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+Phase 4.3 Placer Reporting | Checksum: 2340fa210
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19c95852f
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+Ending Placer Task | Checksum: 191cfe091
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+322 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13952 ; free virtual = 19023
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+
+
+Starting Routing Task
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 8a36ae38 ConstDB: 0 ShapeSum: 5d07ff23 RouteDB: aa913336
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "X_i[43]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[43]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[43]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[43]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[45]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[45]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[44]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[44]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[45]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[45]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[44]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[44]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[42]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[42]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[41]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[41]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[40]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[40]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[39]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[39]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[42]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[42]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[41]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[41]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[40]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[40]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[39]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[39]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[38]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[38]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[37]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[37]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[36]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[36]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[35]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[35]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[38]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[38]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[37]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[37]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[36]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[36]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[35]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[35]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[32]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[32]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[33]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[33]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[34]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[34]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[33]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[33]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[34]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[34]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[32]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[32]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_i[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_i[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "X_i[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "X_i[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Constraints 18-8777] Unable to split tiles. All required files are not available.
+Post Restoration Checksum: NetGraph: 891130ef | NumContArr: 4d3a3628 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 25b9d5c51
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13956 ; free virtual = 19028
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 25b9d5c51
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13956 ; free virtual = 19028
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 25b9d5c51
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13956 ; free virtual = 19028
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 295972c4e
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13956 ; free virtual = 19028
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.195  | TNS=0.000  | WHS=0.157  | THS=0.000  |
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 1c9c07ae7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13956 ; free virtual = 19028
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 895
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 895
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1c9c07ae7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13958 ; free virtual = 19029
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1c9c07ae7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13958 ; free virtual = 19029
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 26dea97d7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13958 ; free virtual = 19029
+Phase 4 Initial Routing | Checksum: 26dea97d7
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13958 ; free virtual = 19029
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 530
+ Number of Nodes with overlaps = 350
+ Number of Nodes with overlaps = 192
+ Number of Nodes with overlaps = 84
+ Number of Nodes with overlaps = 51
+ Number of Nodes with overlaps = 31
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.018 | TNS=-0.034 | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 2925c7d32
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13947 ; free virtual = 19018
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 88
+ Number of Nodes with overlaps = 54
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 23
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.087  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 279e87c3d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+Phase 5 Rip-up And Reroute | Checksum: 279e87c3d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 279e87c3d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 279e87c3d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+Phase 6 Delay and Skew Optimization | Checksum: 279e87c3d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.087  | TNS=0.000  | WHS=0.172  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 22a68350b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+Phase 7 Post Hold Fix | Checksum: 22a68350b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.264769 %
+  Global Horizontal Routing Utilization  = 0.357626 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 22a68350b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 22a68350b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1c5861b35
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 1c5861b35
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.087  | TNS=0.000  | WHS=0.172  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 1c5861b35
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+Total Elapsed time in route_design: 24.56 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 1515615ca
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 1515615ca
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+331 Infos, 135 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19014
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME =~ RAMB*}'.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19016
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19016
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19016
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19016
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19017
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13943 ; free virtual = 19017
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13941 ; free virtual = 19015
+Write Physdb Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2739.383 ; gain = 0.000 ; free physical = 13941 ; free virtual = 19015
+INFO: [Common 17-1381] The checkpoint '/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/post_route.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Sun May 24 00:07:36 2026...
+$ /mnt/storage/xilinx/2025.2.1/Vivado/bin/vivado -mode batch -nojournal -nolog -notrace -source /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_mul_we8_wf35_kintex7_native_f300/vivado.tcl
+
+
+[exit code 0]

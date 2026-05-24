@@ -1,0 +1,710 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat May 23 22:37:41 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300
+Constraint file: top_flopoco_div_we8_wf17_zynq7000_native_srt_87_f300_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i19  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i19 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i412_4_lut_rep_23
+Route        18   e 1.598                                  n7853
+LUT4        ---     0.166              C to Z              \u_dut/mux_761_i19_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[20]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i19  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i19 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i713_2_lut_rep_8
+Route        18   e 1.598                                  n7820
+LUT4        ---     0.166              D to Z              \u_dut/mux_761_i19_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[20]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i18  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i18 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i18
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i412_4_lut_rep_23
+Route        18   e 1.598                                  n7853
+LUT4        ---     0.166              C to Z              \u_dut/mux_761_i18_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[19]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i18  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i18 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i18
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i713_2_lut_rep_8
+Route        18   e 1.598                                  n7820
+LUT4        ---     0.166              D to Z              \u_dut/mux_761_i18_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[19]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i17  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i17 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i17
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i412_4_lut_rep_23
+Route        18   e 1.598                                  n7853
+LUT4        ---     0.166              C to Z              \u_dut/mux_761_i17_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[18]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i17  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i17 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i17
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i713_2_lut_rep_8
+Route        18   e 1.598                                  n7820
+LUT4        ---     0.166              D to Z              \u_dut/mux_761_i17_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[18]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i16  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i16 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i16
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i713_2_lut_rep_8
+Route        18   e 1.598                                  n7820
+LUT4        ---     0.166              D to Z              \u_dut/mux_761_i16_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[17]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i16  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i16 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i16
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i412_4_lut_rep_23
+Route        18   e 1.598                                  n7853
+LUT4        ---     0.166              C to Z              \u_dut/mux_761_i16_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[17]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i15  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i15 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i713_2_lut_rep_8
+Route        18   e 1.598                                  n7820
+LUT4        ---     0.166              D to Z              \u_dut/mux_761_i15_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[16]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/q5_d2_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/fYdec3_d1_i15  (to clk +)
+
+   Delay:                  11.733ns  (19.2% logic, 80.8% route), 16 logic levels.
+
+ Constraint Details:
+
+     11.733ns data_path \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i15 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 1.558ns
+
+ Path Details: \u_dut/q5_d2_i1 to \u_dut/fYdec3_d1_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/q5_d2_i1 (from clk)
+Route        21   e 1.728                                  q5_d2[3]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1941_1
+Route         1   e 0.020                                  n7245
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_3
+Route         1   e 0.020                                  n7246
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_5
+Route         1   e 0.020                                  n7247
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_7
+Route         1   e 0.020                                  n7248
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_9
+Route         1   e 0.020                                  n7249
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_11
+Route         1   e 0.020                                  n7250
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_13
+Route         1   e 0.020                                  n7251
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_15
+Route         1   e 0.020                                  n7252
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1941_17
+Route         1   e 0.020                                  n7253
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1941_19
+Route         4   e 1.397                                  w4full[18]
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1_2_lut
+Route         1   e 1.020                                  \u_dut/SelFunctionTable4/n7493
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/i1750_4_lut
+Route         3   e 1.239                                  n63_adj_1129
+LUT4        ---     0.166              A to Z              \u_dut/SelFunctionTable4/X_6__I_0_Mux_2_i127_4_lut
+Route         4   e 1.297                                  q4[2]
+LUT4        ---     0.166              B to Z              i412_4_lut_rep_23
+Route        18   e 1.598                                  n7853
+LUT4        ---     0.166              C to Z              \u_dut/mux_761_i15_4_lut
+Route         1   e 1.020                                  \u_dut/fYdec3[16]
+                  --------
+                   11.733  (19.2% logic, 80.8% route), 16 logic levels.
+
+Warning: 11.558 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|    11.558 ns|    16 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\u_dut/SelFunctionTable3/n7487          |       1|    1046|     25.54%
+                                        |        |        |
+n63                                     |       3|    1046|     25.54%
+                                        |        |        |
+n7051                                   |       1|    1046|     25.54%
+                                        |        |        |
+q3[2]                                   |       4|    1046|     25.54%
+                                        |        |        |
+q4_d2[3]                                |      21|    1046|     25.54%
+                                        |        |        |
+\u_dut/SelFunctionTable2/n7489          |       1|    1030|     25.15%
+                                        |        |        |
+n63_adj_1171                            |       3|    1030|     25.15%
+                                        |        |        |
+n7276                                   |       1|    1030|     25.15%
+                                        |        |        |
+q2[2]                                   |       4|    1030|     25.15%
+                                        |        |        |
+q3_d2[3]                                |      21|    1030|     25.15%
+                                        |        |        |
+\u_dut/SelFunctionTable1/n7491          |       1|    1010|     24.66%
+                                        |        |        |
+\u_dut/SelFunctionTable4/n7493          |       1|    1010|     24.66%
+                                        |        |        |
+n63_adj_1129                            |       3|    1010|     24.66%
+                                        |        |        |
+n63_adj_1170                            |       3|    1010|     24.66%
+                                        |        |        |
+n7228                                   |       1|    1010|     24.66%
+                                        |        |        |
+n7252                                   |       1|    1010|     24.66%
+                                        |        |        |
+q1[2]                                   |       4|    1010|     24.66%
+                                        |        |        |
+q2_d2[3]                                |      21|    1010|     24.66%
+                                        |        |        |
+q4[2]                                   |       4|    1010|     24.66%
+                                        |        |        |
+q5_d2[3]                                |      21|    1010|     24.66%
+                                        |        |        |
+n7050                                   |       1|     936|     22.85%
+                                        |        |        |
+n7227                                   |       1|     936|     22.85%
+                                        |        |        |
+n7251                                   |       1|     936|     22.85%
+                                        |        |        |
+n7275                                   |       1|     936|     22.85%
+                                        |        |        |
+n7049                                   |       1|     792|     19.34%
+                                        |        |        |
+n7226                                   |       1|     792|     19.34%
+                                        |        |        |
+n7250                                   |       1|     792|     19.34%
+                                        |        |        |
+n7274                                   |       1|     792|     19.34%
+                                        |        |        |
+n7048                                   |       1|     648|     15.82%
+                                        |        |        |
+n7225                                   |       1|     648|     15.82%
+                                        |        |        |
+n7249                                   |       1|     648|     15.82%
+                                        |        |        |
+n7273                                   |       1|     648|     15.82%
+                                        |        |        |
+n7052                                   |       1|     540|     13.18%
+                                        |        |        |
+n7229                                   |       1|     540|     13.18%
+                                        |        |        |
+n7253                                   |       1|     540|     13.18%
+                                        |        |        |
+n7277                                   |       1|     540|     13.18%
+                                        |        |        |
+n7850                                   |      18|     540|     13.18%
+                                        |        |        |
+w1full[18]                              |       4|     540|     13.18%
+                                        |        |        |
+w2full[18]                              |       4|     540|     13.18%
+                                        |        |        |
+w3full[18]                              |       4|     540|     13.18%
+                                        |        |        |
+w4full[18]                              |       4|     540|     13.18%
+                                        |        |        |
+n7851                                   |      18|     524|     12.79%
+                                        |        |        |
+n7817                                   |      18|     506|     12.35%
+                                        |        |        |
+n7818                                   |      18|     506|     12.35%
+                                        |        |        |
+n7852                                   |      18|     506|     12.35%
+                                        |        |        |
+n7853                                   |      18|     506|     12.35%
+                                        |        |        |
+w3full[17]                              |       5|     506|     12.35%
+                                        |        |        |
+n7047                                   |       1|     504|     12.30%
+                                        |        |        |
+n7224                                   |       1|     504|     12.30%
+                                        |        |        |
+n7248                                   |       1|     504|     12.30%
+                                        |        |        |
+n7272                                   |       1|     504|     12.30%
+                                        |        |        |
+n7819                                   |      18|     504|     12.30%
+                                        |        |        |
+n7820                                   |      18|     504|     12.30%
+                                        |        |        |
+w2full[17]                              |       5|     490|     11.96%
+                                        |        |        |
+w1full[17]                              |       5|     470|     11.47%
+                                        |        |        |
+w4full[17]                              |       5|     470|     11.47%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 5295536
+
+Constraints cover  153906 paths, 2091 nets, and 5184 connections (96.8% coverage)
+
+
+Peak memory: 280555520 bytes, TRCE: 1937408 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

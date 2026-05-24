@@ -1,0 +1,1343 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64+215 (git sha1 54866d154, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/yosys.ys' --
+
+1. Executing GHDL.
+Importing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Importing module flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch.
+Importing module intmultiplier_18x18_36_freq300_uid5_Barch.
+Importing module intadder_27_freq300_uid9_Barch.
+
+2. Executing SYNTH_LATTICE pass.
+
+2.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_sim_ecp5.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_sim_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\$__ABC9_LUT5'.
+Generating RTLIL representation for module `\$__ABC9_LUT6'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_COMB'.
+Generating RTLIL representation for module `\VLO'.
+Generating RTLIL representation for module `\VHI'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\DP16KD'.
+Replacing existing blackbox module `\FD1P3AX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:2.1-2.261.
+Generating RTLIL representation for module `\FD1P3AX'.
+Replacing existing blackbox module `\FD1P3AY' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:3.1-3.261.
+Generating RTLIL representation for module `\FD1P3AY'.
+Replacing existing blackbox module `\FD1P3BX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:4.1-4.261.
+Generating RTLIL representation for module `\FD1P3BX'.
+Replacing existing blackbox module `\FD1P3DX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:5.1-5.261.
+Generating RTLIL representation for module `\FD1P3DX'.
+Replacing existing blackbox module `\FD1P3IX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:6.1-6.261.
+Generating RTLIL representation for module `\FD1P3IX'.
+Replacing existing blackbox module `\FD1P3JX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:7.1-7.261.
+Generating RTLIL representation for module `\FD1P3JX'.
+Replacing existing blackbox module `\FD1S3AX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:8.1-8.261.
+Generating RTLIL representation for module `\FD1S3AX'.
+Replacing existing blackbox module `\FD1S3AY' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:9.1-9.261.
+Generating RTLIL representation for module `\FD1S3AY'.
+Replacing existing blackbox module `\FD1S3BX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:10.1-10.261.
+Generating RTLIL representation for module `\FD1S3BX'.
+Replacing existing blackbox module `\FD1S3DX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:11.1-11.261.
+Generating RTLIL representation for module `\FD1S3DX'.
+Replacing existing blackbox module `\FD1S3IX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:12.1-12.261.
+Generating RTLIL representation for module `\FD1S3IX'.
+Replacing existing blackbox module `\FD1S3JX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:13.1-13.261.
+Generating RTLIL representation for module `\FD1S3JX'.
+Replacing existing blackbox module `\IFS1P3BX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:26.1-26.301.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Replacing existing blackbox module `\IFS1P3DX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:27.1-27.301.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Replacing existing blackbox module `\IFS1P3IX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:28.1-28.301.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Replacing existing blackbox module `\IFS1P3JX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:29.1-29.301.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Replacing existing blackbox module `\OFS1P3BX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:31.1-31.302.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Replacing existing blackbox module `\OFS1P3DX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:32.1-32.302.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Replacing existing blackbox module `\OFS1P3IX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:33.1-33.302.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Replacing existing blackbox module `\OFS1P3JX' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_ff.vh:34.1-34.302.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Replacing existing blackbox module `\IB' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:2.1-2.157.
+Generating RTLIL representation for module `\IB'.
+Replacing existing blackbox module `\IBPU' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:3.1-3.157.
+Generating RTLIL representation for module `\IBPU'.
+Replacing existing blackbox module `\IBPD' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:4.1-4.157.
+Generating RTLIL representation for module `\IBPD'.
+Replacing existing blackbox module `\OB' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:5.1-5.157.
+Generating RTLIL representation for module `\OB'.
+Replacing existing blackbox module `\OBZ' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:6.1-6.164.
+Generating RTLIL representation for module `\OBZ'.
+Replacing existing blackbox module `\OBZPU' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:7.1-7.164.
+Generating RTLIL representation for module `\OBZPU'.
+Replacing existing blackbox module `\OBZPD' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:8.1-8.164.
+Generating RTLIL representation for module `\OBZPD'.
+Replacing existing blackbox module `\OBCO' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:9.1-9.90.
+Generating RTLIL representation for module `\OBCO'.
+Replacing existing blackbox module `\BB' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:10.1-10.179.
+Generating RTLIL representation for module `\BB'.
+Replacing existing blackbox module `\BBPU' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:11.1-11.179.
+Generating RTLIL representation for module `\BBPU'.
+Replacing existing blackbox module `\BBPD' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:12.1-12.179.
+Generating RTLIL representation for module `\BBPD'.
+Replacing existing blackbox module `\ILVDS' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:13.1-13.139.
+Generating RTLIL representation for module `\ILVDS'.
+Replacing existing blackbox module `\OLVDS' at /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_io.vh:14.1-14.146.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_bb_ecp5.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_bb_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\PUR'.
+Generating RTLIL representation for module `\SGSR'.
+Generating RTLIL representation for module `\PDPW16KD'.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Generating RTLIL representation for module `\DCSC'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\ECLKBRIDGECS'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\DLLDELD'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DCUA'.
+Successfully finished Verilog frontend.
+
+2.3. Executing HIERARCHY pass (managing design hierarchy).
+
+2.3.1. Analyzing design hierarchy..
+Top module:  \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+Used module:     \flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch
+Used module:         \intadder_27_freq300_uid9_Barch
+Used module:         \intmultiplier_18x18_36_freq300_uid5_Barch
+
+2.3.2. Analyzing design hierarchy..
+Top module:  \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+Used module:     \flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch
+Used module:         \intadder_27_freq300_uid9_Barch
+Used module:         \intmultiplier_18x18_36_freq300_uid5_Barch
+Removed 0 unused modules.
+
+2.4. Executing PROC pass (convert processes to netlists).
+
+2.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.4.4. Executing PROC_INIT pass (extract init attributes).
+
+2.4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module intadder_27_freq300_uid9_Barch.
+Optimizing module intmultiplier_18x18_36_freq300_uid5_Barch.
+Optimizing module flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch.
+<suppressed ~4 debug messages>
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module intadder_27_freq300_uid9_Barch...
+Checking module intmultiplier_18x18_36_freq300_uid5_Barch...
+Checking module flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch...
+Checking module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300...
+Found and reported 0 problems.
+
+2.6. Executing FLATTEN pass (flatten design).
+Deleting now unused module intadder_27_freq300_uid9_Barch.
+Deleting now unused module intmultiplier_18x18_36_freq300_uid5_Barch.
+Deleting now unused module flopoco_mul_we8_wf17_dummyfpga_plain_f300_Barch.
+<suppressed ~3 debug messages>
+
+2.7. Executing TRIBUF pass.
+
+2.8. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 0 unused cells and 23 unused wires.
+<suppressed ~1 debug messages>
+
+2.11. Executing CHECK pass (checking for obvious problems).
+Checking module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300...
+Found and reported 0 problems.
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 49 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+    New ctrl vector for $pmux cell \u_dut.:121: $flatten\u_dut.$auto$ghdl.cc:862:import_module$40
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 1 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 49 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 1 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 2 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 3 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 4 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 5 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 6 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 7 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 8 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 9 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 10 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 11 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 12 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 13 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 14 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 15 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 16 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 17 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 18 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 19 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 20 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 21 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 22 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 23 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 24 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 25 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 26 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 27 on u_dut.roundingadder.:149 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Setting constant 0-bit at position 27 on u_dut.roundingadder.:148 ($dff) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+<suppressed ~1 debug messages>
+
+2.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 48 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+2.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.12.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.12.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.12.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 47 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.12.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.12.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.12.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.13. Executing FSM pass (extract and optimize FSM).
+
+2.13.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.exc_d1 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+2.13.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.13.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.13.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.13.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.13.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 47 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 47 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 28) from port A of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.roundingadder.:145 ($add).
+Removed top 27 bits (of 28) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.roundingadder.:145 ($add).
+Removed top 1 bits (of 28) from port Y of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.roundingadder.:145 ($add).
+Removed top 1 bits (of 2) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:103 ($eq).
+Removed top 9 bits (of 10) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:70 ($add).
+Removed top 1 bits (of 4) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:57 ($eq).
+Removed top 1 bits (of 4) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:54 ($eq).
+Removed top 1 bits (of 4) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:50 ($eq).
+Removed top 3 bits (of 4) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:47 ($eq).
+Removed top 18 bits (of 36) from port A of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.significandmultiplication.:130 ($mul).
+Removed top 18 bits (of 36) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.significandmultiplication.:130 ($mul).
+Removed top 3 bits (of 10) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:30 ($sub).
+Removed top 2 bits (of 10) from port A of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:28 ($add).
+Removed top 2 bits (of 10) from port B of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:28 ($add).
+Removed top 1 bits (of 10) from port Y of cell top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.u_dut.:28 ($add).
+
+2.16. Executing PEEPOPT pass (run peephole optimizers).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.18. Executing SHARE pass (SAT-based resource sharing).
+
+2.19. Executing TECHMAP pass (map to technology primitives).
+
+2.19.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.19.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using template $paramod$55e849a2191f17b159b997340cb0ebb72d635590\_80_mul for cells of type $mul.
+No more expansions possible.
+<suppressed ~85 debug messages>
+
+2.23. Executing TECHMAP pass (map to technology primitives).
+
+2.23.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/dsp_map_18x18.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/dsp_map_18x18.v' to AST representation.
+Generating RTLIL representation for module `$__MUL18X18'.
+Successfully finished Verilog frontend.
+
+2.23.2. Continuing TECHMAP pass.
+Using template $paramod$6d12bf30e693aad43884066ff41c02c3d61c4f33$__MUL18X18 for cells of type $__MUL18X18.
+No more expansions possible.
+<suppressed ~23 debug messages>
+
+2.24. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300:
+  creating $macc model for u_dut.:30 ($sub).
+  creating $macc model for u_dut.:70 ($add).
+  creating $macc model for u_dut.:28 ($add).
+  creating $macc model for u_dut.roundingadder.:145 ($add).
+  merging $macc model for u_dut.:30 into u_dut.:70.
+  creating $alu model for $macc u_dut.:28.
+  creating $alu model for $macc u_dut.roundingadder.:145.
+  creating $macc cell for u_dut.:70: $auto$alumacc.cc:382:replace_macc$282
+  creating $alu cell for u_dut.roundingadder.:145: $auto$alumacc.cc:512:replace_alu$283
+  creating $alu cell for u_dut.:28: $auto$alumacc.cc:512:replace_alu$286
+  created 2 $alu and 1 $macc cells.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 47 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 47 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 1 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+2.25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 46 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.25.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.26. Executing MEMORY pass.
+
+2.26.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.26.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.26.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.26.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.26.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.26.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.26.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.26.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.26.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.26.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.28. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.29. Executing TECHMAP pass (map to technology primitives).
+
+2.29.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/lutrams_map_trellis.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/lutrams_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$__TRELLIS_DPR16X4_'.
+Successfully finished Verilog frontend.
+
+2.29.2. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/brams_map_16kd.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/brams_map_16kd.v' to AST representation.
+Generating RTLIL representation for module `$__DP16KD_'.
+Generating RTLIL representation for module `$__PDPW16KD_'.
+Successfully finished Verilog frontend.
+
+2.29.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+2.30. Executing OPT pass (performing simple optimizations).
+
+2.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+<suppressed ~1 debug messages>
+
+2.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 46 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.30.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.30.5. Finished fast OPT passes.
+
+2.31. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 46 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.32.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+    Consolidated identical input bits for $mux cell \u_dut.:74:
+      Old ports: A={ \u_dut.sigprod [33:0] 2'00 }, B={ \u_dut.sigprod [34:0] 1'0 }, Y=\u_dut.sigprodext
+      New ports: A={ \u_dut.sigprod [33:0] 1'0 }, B=\u_dut.sigprod [34:0], Y=\u_dut.sigprodext [35:1]
+      New connections: \u_dut.sigprodext [0] = 1'0
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 1 changes.
+
+2.32.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 46 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.32.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.32.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+<suppressed ~1 debug messages>
+
+2.32.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.32.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+2.32.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+Performed a total of 0 changes.
+
+2.32.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 46 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.32.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.32.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.32.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.33. Executing TECHMAP pass (map to technology primitives).
+
+2.33.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.33.2. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v' to AST representation.
+Generating RTLIL representation for module `\_80_ccu2c_alu'.
+Successfully finished Verilog frontend.
+
+2.33.3. Continuing TECHMAP pass.
+Using template $paramod$4ccbe221165818e15f326ddee3d1183c7924e12f\_80_ccu2c_alu for cells of type $alu.
+Using template $paramod$956e79e8f8c5e64be7438155ae50a966e615cb04\_80_ccu2c_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \u_dut.expsumpresub [8:0] (9 bits, unsigned)
+  add \u_dut.norm (1 bits, unsigned)
+  add 10'1110000001 (10 bits, unsigned)
+  packed 1 (1) bits / 1 words into adder tree
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_80_ccu2c_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~292 debug messages>
+
+2.34. Executing OPT pass (performing simple optimizations).
+
+2.34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+<suppressed ~216 debug messages>
+
+2.34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 360 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 346 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 340 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+<suppressed ~60 debug messages>
+Removed a total of 20 cells.
+
+2.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:337:slice$705 ($_DFF_P_) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300 (D = $auto$simplemap.cc:189:logic_reduce$879, Q = \u_dut.exc_d1 [1], rval = 1'1).
+Adding SRST signal on $auto$ff.cc:337:slice$704 ($_DFF_P_) from module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300 (D = $auto$simplemap.cc:189:logic_reduce$868, Q = \u_dut.exc_d1 [0], rval = 1'1).
+
+2.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 84 unused cells and 216 unused wires.
+<suppressed ~86 debug messages>
+
+2.34.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.34.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.34.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 256 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Removed a total of 0 cells.
+
+2.34.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.34.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+
+2.34.10. Finished fast OPT passes.
+
+2.35. Executing ABC pass (technology mapping using ABC).
+
+2.35.1. Summary of detected clock domains:
+  3 cells in clk={ }, en={ }, arst={ }, srst={ }
+  26 cells in clk=\clk, en={ }, arst={ }, srst=!$auto$simplemap.cc:189:logic_reduce$858
+  227 cells in clk=\clk, en={ }, arst={ }, srst={ }
+
+2.35.2. Extracting gate netlist of module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300' to `<abc-temp-dir>/input.blif'..
+No matching clock domain found. Not extracting any FF cells.
+
+2.35.3. Extracting gate netlist of module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, synchronously reset by !$auto$simplemap.cc:189:logic_reduce$858
+
+2.35.4. Extracting gate netlist of module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk
+
+2.35.4.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+2.35.4.1. Executed ABC.
+Extracted 26 gates and 32 wires to a netlist network with 6 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 04:40:36)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.35.4.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               BUF cells:        2
+ABC RESULTS:               DFF cells:        2
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:       19
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+
+2.35.4.1. Executed ABC.
+Extracted 202 gates and 339 wires to a netlist network with 135 inputs and 118 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 04:40:36)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: Warning: 113 registers in this network have don't-care init values.
+ABC: The don't-care are assumed to be 0. The result may not verify.
+ABC: Use command "print_latch" to see the init values of registers.
+ABC: Use command "zero" to convert or "init" to change the values.
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.35.4.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       13
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               BUF cells:      201
+ABC RESULTS:               DFF cells:      117
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        4
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:       86
+ABC RESULTS:           input signals:      135
+ABC RESULTS:          output signals:      118
+Removing temp directory.
+Removing global temp directory.
+
+2.36. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 0 unused cells and 523 unused wires.
+<suppressed ~7 debug messages>
+
+2.37. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.38. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 218 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Computing hashes of 217 cells of `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+Finding duplicate cells in `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.39. Executing TECHMAP pass (map to technology primitives).
+
+2.39.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.39.2. Continuing TECHMAP pass.
+Using template $_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template $paramod$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFF_P_.
+No more expansions possible.
+<suppressed ~201 debug messages>
+
+2.40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+<suppressed ~38 debug messages>
+
+2.41. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.42. Executing LATTICE_GSR pass (implement FF init values).
+Handling GSR in top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.43. Executing ATTRMVCP pass (move or copy attributes).
+
+2.44. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300..
+Removed 0 unused cells and 479 unused wires.
+<suppressed ~1 debug messages>
+
+2.45. Executing ABC pass (technology mapping using ABC).
+
+2.45.1. Extracting gate netlist of module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300' to `<abc-temp-dir>/input.blif'..
+
+2.45.1.1. Executed ABC.
+Extracted 70 gates and 123 wires to a netlist network with 53 inputs and 31 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 04:40:36)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.45.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        9
+ABC RESULTS:            ANDNOT cells:        5
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       39
+ABC RESULTS:           input signals:       53
+ABC RESULTS:          output signals:       31
+Removing temp directory.
+Removing global temp directory.
+
+2.46. Executing TECHMAP pass (map to technology primitives).
+
+2.46.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/latches_map.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/latches_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.46.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.47. Executing ABC pass (technology mapping using ABC).
+
+2.47.1. Summary of detected clock domains:
+  203 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+2.47.2. Extracting gate netlist of module `\top_flopoco_mul_we8_wf17_dummyfpga_plain_f300' to `<abc-temp-dir>/input.blif'..
+No matching clock domain found. Not extracting any FF cells.
+
+2.47.2.1. Executed ABC.
+Extracted 56 gates and 109 wires to a netlist network with 53 inputs and 31 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 04:40:36)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + dress <abc-temp-dir>/input.blif 
+ABC: Total number of equiv classes                =      35.
+ABC: Participating nodes from both networks       =      68.
+ABC: Participating nodes from the first network   =      34. (  97.14 % of nodes)
+ABC: Participating nodes from the second network  =      34. (  97.14 % of nodes)
+ABC: Node pairs (any polarity)                    =      34. (  97.14 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      33. (  94.29 % of names can be moved)
+ABC: Total runtime =     0.03 sec
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.47.2.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:       34
+ABC RESULTS:        internal signals:       25
+ABC RESULTS:           input signals:       53
+ABC RESULTS:          output signals:       31
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 231 unused wires.
+
+2.48. Executing TECHMAP pass (map to technology primitives).
+
+2.48.1. Executing Verilog-2005 frontend: /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+2.48.2. Continuing TECHMAP pass.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8$lut for cells of type $lut.
+Using template $paramod$eba7de026ff587370e320127e266317dae097a89$lut for cells of type $lut.
+Using template $paramod$d7ec878ecfa8f5f7604d3e91692b5d4c2ee758ad$lut for cells of type $lut.
+Using template $paramod$da0d148cdeade3c798212107d3d80b366097404a$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100000 for cells of type $lut.
+Using template $paramod$fe9a0158d0352193457c4f5b6282ac86d35fb3ee$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~288 debug messages>
+
+2.49. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+  Optimizing lut $abc$1868$auto$blifparse.cc:557:parse_blif$1872.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$1868$auto$blifparse.cc:557:parse_blif$1876.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+Removed 0 unused cells and 74 unused wires.
+
+2.50. Executing AUTONAME pass.
+Renamed 228 objects in module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300 (33 iterations).
+<suppressed ~228 debug messages>
+
+2.51. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `top_flopoco_mul_we8_wf17_dummyfpga_plain_f300'. Setting top module to top_flopoco_mul_we8_wf17_dummyfpga_plain_f300.
+
+2.51.1. Analyzing design hierarchy..
+Top module:  \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+
+2.51.2. Analyzing design hierarchy..
+Top module:  \top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+Removed 0 unused modules.
+
+2.52. Printing statistics.
+
+=== top_flopoco_mul_we8_wf17_dummyfpga_plain_f300 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       95 wires
+     1147 wire bits
+       95 public wires
+     1147 public wire bits
+        4 ports
+       85 port bits
+        4 cells
+        3   $scopeinfo
+        1   MULT18X18D
+      181 submodules
+       24   CCU2C
+       36   LUT4
+        2   PFUMX
+      119   TRELLIS_FF
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+        4 top_flopoco_mul_we8_wf17_dummyfpga_plain_f300
+
+        +----------Count including submodules.
+        | 
+       95 wires
+     1147 wire bits
+       95 public wires
+     1147 public wire bits
+        4 ports
+       85 port bits
+        - memories
+        - memory bits
+        - processes
+        4 cells
+        3   $scopeinfo
+        1   MULT18X18D
+      181 submodules
+       24   CCU2C
+       36   LUT4
+        2   PFUMX
+      119   TRELLIS_FF
+
+2.53. Executing CHECK pass (checking for obvious problems).
+Checking module top_flopoco_mul_we8_wf17_dummyfpga_plain_f300...
+Found and reported 0 problems.
+
+2.54. Executing JSON backend.
+
+End of script. Logfile hash: 971bdd5759, time: 2.55s, user: 0.81s, system: 0.08s, MEM: 44.16 MB peak
+Yosys 0.64+215 (git sha1 54866d154, clang++ 18.1.8 -fPIC -O3)
+Time spent: 38% 13x read_verilog (0 sec), 29% 3x abc (0 sec), ...
+$ yosys -m ghdl -s /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf17_dummyfpga_plain_f300/yosys.ys
+
+
+[exit code 0]

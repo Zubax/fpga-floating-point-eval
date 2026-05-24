@@ -1,0 +1,141 @@
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.ngd
+   Picdevice="LFE5U-12F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-12FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+604 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:   3637 out of 12687 (29%)
+      PFU registers:         3637 out of 12096 (30%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:      3051 out of  6048 (50%)
+      SLICEs as Logic/ROM:   2985 out of  6048 (49%)
+      SLICEs as RAM:           66 out of  4536 (1%)
+      SLICEs as Carry:        716 out of  6048 (12%)
+   Number of LUT4s:        3434 out of 12096 (28%)
+      Number used as logic LUTs:        1870
+      Number used as distributed RAM:   132
+      Number used as ripple logic:      1432
+      Number used as shift registers:     0
+   Number of PIO sites used: 139 out of 197 (71%)
+   Number of block RAMs:  6 out of 32 (19%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net clk_c: 1930 loads, 1930 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  30
+     Net X_r_0: 1 loads, 1 LSLICEs
+     Net prescaledfY_d11_0: 1 loads, 1 LSLICEs
+     Net prescaledfY_d25_0: 1 loads, 1 LSLICEs
+     Net prescaledfY_d18_0: 1 loads, 1 LSLICEs
+     Net n7678: 1 loads, 1 LSLICEs
+     Net Y_r_34: 1 loads, 1 LSLICEs
+     Net n17551: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d1_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d3_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d6_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d8_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d13_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d15_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d20_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d22_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d27_0: 1 loads, 1 LSLICEs
+     Net u_dut/prescaledfY_d29_0: 1 loads, 1 LSLICEs
+     Net u_dut/q13_d1_0: 1 loads, 1 LSLICEs
+     Net u_dut/n22888: 2 loads, 2 LSLICEs
+     Net u_dut/n21478: 1 loads, 1 LSLICEs
+     Net u_dut/n22905: 2 loads, 2 LSLICEs
+     Net u_dut/n22904: 2 loads, 2 LSLICEs
+     Net u_dut/n22903: 2 loads, 2 LSLICEs
+     Net u_dut/n22900: 2 loads, 2 LSLICEs
+     Net u_dut/n22895: 2 loads, 2 LSLICEs
+     Net u_dut/n22924: 2 loads, 2 LSLICEs
+     Net u_dut/n22923: 2 loads, 2 LSLICEs
+     Net n17517: 3 loads, 3 LSLICEs
+     Net u_dut/n22918: 2 loads, 2 LSLICEs
+     Net u_dut/n22913: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net q3_d1_1: 83 loads
+     Net q6_d1_1: 82 loads
+     Net q9_d1_1: 82 loads
+     Net q1_d1_1: 81 loads
+     Net q2_d1_1: 81 loads
+     Net q4_d1_1: 81 loads
+     Net q10_d1_1: 80 loads
+     Net q12_d1_1: 80 loads
+     Net q5_d1_1: 80 loads
+     Net q7_d1_1: 80 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 1 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 231 MB
+
+Dumping design to file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300_map.ncd.
+$ /usr/local/diamond/3.14/ispfpga/bin/lin64/map -a ECP5U -p LFE5U-12F -t CABGA381 -s 6 -oc Commercial /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.ngd -o /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300_map.ncd -pr /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.prf -mp /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.mrp -lpf /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/constraints.lpf
+
+
+[exit code 0]

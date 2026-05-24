@@ -1,0 +1,434 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat May 23 22:33:47 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_flopoco_mul_we8_wf35_dummyfpga_plain_f300
+Constraint file: top_flopoco_mul_we8_wf35_dummyfpga_plain_f300_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n820
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[15]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n850
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/lat_mult_0
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n893
+AluPd       ---     2.037         MB[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n820
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[27]
+LUT4        ---     0.166              C to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n836
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n820
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[14]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n841
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n820
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[24]
+LUT4        ---     0.166              C to Z              \u_dut/i1_4_lut_adj_2
+Route         1   e 1.020                                  \u_dut/n1435
+LUT4        ---     0.166              A to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n822
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[18]
+LUT4        ---     0.166              D to Z              \u_dut/i1_4_lut_adj_3
+Route         1   e 1.020                                  \u_dut/n1399
+LUT4        ---     0.166              B to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.998ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/SignificandMultiplication/X_35__I_0_e2__i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/RoundingAdder/Cin_1_d1_9  (to clk +)
+
+   Delay:                  15.173ns  (50.5% logic, 49.5% route), 7 logic levels.
+
+ Constraint Details:
+
+     15.173ns data_path \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 4.998ns
+
+ Path Details: \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 to \u_dut/RoundingAdder/Cin_1_d1_9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/SignificandMultiplication/X_35__I_0_e2__i1 (from clk)
+Route         2   e 1.258                                  \u_dut/SignificandMultiplication/n146
+MuPd        ---     2.720          B[18] to P[36]          \u_dut/SignificandMultiplication/X_35__I_0_mult_2
+Route         1   e 1.020                                  \u_dut/SignificandMultiplication/n820
+AluPd       ---     2.037         MA[36] to R[54]          \u_dut/SignificandMultiplication/lat_alu_3
+Route         2   e 1.158                                  \u_dut/sigProd[0]
+AluPd       ---     2.037        CIN[54] to R[54]          \u_dut/SignificandMultiplication/lat_alu_4
+Route         1   e 1.020                                  \u_dut/sigProd[21]
+LUT4        ---     0.166              A to Z              \u_dut/i1_3_lut
+Route         1   e 1.020                                  \u_dut/n1433
+LUT4        ---     0.166              C to Z              \u_dut/i1_4_lut
+Route         1   e 1.020                                  \u_dut/n1403
+LUT4        ---     0.166              B to Z              \u_dut/sigProdExt_36__I_0_4_lut
+Route         1   e 1.020                                  \u_dut/round
+                  --------
+                   15.173  (50.5% logic, 49.5% route), 7 logic levels.
+
+Warning: 14.998 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|    14.998 ns|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\u_dut/round                            |       1|    4096|     99.00%
+                                        |        |        |
+\u_dut/n1403                            |       1|    4018|     98.10%
+                                        |        |        |
+\u_dut/n1399                            |       1|    3394|     82.86%
+                                        |        |        |
+\u_dut/sigProd[18]                      |       1|    3160|     77.15%
+                                        |        |        |
+\u_dut/sigProd[0]                       |       2|    2753|     67.21%
+                                        |        |        |
+\u_dut/SignificandMultiplication/n820   |       1|    1020|     24.90%
+                                        |        |        |
+\u_dut/SignificandMultiplication/n64    |       2|     894|     21.83%
+                                        |        |        |
+\u_dut/SignificandMultiplication/n893   |       1|     497|     12.13%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 20471808
+
+Constraints cover  29157115 paths, 693 nets, and 1089 connections (88.4% coverage)
+
+
+Peak memory: 268926976 bytes, TRCE: 1507328 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

@@ -1,0 +1,861 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat May 23 22:37:12 2026
+
+
+Command Line:  /usr/local/diamond/3.14/ispfpga/bin/lin64/synthesis -f /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/lse.synproj 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 10
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = TRUE
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = no
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300 (searchpath added)
+VHDL library = work
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl
+VHDL design file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl
+NGO file = /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.ngo
+-sdc option: SDC file input is /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/constraints.sdc.
+-lpf option: Output file option is not used.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.14/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300". VHDL-1504
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(24): analyzing entity selfunction7_4_freq300_uid4. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(29): analyzing architecture arch. VHDL-1010
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(193): analyzing entity flopoco_div_we8_wf35_zynq7000_native_srt_87_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(200): analyzing architecture arch. VHDL-1010
+Analyzing VHDL file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl. VHDL-1481
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(4): analyzing entity top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300. VHDL-1012
+INFO - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(13): analyzing architecture rtl. VHDL-1010
+unit top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300 is not yet analyzed. VHDL-1485
+/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(4): executing top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300(rtl)
+
+WARNING - synthesis: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/src/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.vhdl(11): replacing existing netlist top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300(rtl). VHDL-1205
+Top module name (VHDL): top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: /usr/local/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.
+WARNING - synthesis: Bit 41 of Register \u_dut/w13pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 40 of Register \u_dut/w13pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w13pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 41 of Register \u_dut/w13pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 40 of Register \u_dut/w13pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w13pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w12pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w12pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w12pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w11pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w11pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w11pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w11pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w11pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w11pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w10pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w10pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w10pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w10pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w10pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w10pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w9pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w9pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w9pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w8pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w8pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w8pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w8pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w8pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w8pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w7pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w7pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w7pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w7pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w6pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w5pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w5pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w5pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w5pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w4pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w3pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w2pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w2pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w2pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w2pad_d2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/w1pad_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d19 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d19 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d20 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d20 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d21 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d22 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d22 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d23 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d23 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d24 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d24 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d25 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d25 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d26 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d26 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d27 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d27 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d28 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d28 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d29 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d29 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM13_d30 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM13_d30 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d19 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d19 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d20 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d20 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d21 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d22 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d22 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d23 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d23 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d24 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d24 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d25 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d25 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d26 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d26 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d27 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d27 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM12_d28 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM12_d28 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d19 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d19 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d20 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d20 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d21 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d22 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d22 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d23 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d23 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d24 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d24 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d25 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d25 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM11_d26 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM11_d26 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d19 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d19 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d20 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d20 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d21 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d22 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d22 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM10_d23 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM10_d23 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d19 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d19 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d20 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d20 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM9_d21 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM9_d21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d17 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d17 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM8_d18 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM8_d18 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d15 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d15 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM7_d16 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM7_d16 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d12 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d12 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d13 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d13 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM6_d14 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM6_d14 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d10 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d10 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM5_d11 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM5_d11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d8 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d8 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM4_d9 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM4_d9 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d5 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d5 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d6 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d6 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM3_d7 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM3_d7 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM2_d4 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM2_d4 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM1_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM1_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM1_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM1_d2 is stuck at Zero
+WARNING - synthesis: Bit 41 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 40 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 38 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 37 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 35 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/qM_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/qM_d1 is stuck at Zero
+
+
+
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec9_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec9_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec9_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec9_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec6_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec6_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec6_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec6_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec4_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec4_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec4_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec4_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec3_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec3_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec3_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec3_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec1_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec1_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec1_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec1_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec0_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec0_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec0_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec0_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec10_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec10_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec8_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec8_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec7_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec7_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec5_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec5_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec2_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec2_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec12_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec12_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec12_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec12_d2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec11_d1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec11_d1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_dut/fYdec11_d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_dut/fYdec11_d2 is stuck at Zero
+################### Mapped 960 registers to 22 RAM. ##################
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00013_1805. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00012_1803. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00011_1804. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00010_1802. VDB-5034
+WARNING - synthesis: Removing unused instance . VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00008_1801. VDB-5034
+WARNING - synthesis: Removing unused instance _1797. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00006_1800. VDB-5034
+WARNING - synthesis: Removing unused instance _1796. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00004_1799. VDB-5034
+WARNING - synthesis: Removing unused instance _1795. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/sR_d1_821_sft00002_1798. VDB-5034
+WARNING - synthesis: Removing unused instance _1794. VDB-5034
+WARNING - synthesis: Removing unused instance _1793. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP13_d1__28_sft00001_1786. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP13_d1__28_sft00000_1785. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP12_d1_sft00001_1778. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP12_d1_sft00000_1777. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP11_d1_sft00001_1769. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP11_d1_sft00000_1768. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP10_d1_sft00001_1761. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP10_d1_sft00000_1760. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP9_d1_sft00001_1754. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP9_d1_sft00000_1753. VDB-5034
+WARNING - synthesis: Removing unused instance _1792. VDB-5034
+WARNING - synthesis: Removing unused instance _1791. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP8_d1_1779. VDB-5034
+WARNING - synthesis: Removing unused instance _1784. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP7_d1_1771. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP6_d1_1770. VDB-5034
+WARNING - synthesis: Removing unused instance _1776. VDB-5034
+WARNING - synthesis: Removing unused instance \u_dut/qP5_d1_1762. VDB-5034
+WARNING - synthesis: Removing unused instance _1767. VDB-5034
+WARNING - synthesis: Removing unused instance _1759. VDB-5034
+######## Missing driver on net n17611. Patching with GND.
+######## Missing driver on net n17610. Patching with GND.
+######## Missing driver on net n17609. Patching with GND.
+######## Missing driver on net n17608. Patching with GND.
+######## Missing driver on net n17607. Patching with GND.
+######## Missing driver on net n17606. Patching with GND.
+######## Missing driver on net n17605. Patching with GND.
+######## Missing driver on net n17604. Patching with GND.
+######## Missing driver on net n17603. Patching with GND.
+######## Missing driver on net n17602. Patching with GND.
+######## Missing driver on net n17601. Patching with GND.
+######## Missing driver on net n17600. Patching with GND.
+######## Missing driver on net n17599. Patching with GND.
+######## Missing driver on net n17598. Patching with GND.
+######## Missing driver on net n17597. Patching with GND.
+######## Missing driver on net n17596. Patching with GND.
+######## Missing driver on net n17595. Patching with GND.
+######## Missing driver on net n17594. Patching with GND.
+######## Missing driver on net n17593. Patching with GND.
+######## Missing driver on net n17592. Patching with GND.
+######## Missing driver on net n17591. Patching with GND.
+######## Missing driver on net n17590. Patching with GND.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i1 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i1.
+Duplicate register/latch removal. \u_dut/q4_d1_i1 is a one-to-one match with \u_dut/qP4_d1_i0.
+Duplicate register/latch removal. \u_dut/q3_d1_i0 is a one-to-one match with \u_dut/qP3_d1_i0.
+Duplicate register/latch removal. \u_dut/q2_d1_i1 is a one-to-one match with \u_dut/qP2_d1_i0.
+Duplicate register/latch removal. \u_dut/q1_d1_i1 is a one-to-one match with \u_dut/qP1_d1_i0.
+Duplicate register/latch removal. \u_dut/qM12_d1_i1 is a one-to-one match with \u_dut/q12_d1_i3.
+Duplicate register/latch removal. \u_dut/qM11_d1_i1 is a one-to-one match with \u_dut/q11_d1_i3.
+Duplicate register/latch removal. \u_dut/qM10_d1_i1 is a one-to-one match with \u_dut/q10_d1_i3.
+Duplicate register/latch removal. \u_dut/qM9_d1_i1 is a one-to-one match with \u_dut/q9_d1_i3.
+Duplicate register/latch removal. \u_dut/qM8_d1_i1 is a one-to-one match with \u_dut/q8_d1_i3.
+Duplicate register/latch removal. \u_dut/qM7_d1_i1 is a one-to-one match with \u_dut/q7_d1_i3.
+Duplicate register/latch removal. \u_dut/qM6_d1_i1 is a one-to-one match with \u_dut/q6_d1_i3.
+Duplicate register/latch removal. \u_dut/qM5_d1_i1 is a one-to-one match with \u_dut/q5_d1_i3.
+Duplicate register/latch removal. \u_dut/qM4_d1_i1 is a one-to-one match with \u_dut/q4_d1_i3.
+Duplicate register/latch removal. \u_dut/qM3_d1_i1 is a one-to-one match with \u_dut/q3_d1_i3.
+Duplicate register/latch removal. \u_dut/qM2_d1_i1 is a one-to-one match with \u_dut/q2_d1_i3.
+Duplicate register/latch removal. \u_dut/qM1_d1_i1 is a one-to-one match with \u_dut/q1_d1_i3.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i38 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i38.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i37 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i37.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i36 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i36.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i35 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i35.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i34 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i34.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i33 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i33.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i32 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i32.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i31 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i31.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i30 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i30.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i29 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i29.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i28 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i28.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i27 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i27.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i26 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i26.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i25 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i25.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i24 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i24.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i23 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i23.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i22 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i22.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i21 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i21.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i20 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i20.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i19 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i19.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i18 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i18.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i17 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i17.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i16 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i16.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i15 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i15.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i14 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i14.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i13 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i13.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i12 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i12.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i11 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i11.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i10 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i10.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i9 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i9.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i8 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i8.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i7 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i7.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i6 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i6.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i5 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i5.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i4 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i4.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i3 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i3.
+Duplicate register/latch removal. \u_dut/prescaledfY_d2_i2 is a one-to-one match with \u_dut/prescaledfY_d2_rep_6_i2.
+Duplicate register/latch removal. \u_dut/q4_d1_i2 is a one-to-one match with \u_dut/qP4_d1_i1.
+Duplicate register/latch removal. \u_dut/q3_d1_i1 is a one-to-one match with \u_dut/qP3_d1_i1.
+Duplicate register/latch removal. \u_dut/q3_d1_i2 is a one-to-one match with \u_dut/qP3_d1_i2.
+Duplicate register/latch removal. \u_dut/q2_d1_i2 is a one-to-one match with \u_dut/qP2_d1_i1.
+Duplicate register/latch removal. \u_dut/q1_d1_i2 is a one-to-one match with \u_dut/qP1_d1_i1.
+Duplicate register/latch removal. \u_dut/q12_d2_i1 is a one-to-one match with \u_dut/qM12_d2_i1.
+Duplicate register/latch removal. \u_dut/q10_d2_i1 is a one-to-one match with \u_dut/qM10_d2_i1.
+Duplicate register/latch removal. \u_dut/q9_d2_i1 is a one-to-one match with \u_dut/qM9_d2_i1.
+Duplicate register/latch removal. \u_dut/q7_d2_i1 is a one-to-one match with \u_dut/qM7_d2_i1.
+Duplicate register/latch removal. \u_dut/q6_d2_i1 is a one-to-one match with \u_dut/qM6_d2_i1.
+Duplicate register/latch removal. \u_dut/q5_d2_i1 is a one-to-one match with \u_dut/qM5_d2_i1.
+Duplicate register/latch removal. \u_dut/q4_d2_i1 is a one-to-one match with \u_dut/qM4_d2_i1.
+Duplicate register/latch removal. \u_dut/q3_d2_i1 is a one-to-one match with \u_dut/qM3_d2_i1.
+Duplicate register/latch removal. \u_dut/q2_d2_i1 is a one-to-one match with \u_dut/qM2_d2_i1.
+Duplicate register/latch removal. \u_dut/q1_d2_i1 is a one-to-one match with \u_dut/qM1_d2_i1.
+Duplicate register/latch removal. \u_dut/qM11_d2_i1 is a one-to-one match with \u_dut/q11_d2_i3.
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+Duplicate register/latch removal. Y_r_i34 is a one-to-one match with Y_r_rep_5_i35.
+Duplicate register/latch removal. Y_r_i33 is a one-to-one match with Y_r_rep_5_i34.
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/flopoco_div_we8_wf35_zynq7000_native_srt_87_f300/top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300.ngo.
+
+################### Begin Area Report (top_flopoco_div_we8_wf35_zynq7000_native_srt_87_f300)######################
+Number of register bits => 3637 of 12687 (28 % )
+CCU2C => 716
+DPR16X4C => 11
+FD1S3AX => 3584
+FD1S3IX => 51
+FD1S3JX => 2
+GSR => 1
+IB => 93
+LUT4 => 1779
+OB => 46
+PDPW16KD => 6
+PFUMX => 50
+ROM128X1A => 14
+SPR16X4C => 11
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 3665
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_dut/q3_d1_1, loads : 82
+  Net : u_dut/q9_d1_1, loads : 81
+  Net : u_dut/q6_d1_1, loads : 81
+  Net : u_dut/q4_d1_1, loads : 80
+  Net : u_dut/q2_d1_1, loads : 80
+  Net : u_dut/q1_d1_1, loads : 80
+  Net : u_dut/q12_d1_1, loads : 79
+  Net : u_dut/q10_d1_1, loads : 79
+  Net : u_dut/q7_d1_1, loads : 79
+  Net : u_dut/q5_d1_1, loads : 79
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |  100.000 MHz|   80.013 MHz|    25 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 302.176  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 9.863  secs
+--------------------------------------------------------------

@@ -1,0 +1,14 @@
+
+*** Final report ***
+Output file: /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700/src/flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700.vhdl
+Pipeline constructed using approximate timings for target DummyFPGA @ 700 MHz
+Entity selFunction_Freq700_uid4
+   Y: (c0, 0.550000ns)
+|---Entity selFunction_Freq700_uid4
+|      Y: (c0, 0.550000ns)
+Entity flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700
+   R: (c33, 0.707143ns)
+$ /mnt/storage/test/zkf-vs-flopoco/third_party/flopoco-5.1/build/bin/flopoco outputFile=/mnt/storage/test/zkf-vs-flopoco/artifacts/targets/spartan7-vivado/rows/flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700/src/flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700.vhdl frequency=700 target=DummyFPGA useTargetOpt=0 useHardMult=1 plainVHDL=1 FPDiv name=flopoco_div_we8_wf35_dummyfpga_plain_srt_42_f700 wE=8 wF=35 srt=42
+
+
+[exit code 0]

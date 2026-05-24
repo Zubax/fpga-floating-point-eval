@@ -1,0 +1,251 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      1414/24288     5%
+Info:         logic LUTs:   1200/24288     4%
+Info:         carry LUTs:    214/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:      1107/24288     4%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     342 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xaf96cb1a
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:     139/    197    70%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       6/     28    21%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    1107/  24288     4%
+Info: 	        TRELLIS_COMB:    1480/  24288     6%
+Info: 	        TRELLIS_RAMW:       0/   3036     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 1463 cells, random placement wirelen = 98606.
+Info:     at initial placer iter 0, wirelen = 7211
+Info:     at initial placer iter 1, wirelen = 6372
+Info:     at initial placer iter 2, wirelen = 6342
+Info:     at initial placer iter 3, wirelen = 6333
+Info: Running main analytical placer, max placement attempts per cell = 933661.
+Info:     at iteration #1, type ALL: wirelen solved = 6264, spread = 21002, legal = 21405; time = 0.06s
+Info:     at iteration #2, type ALL: wirelen solved = 7360, spread = 13850, legal = 14427; time = 0.07s
+Info:     at iteration #3, type ALL: wirelen solved = 7448, spread = 12975, legal = 13589; time = 0.06s
+Info:     at iteration #4, type ALL: wirelen solved = 7714, spread = 12139, legal = 12563; time = 0.06s
+Info:     at iteration #5, type ALL: wirelen solved = 7988, spread = 11499, legal = 12384; time = 0.06s
+Info:     at iteration #6, type ALL: wirelen solved = 8124, spread = 11371, legal = 12410; time = 0.06s
+Info:     at iteration #7, type ALL: wirelen solved = 8304, spread = 11869, legal = 12971; time = 0.08s
+Info:     at iteration #8, type ALL: wirelen solved = 8704, spread = 12057, legal = 12899; time = 0.06s
+Info:     at iteration #9, type ALL: wirelen solved = 8976, spread = 11992, legal = 12926; time = 0.06s
+Info:     at iteration #10, type ALL: wirelen solved = 8972, spread = 12142, legal = 13176; time = 0.05s
+Info: HeAP Placer Time: 1.08s
+Info:   of which solving equations: 0.58s
+Info:   of which spreading cells: 0.10s
+Info:   of which strict legalisation: 0.08s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 713, wirelen = 12384
+Info:   at iteration #5: temp = 0.000000, timing cost = 451, wirelen = 10554
+Info:   at iteration #10: temp = 0.000000, timing cost = 435, wirelen = 10309
+Info:   at iteration #14: temp = 0.000000, timing cost = 400, wirelen = 10185 
+Info: SA placement time 2.90s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 64.40 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 7.28 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 5.57 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 8 endpoint(s)
+Info:          + represents [1,8) endpoint(s)
+Info: [ -5528,  -4801) |*+
+Info: [ -4801,  -4074) |***+
+Info: [ -4074,  -3347) |**+
+Info: [ -3347,  -2620) |***+
+Info: [ -2620,  -1893) |*****+
+Info: [ -1893,  -1166) |***+
+Info: [ -1166,   -439) |***+
+Info: [  -439,    288) |+
+Info: [   288,   1015) |*+
+Info: [  1015,   1742) |*+
+Info: [  1742,   2469) |*+
+Info: [  2469,   3196) |+
+Info: [  3196,   3923) |*+
+Info: [  3923,   4650) |**+
+Info: [  4650,   5377) |*****+
+Info: [  5377,   6104) |******+
+Info: [  6104,   6831) |********+
+Info: [  6831,   7558) |**************+
+Info: [  7558,   8285) |*****************+
+Info: [  8285,   9012) |************************************************************ 
+Info: Checksum: 0xdde4d26e
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 6891 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      310        689 |  310   689 |      6322|       0.56       0.56|
+Info:       2000 |      672       1327 |  362   638 |      5882|       0.54       1.10|
+Info:       3000 |     1069       1930 |  397   603 |      5444|       0.62       1.72|
+Info:       4000 |     1487       2512 |  418   582 |      5023|       0.71       2.43|
+Info:       5000 |     1913       3086 |  426   574 |      4636|       0.63       3.06|
+Info:       6000 |     2251       3740 |  338   654 |      4131|       0.60       3.66|
+Info:       7000 |     2598       4331 |  347   591 |      3558|       0.28       3.93|
+Info:       8000 |     2857       4977 |  259   646 |      2843|       0.23       4.16|
+Info:       9000 |     2977       5673 |  120   696 |      1979|       0.19       4.35|
+Info:      10000 |     3137       6441 |  160   768 |      1209|       0.32       4.66|
+Info:      11000 |     3169       7350 |   32   909 |       246|       0.37       5.04|
+Info:      11308 |     3198       7582 |   29   232 |         0|       0.32       5.36|
+Info: Routing complete.
+Info: Router1 time 5.36s
+Info: Checksum: 0x7e5b74b5
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source y_r_TRELLIS_FF_Q_32.Q
+Info:    routing  1.36  1.89 Net y_r[32] (14,14) -> (5,13)
+Info:                          Sink u_dut.significandmultiplication.t8_tile_2.dsp0_0.:3281.genblk1.genblk1.genblk1.genblk1.genblk1.sliceA.last.A2
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:61.22-61.23
+Info:      logic  3.93  5.81 Source u_dut.significandmultiplication.t8_tile_2.dsp0_0.:3281.genblk1.genblk1.genblk1.genblk1.genblk1.sliceA.last.P3
+Info:    routing  1.70  7.51 Net u_dut.significandmultiplication.t8_tile_2.dsp0_0.:3281.genblk1.genblk1.genblk1.genblk1.genblk1.blk.last_partial[3] (5,13) -> (8,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w33_2_CCU2C_S1$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:136.29-136.41
+Info:      logic  0.45  7.96 Source u_dut.significandmultiplication.bh7_w33_2_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  7.96 Net u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1_COUT[4] (8,11) -> (8,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w35_2_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:173.32-173.125
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:38.23-38.25
+Info:      logic  0.07  8.03 Source u_dut.significandmultiplication.bh7_w35_2_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  8.03 Net u_dut.significandmultiplication.bh7_w35_2_CCU2C_S1$CCU2_FCI_INT (8,11) -> (8,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w35_2_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  8.03 Source u_dut.significandmultiplication.bh7_w35_2_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  8.03 Net u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1_COUT[6] (8,11) -> (9,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w37_2_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:173.32-173.125
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:38.23-38.25
+Info:      logic  0.07  8.10 Source u_dut.significandmultiplication.bh7_w37_2_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  8.10 Net u_dut.significandmultiplication.bh7_w37_2_CCU2C_S1$CCU2_FCI_INT (9,11) -> (9,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w37_2_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  8.10 Source u_dut.significandmultiplication.bh7_w37_2_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  8.10 Net u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1_COUT[8] (9,11) -> (9,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:173.32-173.125
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:38.23-38.25
+Info:      logic  0.07  8.17 Source u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  8.17 Net u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1$CCU2_FCI_INT (9,11) -> (9,11)
+Info:                          Sink u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.40  8.57 Source u_dut.significandmultiplication.bh7_w39_2_CCU2C_S1$CCU2_COMB1.F
+Info:    routing  1.47  10.05 Net u_dut.significandmultiplication.bh7_w39_2 (9,11) -> (11,6)
+Info:                          Sink u_dut.significandmultiplication.bh7_w39_1_LUT4_D.C
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/mul2dsp.v:138.24-138.35
+Info:      logic  0.24  10.28 Source u_dut.significandmultiplication.bh7_w39_1_LUT4_D.F
+Info:    routing  0.89  11.17 Net u_dut.significandmultiplication.bh7_w39_1_LUT4_D_Z[0] (11,6) -> (11,5)
+Info:                          Sink u_dut.significandmultiplication.bh7_w40_2_LUT4_D.A
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  11.41 Source u_dut.significandmultiplication.bh7_w40_2_LUT4_D.F
+Info:    routing  0.94  12.35 Net u_dut.significandmultiplication.bh7_w42_2_LUT4_D_Z[2] (11,5) -> (13,6)
+Info:                          Sink u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z.A
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  12.58 Source u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  12.58 Net u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT (13,6) -> (13,6)
+Info:                          Sink u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /mnt/storage/synth_eval/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:133.22-133.24
+Info:      logic  0.17  12.75 Source u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.59  13.34 Net u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR (13,6) -> (13,4)
+Info:                          Sink u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_TRELLIS_FF_LSR_1.LSR
+Info:      setup  0.42  13.76 Source u_dut.significandmultiplication.bh7_w42_7_TRELLIS_FF_Q_LSR_TRELLIS_FF_LSR_1.LSR
+Info: 6.81 ns logic, 6.95 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source Y_i[8]$tr_io.O
+Info:    routing  4.51  4.51 Net Y_i[8]$TRELLIS_IO_IN (72,23) -> (13,12)
+Info:                          Sink y_r_TRELLIS_FF_Q_8.M
+Info:      setup  0.00  4.51 Source y_r_TRELLIS_FF_Q_8.M
+Info: 0.00 ns logic, 4.51 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source R_o_TRELLIS_FF_Q_44.Q
+Info:    routing  3.44  3.96 Net R_o[44]$TRELLIS_IO_OUT (27,15) -> (15,50)
+Info:                          Sink R_o[44]$tr_io.I
+Info: 0.52 ns logic, 3.44 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 72.67 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.51 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 3.96 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 8 endpoint(s)
+Info:          + represents [1,8) endpoint(s)
+Info: [ -3761,  -3120) |***+
+Info: [ -3120,  -2479) |***+
+Info: [ -2479,  -1838) |**+
+Info: [ -1838,  -1197) |****+
+Info: [ -1197,   -556) |***+
+Info: [  -556,     85) |**+
+Info: [    85,    726) |*+
+Info: [   726,   1367) |*+
+Info: [  1367,   2008) |+
+Info: [  2008,   2649) | 
+Info: [  2649,   3290) |*+
+Info: [  3290,   3931) |*+
+Info: [  3931,   4572) |**+
+Info: [  4572,   5213) |*+
+Info: [  5213,   5854) |****+
+Info: [  5854,   6495) |*********+
+Info: [  6495,   7136) |*********+
+Info: [  7136,   7777) |**********+
+Info: [  7777,   8418) |*************+
+Info: [  8418,   9059) |************************************************************ 
+
+1 warning, 0 errors
+
+Info: Program finished normally.
+$ nextpnr-ecp5 --json /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf35_zynq7000_native_f500/netlist.json --write /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf35_zynq7000_native_f500/nextpnr-routed.json --12k --package CABGA381 --speed 6 --freq 100 --timing-allow-fail --lpf-allow-unconstrained --report /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-yosys/rows/flopoco_mul_we8_wf35_zynq7000_native_f500/nextpnr-report.json
+
+
+[exit code 0]

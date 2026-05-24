@@ -1,0 +1,568 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat May 23 22:27:55 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_zkf_add_w8_m36_base
+Constraint file: top_zkf_add_w8_m36_base_temp_lse.sdc 
+Report level:    verbose report, limited to 10 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -waveform { 0.000000 5.000000 } -name clk [ get_ports { clk } ]
+            918 items scored, 918 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 6.093ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s0_exp_diff_res1_e3_i0_i0_rep_321  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  16.268ns  (14.9% logic, 85.1% route), 14 logic levels.
+
+ Constraint Details:
+
+     16.268ns data_path s0_exp_diff_res1_e3_i0_i0_rep_321 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 6.093ns
+
+ Path Details: s0_exp_diff_res1_e3_i0_i0_rep_321 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s0_exp_diff_res1_e3_i0_i0_rep_321 (from clk)
+Route        32   e 1.813                                  n5536
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/mux_72_i37_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_1__38__N_160[36]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__I_0_i37_3_lut_4_lut
+Route         8   e 1.435                                  \u_dut/data[1][36]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i33_rep_13_4_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/n3979
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i33_3_lut_rep_284_4_lut_4_lut
+Route         3   e 1.239                                  \u_dut/n5010
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_2_lut_4_lut_adj_77
+Route         1   e 1.020                                  \u_dut/u_align_small/n3661
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_82
+Route         1   e 1.020                                  \u_dut/u_align_small/n3665
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   16.268  (14.9% logic, 85.1% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 6.035ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s0_exp_diff_res1_e3_i0_i1_rep_319  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  16.210ns  (14.9% logic, 85.1% route), 14 logic levels.
+
+ Constraint Details:
+
+     16.210ns data_path s0_exp_diff_res1_e3_i0_i1_rep_319 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 6.035ns
+
+ Path Details: s0_exp_diff_res1_e3_i0_i1_rep_319 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s0_exp_diff_res1_e3_i0_i1_rep_319 (from clk)
+Route        24   e 1.755                                  n5534
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/mux_72_i37_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_1__38__N_160[36]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__I_0_i37_3_lut_4_lut
+Route         8   e 1.435                                  \u_dut/data[1][36]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i33_rep_13_4_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/n3979
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i33_3_lut_rep_284_4_lut_4_lut
+Route         3   e 1.239                                  \u_dut/n5010
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_2_lut_4_lut_adj_77
+Route         1   e 1.020                                  \u_dut/u_align_small/n3661
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_82
+Route         1   e 1.020                                  \u_dut/u_align_small/n3665
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   16.210  (14.9% logic, 85.1% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 5.789ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/s0_small_sig_exp_i35  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  15.964ns  (15.2% logic, 84.8% route), 14 logic levels.
+
+ Constraint Details:
+
+     15.964ns data_path \u_dut/s0_small_sig_exp_i35 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.789ns
+
+ Path Details: \u_dut/s0_small_sig_exp_i35 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/s0_small_sig_exp_i35 (from clk)
+Route         7   e 1.509                                  \u_dut/s0_small_sig_exp[35]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/mux_72_i37_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_1__38__N_160[36]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__I_0_i37_3_lut_4_lut
+Route         8   e 1.435                                  \u_dut/data[1][36]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i33_rep_13_4_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/n3979
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i33_3_lut_rep_284_4_lut_4_lut
+Route         3   e 1.239                                  \u_dut/n5010
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_2_lut_4_lut_adj_77
+Route         1   e 1.020                                  \u_dut/u_align_small/n3661
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_82
+Route         1   e 1.020                                  \u_dut/u_align_small/n3665
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   15.964  (15.2% logic, 84.8% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 5.721ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \u_dut/s0_small_sig_exp_i34  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  15.896ns  (15.2% logic, 84.8% route), 14 logic levels.
+
+ Constraint Details:
+
+     15.896ns data_path \u_dut/s0_small_sig_exp_i34 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.721ns
+
+ Path Details: \u_dut/s0_small_sig_exp_i34 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dut/s0_small_sig_exp_i34 (from clk)
+Route         5   e 1.441                                  \u_dut/s0_small_sig_exp[34]
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/mux_72_i37_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_1__38__N_160[36]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__I_0_i37_3_lut_4_lut
+Route         8   e 1.435                                  \u_dut/data[1][36]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i33_rep_13_4_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/n3979
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i33_3_lut_rep_284_4_lut_4_lut
+Route         3   e 1.239                                  \u_dut/n5010
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_2_lut_4_lut_adj_77
+Route         1   e 1.020                                  \u_dut/u_align_small/n3661
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_82
+Route         1   e 1.020                                  \u_dut/u_align_small/n3665
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   15.896  (15.2% logic, 84.8% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 5.173ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s0_exp_diff_res1_e3_i0_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  15.348ns  (14.7% logic, 85.3% route), 13 logic levels.
+
+ Constraint Details:
+
+     15.348ns data_path s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.173ns
+
+ Path Details: s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s0_exp_diff_res1_e3_i0_i1 (from clk)
+Route        81   e 1.998                                  s0_exp_diff[1]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/mux_71_i25_rep_137_3_lut_4_lut
+Route         3   e 1.239                                  \u_dut/u_align_small/data_1__38__N_286[24]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__I_0_i25_3_lut_4_lut_4_lut
+Route         4   e 1.297                                  \u_dut/u_align_small/data[1][24]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data[1][20]_bdd_3_lut_3161_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_2__38__N_326[12]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/mux_74_i13_3_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/data_2__38__N_200[12]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i13_3_lut_4_lut
+Route         3   e 1.239                                  \u_dut/u_align_small/data[2][12]
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   15.348  (14.7% logic, 85.3% route), 13 logic levels.
+
+
+Error:  The following path violates requirements by 5.092ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s0_exp_diff_res1_e3_i0_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  15.267ns  (14.8% logic, 85.2% route), 13 logic levels.
+
+ Constraint Details:
+
+     15.267ns data_path s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.092ns
+
+ Path Details: s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s0_exp_diff_res1_e3_i0_i1 (from clk)
+Route        81   e 1.998                                  s0_exp_diff[1]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i37_3_lut_4_lut
+Route         8   e 1.435                                  \u_dut/data[1][36]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/data_1__38__I_0_i33_rep_13_4_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/n3979
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i33_3_lut_rep_284_4_lut_4_lut
+Route         3   e 1.239                                  \u_dut/n5010
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_2_lut_4_lut_adj_77
+Route         1   e 1.020                                  \u_dut/u_align_small/n3661
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_82
+Route         1   e 1.020                                  \u_dut/u_align_small/n3665
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_4_lut_adj_81
+Route         1   e 1.020                                  \u_dut/u_align_small/n3685
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i1_4_lut_adj_79
+Route         1   e 1.020                                  \u_dut/u_align_small/n3691
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/g_stage[2].l3
+MUXL5       ---     0.116           ALUT to Z              \u_dut/u_align_small/i42
+Route         1   e 1.020                                  \u_dut/u_align_small/n21
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   15.267  (14.8% logic, 85.2% route), 13 logic levels.
+
+
+Error:  The following path violates requirements by 5.081ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s0_exp_diff_res1_e3_i0_i1  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/s1_small_aligned_i0  (to clk +)
+
+   Delay:                  15.256ns  (14.0% logic, 86.0% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.256ns data_path s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.081ns
+
+ Path Details: s0_exp_diff_res1_e3_i0_i1 to \u_dut/s1_small_aligned_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s0_exp_diff_res1_e3_i0_i1 (from clk)
+Route        81   e 1.998                                  s0_exp_diff[1]
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/mux_71_i28_rep_112_3_lut_4_lut
+Route         3   e 1.239                                  \u_dut/u_align_small/data_1__38__N_286[27]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_1__38__N_286[27]_bdd_3_lut_4_lut_4_lut
+Route         5   e 1.341                                  \u_dut/u_align_small/data[1][27]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data[1][23]_bdd_3_lut_3155_4_lut
+Route         1   e 1.020                                  \u_dut/u_align_small/data_2__38__N_326[15]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/mux_74_i16_3_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_align_small/data_2__38__N_200[15]
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/data_2__38__I_0_74_i16_3_lut_4_lut
+Route         3   e 1.239                                  \u_dut/u_align_small/data[2][15]
+LUT4        ---     0.166              D to Z              \u_dut/u_align_small/i1_3_lut_4_lut_adj_66
+Route         1   e 1.020                                  \u_dut/u_align_small/n3723
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/i1_4_lut_adj_59
+Route         1   e 1.020                                  \u_dut/u_align_small/n3735
+LUT4        ---     0.166              A to Z              \u_dut/u_align_small/i1_4_lut_adj_58
+Route         1   e 1.020                                  \u_dut/u_align_small/n4
+LUT4        ---     0.166              B to Z              \u_dut/u_align_small/i2_4_lut
+Route         1   e 0.020                                  \u_dut/u_align_small/sticky[3]
+MUXL5       ---     0.116           BLUT to Z              \u_dut/u_align_small/sticky_3__I_0
+Route         1   e 1.020                                  \u_dut/u_align_small/final_sticky
+LUT4        ---     0.166              C to Z              \u_dut/u_align_small/final_data_0__I_0_3_lut_4_lut
+Route         1   e 1.020                                  \u_dut/s0_small_aligned[0]
+                  --------
+                   15.256  (14.0% logic, 86.0% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 5.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s2_raw_result_e3_i0_i19  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/u_sub_norm/g_data[2].g_split.data_r_i27  (to clk +)
+
+   Delay:                  15.244ns  (13.3% logic, 86.7% route), 11 logic levels.
+
+ Constraint Details:
+
+     15.244ns data_path s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i27 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.069ns
+
+ Path Details: s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i27
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s2_raw_result_e3_i0_i19 (from clk)
+Route         6   e 1.478                                  s2_raw_result[19]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_4_lut_adj_101
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3861
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_adj_98
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3869
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i3126_4_lut
+Route        15   e 1.561                                  \u_dut/u_sub_norm/n15
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i355_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1561
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i356_3_lut
+Route         3   e 1.239                                  \u_dut/u_sub_norm/data_1__38__N_456[32]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_2_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_sub_norm/n3813
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_rep_266
+Route        25   e 1.663                                  \u_dut/u_sub_norm/n4992
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i643_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1850
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i644_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1851
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/data_pre_2__38__I_0_i28_4_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/data_pre[2][27]
+                  --------
+                   15.244  (13.3% logic, 86.7% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 5.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s2_raw_result_e3_i0_i19  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/u_sub_norm/g_data[2].g_split.data_r_i24  (to clk +)
+
+   Delay:                  15.244ns  (13.3% logic, 86.7% route), 11 logic levels.
+
+ Constraint Details:
+
+     15.244ns data_path s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i24 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.069ns
+
+ Path Details: s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i24
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s2_raw_result_e3_i0_i19 (from clk)
+Route         6   e 1.478                                  s2_raw_result[19]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_4_lut_adj_101
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3861
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_adj_98
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3869
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i3126_4_lut
+Route        15   e 1.561                                  \u_dut/u_sub_norm/n15
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i355_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1561
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i356_3_lut
+Route         3   e 1.239                                  \u_dut/u_sub_norm/data_1__38__N_456[32]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_2_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_sub_norm/n3813
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_rep_266
+Route        25   e 1.663                                  \u_dut/u_sub_norm/n4992
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i597_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1803
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i598_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1804
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/data_pre_2__38__I_0_i25_4_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/data_pre[2][24]
+                  --------
+                   15.244  (13.3% logic, 86.7% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 5.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             s2_raw_result_e3_i0_i19  (from clk +)
+   Destination:    FD1S3AX    D              \u_dut/u_sub_norm/g_data[2].g_split.data_r_i25  (to clk +)
+
+   Delay:                  15.244ns  (13.3% logic, 86.7% route), 11 logic levels.
+
+ Constraint Details:
+
+     15.244ns data_path s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i25 violates
+     10.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 10.175ns) by 5.069ns
+
+ Path Details: s2_raw_result_e3_i0_i19 to \u_dut/u_sub_norm/g_data[2].g_split.data_r_i25
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              s2_raw_result_e3_i0_i19 (from clk)
+Route         6   e 1.478                                  s2_raw_result[19]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_4_lut_adj_101
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3861
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_adj_98
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n3869
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i3126_4_lut
+Route        15   e 1.561                                  \u_dut/u_sub_norm/n15
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i355_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1561
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i356_3_lut
+Route         3   e 1.239                                  \u_dut/u_sub_norm/data_1__38__N_456[32]
+LUT4        ---     0.166              D to Z              \u_dut/u_sub_norm/i1_2_lut_4_lut
+Route         2   e 1.158                                  \u_dut/u_sub_norm/n3813
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/i1_4_lut_rep_266
+Route        25   e 1.663                                  \u_dut/u_sub_norm/n4992
+LUT4        ---     0.166              C to Z              \u_dut/u_sub_norm/i639_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1846
+LUT4        ---     0.166              A to Z              \u_dut/u_sub_norm/i640_3_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/n1847
+LUT4        ---     0.166              B to Z              \u_dut/u_sub_norm/data_pre_2__38__I_0_i26_4_lut
+Route         1   e 1.020                                  \u_dut/u_sub_norm/data_pre[2][25]
+                  --------
+                   15.244  (13.3% logic, 86.7% route), 11 logic levels.
+
+Warning: 16.093 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000          |             |             |
+-waveform { 0.000000 5.000000 } -name   |             |             |
+clk [ get_ports { clk } ]               |    10.000 ns|    16.093 ns|    14 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\u_dut/u_sub_norm/n4992                 |      25|     656|     71.46%
+                                        |        |        |
+\u_dut/u_sub_norm/n3813                 |       2|     608|     66.23%
+                                        |        |        |
+\u_dut/u_sub_norm/data_1__38__N_456[32] |       3|     584|     63.62%
+                                        |        |        |
+\u_dut/u_sub_norm/n15                   |      15|     472|     51.42%
+                                        |        |        |
+\u_dut/u_sub_norm/n1561                 |       1|     424|     46.19%
+                                        |        |        |
+\u_dut/u_sub_norm/n3869                 |       1|     288|     31.37%
+                                        |        |        |
+\u_dut/u_sub_norm/n5538                 |      50|     287|     31.26%
+                                        |        |        |
+\u_dut/u_sub_norm/n3841                 |       3|     279|     30.39%
+                                        |        |        |
+\u_dut/u_sub_norm/n5511                 |       8|     220|     23.97%
+                                        |        |        |
+\u_dut/u_sub_norm/n3837                 |       1|     176|     19.17%
+                                        |        |        |
+\u_dut/u_sub_norm/n4156                 |       8|     176|     19.17%
+                                        |        |        |
+\u_dut/u_sub_norm/n3861                 |       1|     160|     17.43%
+                                        |        |        |
+\u_dut/s0_small_aligned[0]              |       1|     159|     17.32%
+                                        |        |        |
+\u_dut/u_align_small/final_sticky       |       1|     159|     17.32%
+                                        |        |        |
+\u_dut/u_align_small/sticky[3]          |       1|     159|     17.32%
+                                        |        |        |
+\u_dut/u_sub_norm/n2023                 |      22|     103|     11.22%
+                                        |        |        |
+\u_dut/u_sub_norm/n3831                 |       1|     103|     11.22%
+                                        |        |        |
+\u_dut/u_sub_norm/n3867                 |       1|      96|     10.46%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 918  Score: 3393114
+
+Constraints cover  81551 paths, 1569 nets, and 4516 connections (97.0% coverage)
+
+
+Peak memory: 230883328 bytes, TRCE: 479232 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

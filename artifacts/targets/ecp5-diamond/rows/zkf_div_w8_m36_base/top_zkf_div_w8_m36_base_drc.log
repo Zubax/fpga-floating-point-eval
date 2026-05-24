@@ -1,0 +1,3 @@
+Results of NGD DRC are available in top_zkf_div_w8_m36_base_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /mnt/storage/test/zkf-vs-flopoco/artifacts/targets/ecp5-diamond/rows/zkf_div_w8_m36_base/top_zkf_div_w8_m36_base.ngo.

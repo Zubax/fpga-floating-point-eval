@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local toolchains, vendored source trees, and build products
+third_party/
+
+# Local scratch outputs
+flopoco.vhdl
+
+# Editor/OS noise
+.DS_Store
+*.swp
+*~
